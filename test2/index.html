@@ -4,6 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>CSSF</title>
+   <link rel="stylesheet" media="all" href="reset.css">
    <script src="CSSF.js"></script>
    <style>
       *
@@ -12,16 +13,200 @@
          }
       :root
          {
-            --color-1: red;
-            --color-2: blue;
-            --color-3: yellow;
+            --btn-br-color: green;
+         }
+      :root.dark-mode
+         {
+            color-scheme: dark;
+         }
+      :root.light-mode
+         {
+            color-scheme: light;
          }
    </style>
+   <script>
+      function toggleColorScheme() 
+         {
+            const root = document.documentElement;
+            const isDarkMode = root.classList.contains('dark-mode');
+            
+            if(isDarkMode) 
+               {
+                  root.classList.add('light-mode');
+                  root.classList.remove('dark-mode');
+                  localStorage.setItem('darkMode', 'false');
+               } else {
+                  root.classList.add('dark-mode');
+                  root.classList.remove('light-mode');
+                  localStorage.setItem('darkMode', 'true');
+               }
+         }
 
+      document.addEventListener('DOMContentLoaded', () => 
+         {
+            const root = document.documentElement;
+            const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const savedDarkMode = localStorage.getItem('darkMode');
+
+            const isDarkMode = savedDarkMode !== null ? savedDarkMode === 'true' : prefersDarkMode;
+            console.log('isDarkMode', isDarkMode);
+            isDarkMode ? root.classList.add('dark-mode') : root.classList.remove('dark-mode');
+
+              
+         });
+         
+         
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.documentElement;
+  const savedDarkMode = localStorage.getItem('darkMode');
+
+  if (savedDarkMode === 'true') {
+    root.classList.add('dark-mode');
+    root.classList.remove('dark-light');
+  } else {
+    root.classList.add('light-mode');
+    root.classList.remove('dark-mode');
+  }
+});
+
+   </script>
   
 </head>
-<body>
+<body class="cssf--val-color-1_red--val-color-2_blue--val-color-3_yellow--val-color-4_brown">
 
+
+<div class="cssf--val-gl-spacing_16pxrem--val-gl-content_900px--val-gl-outbreak_1200px--grid-layout">
+   <div class="cssf--grid-column_content--bg2">test c</div>
+   <div class="cssf--grid-column_full-width--bg1">
+      <div class="cssf--val-gl-spacing_16pxrem--val-gl-content_900px--val-gl-outbreak_1200px--grid-layout">
+         
+         <div class="cssf--grid-column_breakout--bg3">test b</div>
+         <div class="cssf--grid-column_content--bg2">
+            <h2 class="cssf--grid-column_content">H2 Überschrift</h2>
+            <p class="cssf--grid-column_content">P Text P Text P Text P Text P Text P Text P Text P Text P Text P Text P Text P Text</p>
+         </div>         
+      </div>
+   </div>
+   <div class="cssf--grid-column_breakout--bg3">test b</div>
+   <div class="cssf--grid-column_content--bg2">test c</div>
+</div>
+
+<br>
+
+<div class="cssf--val-gl-spacing_16pxrem--val-gl-content_900px--val-gl-outbreak_1200px--grid-layout">
+   <div class="cssf--grid-column_content--bg2">test c</div>
+   <div class="cssf--grid-column_full-width--bg1">test f</div>
+   <div class="cssf--grid-column_breakout--bg3">test b</div>
+   <div class="cssf--grid-column_content--bg2">test c</div>
+</div>
+
+<div class="cssf--con1200--flex-layout--test-br1">
+   <div class="cssf--fcol33--bg1--p10">1200 33%</div>
+   <div class="cssf--fcol33--bg2--p10">1200 33%</div>
+   <div class="cssf--fcol33--bg3--p10">1200 33%</div>
+   <div class="cssf--fcol33--bg3--p10">1200 33%</div>
+</div>
+
+<div class="cssf--con1200--flex--test-br1">
+   <div class="cssf--fcol33c--bg1--p10px">1200 33%</div>
+   <div class="cssf--fcol66c--bg3--p10">1200 66%</div>
+</div>
+<div class="cssf--con1200--flex--gap10--test-br1">
+   <div class="cssf--fcol33g10s2--bg1--p10">1200 33%</div>
+   <div class="cssf--fcol33g10s2--bg2--p10">1200 33%</div>
+   <div class="cssf--fcol33g10s2--bg3--p10">1200 33%</div>
+   <div class="cssf--fcol33g10s2--bg4--p10">1200 33%</div>
+</div>
+<div class="cssf--con1200--flex--gap10--test-br1">
+   <div class="cssf--fcol33g10x2--bg1--p10">1200 33%</div>
+   <div class="cssf--fcol33g10x2--bg2--p10">1200 33%</div>
+   <div class="cssf--fcol33g10x2--bg3--p10">1200 33%</div>
+   <div class="cssf--fcol33g10x2--bg4--p10">1200 33%</div>
+   <div class="cssf--fcol33g10x2--bg1--p10">1200 33%</div>
+</div>
+<div class="cssf--con1200--flex--gap20--test-br1">
+   <div class="cssf--fcol33g20x2--bg1--p10">1200 33%</div>
+   <div class="cssf--fcol33g20x2--bg2--p10">1200 33%</div>
+   <div class="cssf--fcol33g20x2--bg3--p10">1200 33%</div>
+   <div class="cssf--fcol33g20x2--bg4--p10">1200 33%</div>
+   <div class="cssf--fcol33g20x2--bg1--p10">1200 33%</div>
+</div>
+
+<div class="cssf--con1200--flex--gap5--test-br1">
+   <div class="cssf--fcol33g5x2--bg1--p10">1200 33%</div>
+   <div class="cssf--fcol33g5x2--bg2--p10">1200 33%</div>
+   <div class="cssf--fcol33g5x2--bg3--p10">1200 33%</div>
+   <div class="cssf--fcol33g5x2--bg4--p10">1200 33%</div>
+   <div class="cssf--fcol33g5x2--bg1--p10">1200 33%</div>
+</div>
+<div class="cssf--con1200--flex--gap5--test-br1
+     cssf--mq768--flex--gap40">
+   <div class="cssf--fcol33g5x2--bg1--p10 cssf--mq768--fcol33g40x2">1200 33%</div>
+   <div class="cssf--fcol33g5x2--bg2--p10 cssf--mq768--fcol33g40x2">1200 33%</div>
+   <div class="cssf--fcol33g5x2--bg3--p10 cssf--mq768--fcol33g40x2">1200 33%</div>
+   <div class="cssf--fcol33g5x2--bg4--p10 cssf--mq768--fcol33g40x2">1200 33%</div>
+   <div class="cssf--fcol33g5x2--bg1--p10 cssf--mq768--fcol33g40x2">1200 33%</div>
+</div>
+<div class="cssf--con1200--flex--test-br1">
+   <div class="cssf--fcol50--bg1--p10 cssf--mq768--fcol33">1200 33%</div>
+   <div class="cssf--fcol50--bg2--p10 cssf--mq768--fcol33">1200 33%</div>
+   <div class="cssf--fcol50--bg3--p10 cssf--mq768--fcol33">1200 33%</div>
+   <div class="cssf--fcol50--bg4--p10 cssf--mq768--fcol33">1200 33%</div>
+   <div class="cssf--fcol50--bg1--p10 cssf--mq768--fcol33">1200 33%</div>
+</div>
+
+
+
+<!-- -------------------------------------------------------------
+<div class="cssf--grid-layout">
+ Test
+</div>
+<div class="cssf--val-padding-inline_16px--val-content-max-width_900px--val-breakout-max-width_1200px">
+ Test
+</div>
+<div class="cssf--val-padding-inline_16pxrem--val-content-max-width_900pxrem--val-breakout-max-width_1200pxrem">
+ Test
+</div>
+ -->
+
+
+<!-- -------------------------------------------------------------
+<button onclick="toggleColorScheme()">Toggle Dark Mode</button> -->
+<!--
+<div class="cssf--con1200--flex-layout--test-br1">
+   <div class="cssf--fcol66--test-set1">1200 66%</div>
+   <div class="cssf--fcol33--test-set1">1200 33%</div>
+</div>
+<div class="cssf--con1200--flex-layout--test-br1">
+   <div class="cssf--fcol33--bg1--p10px">1200 33%</div>
+   <div class="cssf--fcol33--bg2--p10">1200 33%</div>
+   <div class="cssf--fcol33--bg3--p10">1200 33%</div>
+</div>
+<div class="cssf--con1200--flex-layout--test-br1">
+   <div class="cssf--fcol33--bg1--p10">1200 33%</div>
+   <div class="cssf--fcol66--bg2--p10">1200 66%</div>
+</div>
+<hr>
+<div class="cssf--con1200--flex-layout--gap16--test-br1">
+   <div class="cssf--fcol66--bg1--p10">1200 66%</div>
+   <div class="cssf--fcol33--bg2--p10">1200 33%</div>
+</div>
+<div class="cssf--con1200--flex-layout--gap16--test-br1">
+   <div class="cssf--fcol33--bg1--p10">1200 33%</div>
+   <div class="cssf--fcol33--bg2--p10">1200 33%</div>
+   <div class="cssf--fcol33--bg3--p10">1200 33%</div>
+</div>
+<div class="cssf--con1200--flex-layout--gap16--test-br1">
+   <div class="cssf--fcol33--bg1--p10">1200 33%</div>
+   <div class="cssf--fcol66--bg2--p10">1200 66%</div>
+</div>
+ -->
+<!-- -------------------------------------------------------------
+<div class="cssf--con1200 cssf--br3_solid_var-color-1--px20--py10">test 1200</div>
+<div class="cssf--con992 cssf--br3_solid_var-color-1--px20--py10">test 992</div>
+
+ -->
+<!-- -------------------------------------------------------------
 <div class="cssf--flex">test</div>
 <div class="cssf--my20">
    <div class="cssf--max-width1200px--px20 cssf--bpm768--px40">
@@ -36,17 +221,18 @@
       </div>
    </div>
 </div>
-
-<!-- ------------------------------------------------------------- -->
-   
+ -->
+<!-- -------------------------------------------------------------
+   <button class="btn">test .btn</button>
+   <button class="cssf--btn">test .cssf--btn</button>
    <span class="cssf--p15--cursor_pointer--br15_solid_var-color-1">Button</span>
    <span class="cssf--p15--cursor_pointer--br30_solid">Button</span>
    <div class="cssf--max-width992px--mr-16 cssf--br3_solid_var-color-1--px20--py10--m_auto cssf--bpm992--br3_solid_var-color-2"></div>
    <figure class="cssf--br3_solid_var-color-1--br-r20 cssf--p20">
       test b
       <figcaption class="cssf--bg_var-color-3">test b t</figcaption>
-   </figure>
-<!-- ------------------------------------------------------------- -->
+   </figure> -->
+<!-- ------------------------------------------------------------- 
    <div class="ich-test">test 1</div>
    <div class="cssf--m15--p10 cssf--mx12">test 2</div>
    <div class="cssf--bpm1200--p16">test 3</div>
@@ -62,6 +248,6 @@
 
    <div class="cssf--bpm992--w100--h80">test 13</div>
    <div class="cssf--bpc992_cs50p--m8">test 13</div>
- 
+ -->
 </body>
 </html>
