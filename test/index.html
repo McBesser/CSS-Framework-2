@@ -5,6 +5,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>CSSF</title>
    <link rel="stylesheet" media="all" href="../dist/preset.css">
+   <link rel="stylesheet" media="all" href="../dist/preset-var.css">
+   <link rel="stylesheet" media="all" href="../dist/form.css">
    <script src="../dist/CSSF.js"></script>
    <style>
       *
@@ -22,6 +24,17 @@
       :root.light-mode
          {
             color-scheme: light;
+         }
+      .test-clamp
+         {
+            /* 992 32 */
+            font-size: clamp(1rem, 1.0000rem + 1.6129vw, 2rem);
+         }
+      .test2-clamp
+         {
+            /* 992 32 */
+            /* clamp(1rem, 1rem + calc((§0 - 1rem) / (§1 - 0rem) * 100)vw, §0) */
+            font-size: clamp(1rem, ((2rem + 1rem / 10) * (2rem + 1rem / 10)), 62rem)
          }
    </style>
    <script>
@@ -74,7 +87,12 @@ document.addEventListener('DOMContentLoaded', () => {
 </head>
 <body class="cssf--val-color-1_red--val-color-2_blue--val-color-3_yellow--val-color-4_brown">
 
-
+<div class="cssf--background_hex-ffffaa">
+<span class="test-clamp">ich bin blasses gelb</span>
+</div>
+<div class="cssf--background_hex-ffffaa">
+<span class="cssf--fn-clamp_font-size_0_1200_16_32">ich bin blasses gelb</span>
+</div>
 <div class="cssf--val-gl-spacing_16pxrem--val-gl-content_900px--val-gl-outbreak_1200px--grid-layout">
    <div class="cssf--grid-column_content--bg2">test c</div>
    <div class="cssf--grid-column_full-width--bg1">
@@ -155,6 +173,12 @@ document.addEventListener('DOMContentLoaded', () => {
    <div class="cssf--fcol50--bg1--p10 cssf--mq768--fcol33">1200 33%</div>
 </div>
 
+<div class="cssf cssf--con992--bg1--p16">
+   <form>
+      <input type="text" value="test"><br><br>
+      <input type="text" value="test">
+   </form>
+</div>
 
 
 <!-- -------------------------------------------------------------

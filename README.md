@@ -7,7 +7,9 @@ e.g.:
 
 
 ### subdivision
-property, number, unit
+`p16px` = property, number, unit
+`p_16px` = property (number, unit; chaining with "_")
+`flex_1_1` = property (number; chaining with "_")
 e.g.:
 `p16px` (`padding16px`; p (short) = padding)
 use e.g.: 
@@ -69,6 +71,13 @@ alias
 'cql': 'container-light',
 ```
 
+### calc shorts
+- ca = addition
+- cs = subtraction
+- cm = multiplication
+- cd = division
+e.g. `m16_cd2int` = margin: calc(1rem / 2);
+
 ### special features / notes
 - media- / container queries focus Pixel: mq1200 = 1200 Pixel (@media... min-width: 1200px)
 - Properties Focus rem: m16 = 1rem (margin: 1rem)
@@ -76,4 +85,6 @@ alias
 - convert px to rem: m_16pxrem = 1rem (margin: 1rem)
 - set var(): `cssf--background_var-bg1` = background: var(--bg1)
 - set var value: `cssf--val-bg1_black` = --bg1: black 
+- `cssf--color_hex-ffffff` = color: #ffffff
+
 

@@ -1,8 +1,10 @@
 class CSSF {
    constructor(settings = {}) {
+      this.version = '0.1';
       this.prefix = settings.prefix !== undefined ? settings.prefix : 'cssf';
       this.templates = Object.assign({
             'grid-layout-standard': '[full-width-start] minmax(§0, 1fr) [outbreak-start] minmax(0, calc((§2 - §1) / 2)) [content-start] min(100% - (§0 * 2), §1) [content-end] minmax(0, calc((§2 - §1) / 2)) [outbreak-end] minmax(§0, 1fr) [full-width-end]',
+            'clamp-size-standard': 'clamp(1rem, 1rem + calc((§0 - 1rem) / (§1 - 0rem) * 100)vw, §0)',
             'clamp': 'clamp(§0, §1, §2)',
             'calc': 'calc(§0)',
             'rgb': 'rgb(§0, §1, §2)',
@@ -11,7 +13,9 @@ class CSSF {
             'var': 'var(§0, §1)',
             'rect': 'rect(§0)',
             'inset': 'inset(§0)',
-            'max': 'max(§0, §1)'
+            'min': 'min(§0, §1)',
+            'max': 'max(§0, §1)',
+            'repeat': 'repeat(§0, §1)'
          },
          settings.templates || {}
       );
@@ -75,6 +79,7 @@ class CSSF {
             'fcol100': 'f_1_1_100p--box-sizing_border-box',
             /* -------------------------------------------------------------------------------------- */
             'grid-layout': 'd_grid--tpl-grid-layout-standard_grid-template-columns_var-gl-spacing_var-gl-content_var-gl-outbreak',
+            'clamp-font-size': 'tpl-clamp-size-standard_font-size_var-cfs-font-size_var-cfs-width',
             'btn': 'px15--py10--cursor_pointer--br3_solid_var-btn-br-color'
          },
          settings.alias || {}
@@ -231,84 +236,101 @@ class CSSF {
          let styles = '';
          styles += this.prefix ? `.${this.prefix}--${cssClassUse}{` : `.${cssClassUse}{`;
          parts.forEach((part, partIndex) => {
-            const subParts = part.split('_');
-            const convertedSubPartsData = [];
-            subParts.forEach((subPart, subPartIndex) => {
-               convertedSubPartsData.push(this.convertSubPartData(subPart));
-            });
-            const mainInstruction = convertedSubPartsData.shift();
-            const instructions = convertedSubPartsData;
-            if (subParts[0].startsWith('tpl')) {
-               const tpl = this.templates[subParts[0].substring(4)];
-               const propertyName = convertedSubPartsData.shift()['property'];
-               const val = this.fillTemplate(tpl, convertedSubPartsData);
-               styles += `${propertyName}: ${val} `;
-               styles += ` !important;`;
-            } else if (['media', 'media-dark', 'media-light', 'container', 'container-dark', 'container-light'].includes(mainInstruction.property)) {
-               let calc = 0;
-               if (instructions.length > 0 && (instructions[0].number && (instructions[0].unit || instructions[0].unit === ''))) {
-                  const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
-                  properties.forEach((property) => {
-                     const convProperty = (['media', 'media-dark', 'media-light'].includes(property)) ? 'media' : (['container', 'container-dark', 'container-light'].includes(property) ? 'container' : '');
-                     query += `@${convProperty}(min-width: `;
-                     calc = this.calculateValues(calc, 'px', '+', mainInstruction.number, mainInstruction.unit);
-                     instructions.forEach((instruction, instructionIndex) => {
-                        calc = this.calculateValues(calc, 'px', instruction.property, instruction.number, instruction.unit);
-                     });
-                     query += `${calc}px)`;
-                     query += (mainInstruction.property === 'media-dark' || mainInstruction.property === 'container-dark') ? ` and (prefers-color-scheme: dark)` : ``;
-                     query += (mainInstruction.property === 'media-light' || mainInstruction.property === 'container-light') ? ` and (prefers-color-scheme: light)` : ``;
-                  });
-               } else if (mainInstruction.number && (mainInstruction.unit || mainInstruction.unit === '')) {
-                  const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
-                  properties.forEach((property) => {
-                     const convProperty = (['media', 'media-dark', 'media-light'].includes(property)) ? 'media' : (['container', 'container-dark', 'container-light'].includes(property) ? 'container' : '');
-                     query += `@${convProperty}(min-width: ${mainInstruction.number}${mainInstruction.unit})`;
-                     query += (mainInstruction.property === 'media-dark' || mainInstruction.property === 'container-dark') ? ` and (prefers-color-scheme: dark)` : ``;
-                     query += (mainInstruction.property === 'media-light' || mainInstruction.property === 'container-light') ? ` and (prefers-color-scheme: light)` : ``;
-                  });
-               } else {
-                  const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
-                  properties.forEach((property) => {
-                     const convProperty = (['media', 'media-dark', 'media-light'].includes(property)) ? 'media' : (['container', 'container-dark', 'container-light'].includes(property) ? 'container' : '');
-                     /* query += `@${convProperty}(min-width: ${mainInstruction.number}${mainInstruction.unit})`; */
-                     query += `@${convProperty}`;
-                     query += (mainInstruction.property === 'media-dark' || mainInstruction.property === 'container-dark') ? ` (prefers-color-scheme: dark)` : ``;
-                     query += (mainInstruction.property === 'media-light' || mainInstruction.property === 'container-light') ? ` (prefers-color-scheme: light)` : ``;
-                  });
-               }
+            if (part.startsWith('fn')) {
+               const fnRaw = this.shorts[part.substring(3)] || part.substring(3);
+               const subParts = fnRaw.split('_');
+               const fnName = subParts.shift();
+               const property = subParts.shift();
+               const fnVar = subParts.join(", ");
+               let result = '';
+               switch (fnName)
+                  {
+                     case 'clamp':
+                        result = eval(`this.clampBuilder(${fnVar});`);
+                     break;
+                  }
+               styles += `${property}: ${result}`;
             } else {
-
-               if (instructions.length > 0 && (instructions[0].property && instructions[0].number && (instructions[0].unit || instructions[0].unit === ''))) {
-                  const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
-                  properties.forEach((property) => {
-                     styles += `${property}: calc(${mainInstruction.number}${mainInstruction.unit}`;
-                     instructions.forEach((instruction, instructionIndex) => {
-                        styles += ` ${instruction.property} ${instruction.number}${instruction.unit}`;
+               const subParts = part.split('_');
+               const convertedSubPartsData = [];
+               subParts.forEach((subPart, subPartIndex) => {
+                  convertedSubPartsData.push(this.convertSubPartData(subPart));
+               });
+               const mainInstruction = convertedSubPartsData.shift();
+               const instructions = convertedSubPartsData;
+               if (subParts[0].startsWith('tpl')) {
+                  const tpl = this.templates[subParts[0].substring(4)];
+                  const propertyName = convertedSubPartsData.shift()['property'];
+                  const val = this.fillTemplate(tpl, convertedSubPartsData);
+                  styles += `${propertyName}: ${val} `;
+                  styles += ` !important;`;
+               } else if (['media', 'media-dark', 'media-light', 'container', 'container-dark', 'container-light'].includes(mainInstruction.property)) {
+                  let calc = 0;
+                  if (instructions.length > 0 && (instructions[0].number && (instructions[0].unit || instructions[0].unit === ''))) {
+                     const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
+                     properties.forEach((property) => {
+                        const convProperty = (['media', 'media-dark', 'media-light'].includes(property)) ? 'media' : (['container', 'container-dark', 'container-light'].includes(property) ? 'container' : '');
+                        query += `@${convProperty}(min-width: `;
+                        calc = this.calculateValues(calc, 'px', '+', mainInstruction.number, mainInstruction.unit);
+                        instructions.forEach((instruction, instructionIndex) => {
+                           calc = this.calculateValues(calc, 'px', instruction.property, instruction.number, instruction.unit);
+                        });
+                        query += `${calc}px)`;
+                        query += (mainInstruction.property === 'media-dark' || mainInstruction.property === 'container-dark') ? ` and (prefers-color-scheme: dark)` : ``;
+                        query += (mainInstruction.property === 'media-light' || mainInstruction.property === 'container-light') ? ` and (prefers-color-scheme: light)` : ``;
                      });
-                     styles += `) !important;`;
-                  });
-               } else if (instructions.length > 0 && mainInstruction.number && (mainInstruction.unit || mainInstruction.unit === '')) {
-                  const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
-                  styles += `${properties[0]}: ${mainInstruction.number}${mainInstruction.unit} `;
-                  instructions.forEach((instruction, instructionIndex) => {
-                     styles += ` ${instruction.property}`;
-                  });
-                  styles += ` !important;`;
-               } else if (instructions.length > 0) {
-                  const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
-                  styles += `${properties[0]}: `;
-                  instructions.forEach((instruction, instructionIndex) => {
-                     styles += instruction.property ? ` ${instruction.property}` : ` ${instruction.number}${instruction.unit}`;
-                  });
-                  styles += ` !important;`;
+                  } else if (mainInstruction.number && (mainInstruction.unit || mainInstruction.unit === '')) {
+                     const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
+                     properties.forEach((property) => {
+                        const convProperty = (['media', 'media-dark', 'media-light'].includes(property)) ? 'media' : (['container', 'container-dark', 'container-light'].includes(property) ? 'container' : '');
+                        query += `@${convProperty}(min-width: ${mainInstruction.number}${mainInstruction.unit})`;
+                        query += (mainInstruction.property === 'media-dark' || mainInstruction.property === 'container-dark') ? ` and (prefers-color-scheme: dark)` : ``;
+                        query += (mainInstruction.property === 'media-light' || mainInstruction.property === 'container-light') ? ` and (prefers-color-scheme: light)` : ``;
+                     });
+                  } else {
+                     const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
+                     properties.forEach((property) => {
+                        const convProperty = (['media', 'media-dark', 'media-light'].includes(property)) ? 'media' : (['container', 'container-dark', 'container-light'].includes(property) ? 'container' : '');
+                        /* query += `@${convProperty}(min-width: ${mainInstruction.number}${mainInstruction.unit})`; */
+                        query += `@${convProperty}`;
+                        query += (mainInstruction.property === 'media-dark' || mainInstruction.property === 'container-dark') ? ` (prefers-color-scheme: dark)` : ``;
+                        query += (mainInstruction.property === 'media-light' || mainInstruction.property === 'container-light') ? ` (prefers-color-scheme: light)` : ``;
+                     });
+                  }
                } else {
-                  const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
-                  properties.forEach((property) => {
-                     styles += `${property}: ${mainInstruction.number}${mainInstruction.unit} !important;`;
-                  });
-               }
+
+                  if (instructions.length > 0 && (instructions[0].property && instructions[0].number && (instructions[0].unit || instructions[0].unit === ''))) {
+                     const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
+                     properties.forEach((property) => {
+                        styles += `${property}: calc(${mainInstruction.number}${mainInstruction.unit}`;
+                        instructions.forEach((instruction, instructionIndex) => {
+                           styles += ` ${instruction.property} ${instruction.number}${instruction.unit}`;
+                        });
+                        styles += `) !important;`;
+                     });
+                  } else if (instructions.length > 0 && mainInstruction.number && (mainInstruction.unit || mainInstruction.unit === '')) {
+                     const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
+                     styles += `${properties[0]}: ${mainInstruction.number}${mainInstruction.unit} `;
+                     instructions.forEach((instruction, instructionIndex) => {
+                        styles += ` ${instruction.property}`;
+                     });
+                     styles += ` !important;`;
+                  } else if (instructions.length > 0) {
+                     const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
+                     styles += `${properties[0]}: `;
+                     instructions.forEach((instruction, instructionIndex) => {
+                        styles += instruction.property ? ` ${instruction.property}` : ` ${instruction.number}${instruction.unit}`;
+                     });
+                     styles += ` !important;`;
+                  } else {
+                     const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
+                     properties.forEach((property) => {
+                        styles += `${property}: ${mainInstruction.number}${mainInstruction.unit} !important;`;
+                     });
+                  }
+               }               
             }
+
          });
          styles += `}`;
          data.push(query !== '' ? `${query}{${styles}}` : styles);
@@ -334,16 +356,23 @@ class CSSF {
 
    convertSubPartData(subPart) {
       if (subPart.startsWith('val')) {
-         const propertyName = this.shorts[subPart.substring(3)] || subPart.substring(3);
+         const propertyName = this.shorts[subPart.substring(4)] || subPart.substring(4);
          return {
-            property: `-${propertyName}`,
+            property: `--${propertyName}`,
             number: null,
             unit: null
          };
       } else if (subPart.startsWith('var')) {
-         const propertyName = this.shorts[subPart.substring(3)] || subPart.substring(3);
+         const propertyName = this.shorts[subPart.substring(4)] || subPart.substring(4);
          return {
-            property: `var(-${propertyName})`,
+            property: `var(--${propertyName})`,
+            number: null,
+            unit: null
+         };
+      } else if (subPart.startsWith('hex')) {
+         const propertyName = this.shorts[subPart.substring(4)] || subPart.substring(4);
+         return {
+            property: `#${propertyName}`,
             number: null,
             unit: null
          };
@@ -391,7 +420,21 @@ class CSSF {
          };
       }
    }
+   /* https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
+   clampBuilder( minWidthPx, maxWidthPx, minFontSizePx, maxFontSizePx ) {
+     const minFontSize = minFontSizePx / 16; 
+     const maxFontSize = maxFontSizePx / 16; 
+     const root = document.querySelector( "html" );
+     const pixelsPerRem = Number( getComputedStyle( root ).fontSize.slice( 0,-2 ) );
 
+     const minWidth = minWidthPx / pixelsPerRem;
+     const maxWidth = maxWidthPx / pixelsPerRem;
+
+     const slope = ( maxFontSize - minFontSize ) / ( maxWidth - minWidth );
+     const yAxisIntersection = -minWidth * slope + minFontSize
+
+     return `clamp( ${ minFontSize }rem, ${ yAxisIntersection }rem + ${ slope * 100 }vw, ${ maxFontSize }rem )`;
+   }
    calculateValues(value1, unit1, operation, value2, unit2) {
       const remToPx = (rem) => rem * 16;
 
