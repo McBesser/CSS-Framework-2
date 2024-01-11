@@ -2,7 +2,7 @@ class CSSF {
    constructor(settings = {}) {
       this.prefix = settings.prefix !== undefined ? settings.prefix : 'cssf';
       this.templates = Object.assign({
-            'grid-layout-standard': '[full-width-start] minmax(§0, 1fr) [breakout-start] minmax(0, calc((§2 - §1) / 2)) [content-start] min(100% - (§0 * 2), §1) [content-end] minmax(0, calc((§2 - §1) / 2)) [breakout-end] minmax(§0, 1fr) [full-width-end]',
+            'grid-layout-standard': '[full-width-start] minmax(§0, 1fr) [outbreak-start] minmax(0, calc((§2 - §1) / 2)) [content-start] min(100% - (§0 * 2), §1) [content-end] minmax(0, calc((§2 - §1) / 2)) [outbreak-end] minmax(§0, 1fr) [full-width-end]',
             'clamp': 'clamp(§0, §1, §2)',
             'calc': 'calc(§0)',
             'rgb': 'rgb(§0, §1, §2)',
@@ -25,12 +25,11 @@ class CSSF {
             'bg3': 'bg_var-color-3',
             'bg4': 'bg_var-color-4',
             'con576': 'max-width576px--m_auto--box-sizing_border-box',
-            'con768': 'max-width768px--m_auto',
-            'con992': 'max-width992px--m_auto',
-            'con1200': 'max-width1200px--m_auto',
-            'con1400': 'max-width1400px--m_auto',
-            'flex-layout': 'd_flex--f-d_row--f-w_nowrap--f-jc_start--f-ac_stretch--f-ai_stretch',
-            'flex': 'd_flex--f-d_row--f-w_wrap--f-jc_start--f-ac_stretch--f-ai_stretch',
+            'con768': 'max-width768px--m_auto--box-sizing_border-box',
+            'con992': 'max-width992px--m_auto--box-sizing_border-box',
+            'con1200': 'max-width1200px--m_auto--box-sizing_border-box',
+            'con1400': 'max-width1400px--m_auto--box-sizing_border-box',
+            'flex-layout': 'd_flex--f-d_row--f-w_wrap--f-jc_start--f-ac_stretch--f-ai_stretch',
             /* -------------------------------------------------------------------------------------- */
             'fcol25': 'f_1_1--flex-basis100p_cd4int--max-width100p_cd4int--box-sizing_border-box',
             'fcol33': 'f_1_1--flex-basis100p_cd3int--max-width100p_cd3int--box-sizing_border-box',
@@ -81,7 +80,6 @@ class CSSF {
          settings.alias || {}
       );
       this.shorts = Object.assign({
-            'tpl': 'template',
             'mq': 'media',
             'mqd': 'media-dark',
             'mql': 'media-light',
