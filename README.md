@@ -36,12 +36,13 @@ use e.g.: `cssf--m16`, `cssf--margin16`, `cssf--m_16pxrem`
 ### alias
 - Shorten chaining of commands
 - settings.alias Object; 
+- Placeholder
 e.g.:
 ```
 'test-br2': 'br1_solid--color_white',
-'bg1': 'bg_var-color-1',
+'bg-var': 'bg_var-color-§0',
 ```
-use e.g.: `cssf--bg1`
+use e.g.: `cssf--bg-var_1` = bg_var-color-1
 ### templates
 - settings.templates Object
 - placeholder: §0, §1, §...
@@ -86,5 +87,36 @@ e.g. `m16_cd2int` = margin: calc(1rem / 2);
 - set var(): `cssf--background_var-bg1` = background: var(--bg1)
 - set var value: `cssf--val-bg1_black` = --bg1: black 
 - `cssf--color_hex-ffffff` = color: #ffffff
+- `cssf--cfn-clamp_font-size_0_1200_16_32` = font-size: clamp( 1rem, 1rem + 1.3333333333333335vw, 2rem );
+- fn-rgb_bg_255_op-c_0_op-c_0
 
 
+### legend
+#### starts with
+cfn- = custom function (js function)
+fn- = function (css function)
+op- = operation (sign)
+op-ca, op-add = addition `+`
+op-cs, op-sub = subtraction `-`
+op-cm, op-mul = multiplication `*`
+op-cd, op-div = division `/`
+op-op = open parenthesis `(`
+op-cp = close parenthesis `)`
+op-c = comma `,`
+op-p = point `.`
+mq- = media-query (media)
+cq- = container-query (container)
+val- = value
+var- = Variable
+str- = string
+hex- = hexadecimal
+uc- = unicode (backslash)
+#### ends with
+int = number is integer (not converting)
+pxrem = convert px to rem
+
+### format
+[] = optional
+_ = value(s)
+-- = more instructions
+prefix--[breakpointEtc.--][prefix-]property[NumberU][nit][_...][--...]

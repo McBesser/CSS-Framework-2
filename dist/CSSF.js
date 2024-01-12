@@ -15,7 +15,7 @@ class CSSF {
             'inset': 'inset(§0)',
             'min': 'min(§0, §1)',
             'max': 'max(§0, §1)',
-            'repeat': 'repeat(§0, §1)'
+            'repeat': 'repeat(§0, §1)',
          },
          settings.templates || {}
       );
@@ -24,15 +24,15 @@ class CSSF {
             'test-set2': 'br1_solid--color_white--px20--py10',
             'test-br1': 'br1_solid--color_black',
             'test-br2': 'br1_solid--color_white',
-            'bg1': 'bg_var-color-1',
-            'bg2': 'bg_var-color-2',
-            'bg3': 'bg_var-color-3',
-            'bg4': 'bg_var-color-4',
-            'con576': 'max-width576px--m_auto--box-sizing_border-box',
-            'con768': 'max-width768px--m_auto--box-sizing_border-box',
-            'con992': 'max-width992px--m_auto--box-sizing_border-box',
-            'con1200': 'max-width1200px--m_auto--box-sizing_border-box',
-            'con1400': 'max-width1400px--m_auto--box-sizing_border-box',
+            /* -------------------------------------------------------------------------------------- */
+            'teaser-lc': 'lc_§0--bo_vertical--text-overflow_ellipsis--d_-webkit-box--overflow_hidden',
+            /* -------------------------------------------------------------------------------------- */
+            'c-var': 'c_var-color-§0',
+            'bg-var': 'bg_var-color-§0',
+            /* -------------------------------------------------------------------------------------- */
+            /* con_1200 = max-width: 1200 */
+            'con': 'max-width§0px--m_auto--box-sizing_border-box',
+            /* -------------------------------------------------------------------------------------- */
             'flex-layout': 'd_flex--f-d_row--f-w_wrap--f-jc_start--f-ac_stretch--f-ai_stretch',
             /* -------------------------------------------------------------------------------------- */
             'fcol25': 'f_1_1--flex-basis100p_cd4int--max-width100p_cd4int--box-sizing_border-box',
@@ -41,44 +41,20 @@ class CSSF {
             'fcol66': 'f_1_1--flex-basis100p_cd3int_cm2int--max-width100p_cd2int--box-sizing_border-box',
             'fcol75': 'f_1_1--flex-basis100p_cd4int_cm3int--max-width100p_cd2int--box-sizing_border-box',
             /* -------------------------------------------------------------------------------------- */
-            'fcol25g5x1': 'f_1_1--flex-basis100p_cd4int_cs5--max-width100p_cd4int_cs5_cd2int_cm1int--box-sizing_border-box',
-            'fcol25g5x3': 'f_1_1--flex-basis100p_cd4int_cs5--max-width100p_cd4int_cs5_cd4int_cm3int--box-sizing_border-box',
-            'fcol33g5x2': 'f_1_1--flex-basis100p_cd3int_cs5--max-width100p_cd3int_cs5_cd3int_cm2int--box-sizing_border-box',
-            'fcol50g5x1': 'f_1_1--flex-basis100p_cd2int_cs5--max-width100p_cd2int_cs5_cd2int_cm1int--box-sizing_border-box',
-            'fcol66g5x1': 'f_1_1--flex-basis100p_cd3int_cm2int_cs5--max-width100p_cd2int_cs5_cd2int_cm1int--box-sizing_border-box',
-            'fcol75g5x1': 'f_1_1--flex-basis100p_cd4int_cm3int_cs5--max-width100p_cd2int_cs5_cd2int_cm1int--box-sizing_border-box',
-            /* -------------------------------------------------------------------------------------- */
-            'fcol25g10x1': 'f_1_1--flex-basis100p_cd4int_cs10--max-width100p_cd4int_cs10_cd2int_cm1int--box-sizing_border-box',
-            'fcol25g10x3': 'f_1_1--flex-basis100p_cd4int_cs10--max-width100p_cd4int_cs10_cd4int_cm3int--box-sizing_border-box',
-            'fcol33g10x2': 'f_1_1--flex-basis100p_cd3int_cs10--max-width100p_cd3int_cs10_cd3int_cm2int--box-sizing_border-box',
-            'fcol50g10x1': 'f_1_1--flex-basis100p_cd2int_cs10--max-width100p_cd2int_cs10_cd2int_cm1int--box-sizing_border-box',
-            'fcol66g10x1': 'f_1_1--flex-basis100p_cd3int_cm2int_cs10--max-width100p_cd2int_cs10_cd2int_cm1int--box-sizing_border-box',
-            'fcol75g10x1': 'f_1_1--flex-basis100p_cd4int_cm3int_cs10--max-width100p_cd2int_cs10_cd2int_cm1int--box-sizing_border-box',
-            /* -------------------------------------------------------------------------------------- */
-            'fcol25g20x1': 'f_1_1--flex-basis100p_cd4int_cs20--max-width100p_cd4int_cs20_cd2int_cm1int--box-sizing_border-box',
-            'fcol25g20x3': 'f_1_1--flex-basis100p_cd4int_cs20--max-width100p_cd4int_cs20_cd4int_cm3int--box-sizing_border-box',
-            'fcol33g20x2': 'f_1_1--flex-basis100p_cd3int_cs20--max-width100p_cd3int_cs20_cd3int_cm2int--box-sizing_border-box',
-            'fcol50g20x1': 'f_1_1--flex-basis100p_cd2int_cs20--max-width100p_cd2int_cs20_cd2int_cm1int--box-sizing_border-box',
-            'fcol66g20x1': 'f_1_1--flex-basis100p_cd3int_cm2int_cs20--max-width100p_cd2int_cs20_cd2int_cm1int--box-sizing_border-box',
-            'fcol75g20x1': 'f_1_1--flex-basis100p_cd4int_cm3int_cs20--max-width100p_cd2int_cs20_cd2int_cm1int--box-sizing_border-box',
-            /* -------------------------------------------------------------------------------------- */
-            'fcol25g30x1': 'f_1_1--flex-basis100p_cd4int_cs30--max-width100p_cd4int_cs30_cd2int_cm1int--box-sizing_border-box',
-            'fcol25g30x3': 'f_1_1--flex-basis100p_cd4int_cs30--max-width100p_cd4int_cs30_cd4int_cm3int--box-sizing_border-box',
-            'fcol33g30x2': 'f_1_1--flex-basis100p_cd3int_cs30--max-width100p_cd3int_cs30_cd3int_cm2int--box-sizing_border-box',
-            'fcol50g30x1': 'f_1_1--flex-basis100p_cd2int_cs30--max-width100p_cd2int_cs30_cd2int_cm1int--box-sizing_border-box',
-            'fcol66g30x1': 'f_1_1--flex-basis100p_cd3int_cm2int_cs30--max-width100p_cd2int_cs30_cd2int_cm1int--box-sizing_border-box',
-            'fcol75g30x1': 'f_1_1--flex-basis100p_cd4int_cm3int_cs30--max-width100p_cd2int_cs30_cd2int_cm1int--box-sizing_border-box',
-            /* -------------------------------------------------------------------------------------- */
-            'fcol25g40x1': 'f_1_1--flex-basis100p_cd4int_cs40--max-width100p_cd4int_cs40_cd2int_cm1int--box-sizing_border-box',
-            'fcol25g40x3': 'f_1_1--flex-basis100p_cd4int_cs40--max-width100p_cd4int_cs40_cd4int_cm3int--box-sizing_border-box',
-            'fcol33g40x2': 'f_1_1--flex-basis100p_cd3int_cs40--max-width100p_cd3int_cs40_cd3int_cm2int--box-sizing_border-box',
-            'fcol50g40x1': 'f_1_1--flex-basis100p_cd2int_cs40--max-width100p_cd2int_cs40_cd2int_cm1int--box-sizing_border-box',
-            'fcol66g40x1': 'f_1_1--flex-basis100p_cd3int_cm2int_cs40--max-width100p_cd2int_cs40_cd2int_cm1int--box-sizing_border-box',
-            'fcol75g40x1': 'f_1_1--flex-basis100p_cd4int_cm3int_cs40--max-width100p_cd2int_cs40_cd2int_cm1int--box-sizing_border-box',
+            /* fcol25gx1_20 = gap 20px */
+            'fcol25gx1': 'f_1_1--flex-basis100p_cd4int_cs§0--max-width100p_cd4int_cs§0_cd2int_cm1int--box-sizing_border-box',
+            'fcol25gx3': 'f_1_1--flex-basis100p_cd4int_cs§0--max-width100p_cd4int_cs§0_cd4int_cm3int--box-sizing_border-box',
+            'fcol33gx2': 'f_1_1--flex-basis100p_cd3int_cs§0--max-width100p_cd3int_cs§0_cd3int_cm2int--box-sizing_border-box',
+            'fcol50gx1': 'f_1_1--flex-basis100p_cd2int_cs§0--max-width100p_cd2int_cs§0_cd2int_cm1int--box-sizing_border-box',
+            'fcol66gx1': 'f_1_1--flex-basis100p_cd3int_cm2int_cs§0--max-width100p_cd2int_cs§0_cd2int_cm1int--box-sizing_border-box',
+            'fcol75gx1': 'f_1_1--flex-basis100p_cd4int_cm3int_cs§0--max-width100p_cd2int_cs§0_cd2int_cm1int--box-sizing_border-box',
             /* -------------------------------------------------------------------------------------- */
             'fcol100': 'f_1_1_100p--box-sizing_border-box',
             /* -------------------------------------------------------------------------------------- */
             'grid-layout': 'd_grid--tpl-grid-layout-standard_grid-template-columns_var-gl-spacing_var-gl-content_var-gl-outbreak',
+            /* -------------------------------------------------------------------------------------- */
+            'grid-brick-col-2': 'd_grid--gta_text-rh-rh_text-r1-r2_text-rf-rf',
+            /* -------------------------------------------------------------------------------------- */
             'clamp-font-size': 'tpl-clamp-size-standard_font-size_var-cfs-font-size_var-cfs-width',
             'btn': 'px15--py10--cursor_pointer--br3_solid_var-btn-br-color'
          },
@@ -136,6 +112,8 @@ class CSSF {
             'f-ac': 'align-content',
             'f-as': 'align-self',
             'g': 'grid',
+            'gta': 'grid-template-areas',
+            'ga': 'grid-area',
             'd': 'display',
             'ca': '+',
             'cs': '-',
@@ -145,6 +123,8 @@ class CSSF {
             'end': 'flex-end',
             'between': 'space-between',
             'around': 'space-around',
+            'lc': ['line-clamp', '-webkit-line-clamp'],
+            'bo': ['box-orient', '-webkit-box-orient']
          },
          settings.shorts || {}
       );
@@ -230,14 +210,22 @@ class CSSF {
 
          let parts = [];
          cssClass.split('--').forEach((part, partIndex) => {
-            parts.push(...(this.alias[part] ? this.alias[part].split('--') : [part]));
+            const aliasSubParts = part.split('_');
+            const aliasName = aliasSubParts.shift();
+            if (this.alias[aliasName]) {
+               const aliasRawData = this.alias[aliasName];
+               const aliasConvert = this.fillAlias(aliasRawData, aliasSubParts);
+               parts.push(...aliasConvert.split('--'));
+            } else {
+               parts.push(...[part]);
+            }
          });
          let query = '';
          let styles = '';
-         styles += this.prefix ? `.${this.prefix}--${cssClassUse}{` : `.${cssClassUse}{`;
+         styles += this.prefix ? `.${this.prefix}--${cssClassUse}{ ` : `.${cssClassUse}{ `;
          parts.forEach((part, partIndex) => {
-            if (part.startsWith('fn')) {
-               const fnRaw = this.shorts[part.substring(3)] || part.substring(3);
+            if (part.startsWith('cfn')) {
+               const fnRaw = part.substring(4);
                const subParts = fnRaw.split('_');
                const fnName = subParts.shift();
                const property = subParts.shift();
@@ -249,7 +237,7 @@ class CSSF {
                         result = eval(`this.clampBuilder(${fnVar});`);
                      break;
                   }
-               styles += `${property}: ${result}`;
+               styles += `${property}: ${result} !important;`;
             } else {
                const subParts = part.split('_');
                const convertedSubPartsData = [];
@@ -258,12 +246,19 @@ class CSSF {
                });
                const mainInstruction = convertedSubPartsData.shift();
                const instructions = convertedSubPartsData;
-               if (subParts[0].startsWith('tpl')) {
+               if (subParts[0].startsWith('fn')) {
+                  const fn = mainInstruction.property.substring(3);
+                  const property = convertedSubPartsData.shift().property;
+                  styles += `${property}: ${fn}(`;
+                  instructions.forEach((instruction, instructionIndex) => {
+                     styles += `${instruction.property ??  ''}${instruction.number ??  ''}${instruction.unit ??  ''}`;
+                  });
+                  styles += `) !important;`;
+               } else if (subParts[0].startsWith('tpl')) {
                   const tpl = this.templates[subParts[0].substring(4)];
-                  const propertyName = convertedSubPartsData.shift()['property'];
+                  const propertyName = convertedSubPartsData.shift()['property'];                  
                   const val = this.fillTemplate(tpl, convertedSubPartsData);
-                  styles += `${propertyName}: ${val} `;
-                  styles += ` !important;`;
+                  styles += `${propertyName}: ${val} !important;`;
                } else if (['media', 'media-dark', 'media-light', 'container', 'container-dark', 'container-light'].includes(mainInstruction.property)) {
                   let calc = 0;
                   if (instructions.length > 0 && (instructions[0].number && (instructions[0].unit || instructions[0].unit === ''))) {
@@ -310,18 +305,26 @@ class CSSF {
                      });
                   } else if (instructions.length > 0 && mainInstruction.number && (mainInstruction.unit || mainInstruction.unit === '')) {
                      const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
-                     styles += `${properties[0]}: ${mainInstruction.number}${mainInstruction.unit} `;
-                     instructions.forEach((instruction, instructionIndex) => {
-                        styles += ` ${instruction.property}`;
+                     /* ---------- */
+                     properties.forEach((property) => {  
+                        styles += `${property}: ${mainInstruction.number}${mainInstruction.unit} `;
+                        instructions.forEach((instruction, instructionIndex) => {
+                           styles += ` ${instruction.property}`;
+                        });
+                        styles += ` !important;`;   
                      });
-                     styles += ` !important;`;
+                     /* ---------- */
                   } else if (instructions.length > 0) {
                      const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
-                     styles += `${properties[0]}: `;
-                     instructions.forEach((instruction, instructionIndex) => {
-                        styles += instruction.property ? ` ${instruction.property}` : ` ${instruction.number}${instruction.unit}`;
+                     /* ---------- */
+                     properties.forEach((property) => {                        
+                        styles += `${property}:`;
+                        instructions.forEach((instruction, instructionIndex) => {
+                           styles += instruction.property ? ` ${instruction.property}` : ` ${instruction.number}${instruction.unit}`;
+                        });
+                        styles += ` !important;`;      
                      });
-                     styles += ` !important;`;
+                     /* ---------- */
                   } else {
                      const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
                      properties.forEach((property) => {
@@ -332,8 +335,8 @@ class CSSF {
             }
 
          });
-         styles += `}`;
-         data.push(query !== '' ? `${query}{${styles}}` : styles);
+         styles += ` }`;
+         data.push(query !== '' ? `${query}{ ${styles} }` : styles);
       });
       return data;
    }
@@ -353,26 +356,125 @@ class CSSF {
 
       return result;
    }
+   fillAlias(tpl, data) {
+      let result = tpl;
 
-   convertSubPartData(subPart) {
-      if (subPart.startsWith('val')) {
+      for (let i = 0; i < data.length; i++) {
+         const entry = data[i];
+         const placeholder = new RegExp(`§${i}`, 'g');
+
+         let replacement = '';
+         replacement += entry ?? '';
+         result = result.replaceAll(placeholder, replacement);
+      }
+
+      return result;
+   }
+
+   convertSubPartData(subPart) { 
+      if (subPart.startsWith('op-')) {
+         const propertyName = subPart.substring(3);
+         switch (propertyName) {
+            case 'op':
+               return {
+                  property: '(',
+                  number: null,
+                  unit: null
+               };
+            break;
+            case 'cp':
+               return {
+                  property: ')',
+                  number: null,
+                  unit: null
+               };
+            break;
+            case 'add':
+            case 'ca':
+               return {
+                  property: ' + ',
+                  number: null,
+                  unit: null
+               };
+            break;
+            case 'sub':
+            case 'cs':
+               return {
+                  property: ' - ',
+                  number: null,
+                  unit: null
+               };
+            break;
+            case 'div':
+            case 'cd':
+               return {
+                  property: ' / ',
+                  number: null,
+                  unit: null
+               };
+            break;
+            case 'mul':
+            case 'cm':
+               return {
+                  property: ' * ',
+                  number: null,
+                  unit: null
+               };
+            break;
+            case 'p':
+               return {
+                  property: '.',
+                  number: null,
+                  unit: null
+               };
+            break;
+            case 'c':
+               return {
+                  property: ', ',
+                  number: null,
+                  unit: null
+               };
+            break;
+         }
+      } else if (subPart.startsWith('str-')) {
+         const propertyName = subPart.substring(4);
+         return {
+            property: `${propertyName}`,
+            number: null,
+            unit: null
+         };
+      } else if (subPart.startsWith('val-')) {
          const propertyName = this.shorts[subPart.substring(4)] || subPart.substring(4);
          return {
             property: `--${propertyName}`,
             number: null,
             unit: null
          };
-      } else if (subPart.startsWith('var')) {
+      } else if (subPart.startsWith('var-')) {
          const propertyName = this.shorts[subPart.substring(4)] || subPart.substring(4);
          return {
             property: `var(--${propertyName})`,
             number: null,
             unit: null
          };
-      } else if (subPart.startsWith('hex')) {
+      } else if (subPart.startsWith('hex-')) {
          const propertyName = this.shorts[subPart.substring(4)] || subPart.substring(4);
          return {
             property: `#${propertyName}`,
+            number: null,
+            unit: null
+         };
+      } else if (subPart.startsWith('uc-')) {
+         const propertyName = this.shorts[subPart.substring(3)] || subPart.substring(3);
+         return {
+            property: `\${propertyName}`,
+            number: null,
+            unit: null
+         };
+      } else if (subPart.startsWith('text-')) {
+         const propertyName = subPart.substring(5).replace(/-/g, ' ');
+         return {
+            property: `"${propertyName}"`,
             number: null,
             unit: null
          };
