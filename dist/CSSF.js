@@ -3,7 +3,9 @@ class CSSF {
       this.version = '0.1';
       this.prefix = settings.prefix !== undefined ? settings.prefix : 'cssf';
       this.templates = Object.assign({
-            'grid-layout-standard': '[full-width-start] minmax(§0, 1fr) [outbreak-start] minmax(0, calc((§2 - §1) / 2)) [content-start] min(100% - (§0 * 2), §1) [content-end] minmax(0, calc((§2 - §1) / 2)) [outbreak-end] minmax(§0, 1fr) [full-width-end]',
+            'grid-layout-cols-standard': '[full-start] minmax(§0, 1fr) [outside-start] minmax(0, calc((§2 - §1) / 2)) [content-start] min(100% - (§0 * 2), §1) [content-end] minmax(0, calc((§2 - §1) / 2)) [outside-end] minmax(§0, 1fr) [full-end]',
+            'test-grid-layout-rows-standard': '[full-start] minmax(§0, 1fr) [outside-start] [content-start] [content-end] [outside-end] minmax(§0, 1fr) [full-end]',
+            'grid-layout-rows-standard': 'auto',
             'clamp-size-standard': 'clamp(1rem, 1rem + calc((§0 - 1rem) / (§1 - 0rem) * 100)vw, §0)',
             'clamp': 'clamp(§0, §1, §2)',
             'calc': 'calc(§0)',
@@ -15,11 +17,14 @@ class CSSF {
             'inset': 'inset(§0)',
             'min': 'min(§0, §1)',
             'max': 'max(§0, §1)',
+            'minmax': 'minmax(§0, §1)',
             'repeat': 'repeat(§0, §1)',
+            'repeat-minmax': 'repeat(§0, minmax(§1, §2))',
          },
          settings.templates || {}
       );
       this.alias = Object.assign({
+            'test-color': 'val-color-1_hex-000000--val-color-2_hex-ffffff--val-color-3_hex-ffaaaa--val-color-4_hex-aaaaff--val-color-5_hex-ffffaa--val-color-6_hex-ffaaff--val-color-7_hex-aaffaa--val-color-8_hex-aaffff',
             'test-set1': 'br1_solid--color_black--px20--py10',
             'test-set2': 'br1_solid--color_white--px20--py10',
             'test-br1': 'br1_solid--color_black',
@@ -51,9 +56,17 @@ class CSSF {
             /* -------------------------------------------------------------------------------------- */
             'fcol100': 'f_1_1_100p--box-sizing_border-box',
             /* -------------------------------------------------------------------------------------- */
-            'grid-layout': 'd_grid--tpl-grid-layout-standard_grid-template-columns_var-gl-spacing_var-gl-content_var-gl-outbreak',
+            'grid-layout': 'd_grid--tpl-grid-layout-cols-standard_grid-template-columns_var-layout-gap_var-layout-content_var-layout-outside--tpl-grid-layout-rows-standard_grid-template-rows_var-layout-gap--py_var-layout-gap',
+            'grid-layout-val': 'd_grid--tpl-grid-layout-cols-standard_grid-template-columns_§0_§1_§2--tpl-grid-layout-rows-standard_grid-template-rows_§0',
             /* -------------------------------------------------------------------------------------- */
-            'grid-brick-col-2': 'd_grid--gta_text-rh-rh_text-r1-r2_text-rf-rf',
+            /* -------------------------------------------------------------------------------------- */
+            'grid-brick-layout': 'd_grid--tpl-repeat_gtc_12_1fr--gap_var-layout-gap',
+            'gcol25': 'gc_span_3',
+            'gcol33': 'gc_span_4',
+            'gcol50': 'gc_span_6',
+            'gcol66': 'gc_span_8',
+            'gcol75': 'gc_span_9',
+            'gcol100': 'gc_span_12',
             /* -------------------------------------------------------------------------------------- */
             'clamp-font-size': 'tpl-clamp-size-standard_font-size_var-cfs-font-size_var-cfs-width',
             'btn': 'px15--py10--cursor_pointer--br3_solid_var-btn-br-color'
@@ -113,7 +126,10 @@ class CSSF {
             'f-as': 'align-self',
             'g': 'grid',
             'gta': 'grid-template-areas',
+            'gtc': 'grid-template-columns',
+            'gtr': 'grid-template-rows',
             'ga': 'grid-area',
+            'gc': 'grid-column',
             'd': 'display',
             'ca': '+',
             'cs': '-',
@@ -222,7 +238,7 @@ class CSSF {
          });
          let query = '';
          let styles = '';
-         styles += this.prefix ? `.${this.prefix}--${cssClassUse}{ ` : `.${cssClassUse}{ `;
+         styles += this.prefix ? ` .${this.prefix}--${cssClassUse} {` : `.${cssClassUse} {`;
          parts.forEach((part, partIndex) => {
             if (part.startsWith('cfn')) {
                const fnRaw = part.substring(4);
@@ -237,7 +253,7 @@ class CSSF {
                         result = eval(`this.clampBuilder(${fnVar});`);
                      break;
                   }
-               styles += `${property}: ${result} !important;`;
+               styles += ` ${property}: ${result} !important;`;
             } else {
                const subParts = part.split('_');
                const convertedSubPartsData = [];
@@ -249,7 +265,7 @@ class CSSF {
                if (subParts[0].startsWith('fn')) {
                   const fn = mainInstruction.property.substring(3);
                   const property = convertedSubPartsData.shift().property;
-                  styles += `${property}: ${fn}(`;
+                  styles += ` ${property}: ${fn}(`;
                   instructions.forEach((instruction, instructionIndex) => {
                      styles += `${instruction.property ??  ''}${instruction.number ??  ''}${instruction.unit ??  ''}`;
                   });
@@ -258,7 +274,7 @@ class CSSF {
                   const tpl = this.templates[subParts[0].substring(4)];
                   const propertyName = convertedSubPartsData.shift()['property'];                  
                   const val = this.fillTemplate(tpl, convertedSubPartsData);
-                  styles += `${propertyName}: ${val} !important;`;
+                  styles += ` ${propertyName}: ${val} !important;`;
                } else if (['media', 'media-dark', 'media-light', 'container', 'container-dark', 'container-light'].includes(mainInstruction.property)) {
                   let calc = 0;
                   if (instructions.length > 0 && (instructions[0].number && (instructions[0].unit || instructions[0].unit === ''))) {
@@ -297,7 +313,7 @@ class CSSF {
                   if (instructions.length > 0 && (instructions[0].property && instructions[0].number && (instructions[0].unit || instructions[0].unit === ''))) {
                      const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
                      properties.forEach((property) => {
-                        styles += `${property}: calc(${mainInstruction.number}${mainInstruction.unit}`;
+                        styles += ` ${property}: calc(${mainInstruction.number}${mainInstruction.unit}`;
                         instructions.forEach((instruction, instructionIndex) => {
                            styles += ` ${instruction.property} ${instruction.number}${instruction.unit}`;
                         });
@@ -307,7 +323,7 @@ class CSSF {
                      const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
                      /* ---------- */
                      properties.forEach((property) => {  
-                        styles += `${property}: ${mainInstruction.number}${mainInstruction.unit} `;
+                        styles += ` ${property}: ${mainInstruction.number}${mainInstruction.unit} `;
                         instructions.forEach((instruction, instructionIndex) => {
                            styles += ` ${instruction.property}`;
                         });
@@ -318,7 +334,7 @@ class CSSF {
                      const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
                      /* ---------- */
                      properties.forEach((property) => {                        
-                        styles += `${property}:`;
+                        styles += ` ${property}:`;
                         instructions.forEach((instruction, instructionIndex) => {
                            styles += instruction.property ? ` ${instruction.property}` : ` ${instruction.number}${instruction.unit}`;
                         });
@@ -328,7 +344,7 @@ class CSSF {
                   } else {
                      const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
                      properties.forEach((property) => {
-                        styles += `${property}: ${mainInstruction.number}${mainInstruction.unit} !important;`;
+                        styles += ` ${property}: ${mainInstruction.number}${mainInstruction.unit} !important;`;
                      });
                   }
                }               

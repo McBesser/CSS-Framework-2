@@ -8,18 +8,129 @@
    <link rel="stylesheet" media="all" href="../dist/preset-var.css">
    <link rel="stylesheet" media="all" href="../dist/form.css">
    <script src="../dist/CSSF.js"></script>
-   <style>
-      .test
-         {
-            font-size: calc ( 16px * 2 ) !important;
-         }
-   </style>
-   <script>
-
-   </script>
-  
 </head>
-<body class="cssf--val-color-1_hex-000000--val-color-2_hex-ffffff--val-color-3_hex-ffaaaa--val-color-4_hex-aaaaff--val-color-5_hex-ffffaa--val-color-6_hex-ffaaff">
+<body class="cssf--test-color--c-var_1">
+
+<hr class="cssf--border-color_var-color-3">
+
+<style>
+   :root
+      {
+         --layout-expansion: content; /* full, content, outside */
+         --layout-gap: var(--size-10);
+         --layout-content: 992px;
+         --layout-outside: 1200px;      
+      }
+
+   @media (min-width: 768px)
+      {
+         :root
+            {
+               --layout-gap: var(--size-20);
+            }
+      }
+</style>
+
+<hr class="cssf--border-color_var-color-3">
+
+<div class="gl cssf--grid-layout cssf--bg-var_2">
+   <div class="gc gbl cssf--gc_content cssf--grid-brick-layout">
+      <div class="rh cssf--gcol100"><div class="cssf--bg-var_7--p20">rh</div></div>
+      <div class="r1 cssf--gcol25"><div class="cssf--bg-var_3--p20">r1</div></div>
+      <div class="r2 cssf--gcol25"><div class="cssf--bg-var_4--p20">r2</div></div>
+      <div class="r3 cssf--gcol25"><div class="cssf--bg-var_5--p20">r3</div></div>
+      <div class="r4 cssf--gcol25"><div class="cssf--bg-var_6--p20">r4</div></div>
+      <div class="rf cssf--gcol100"><div class="cssf--bg-var_8--p20">rf</div></div>
+   </div>
+</div>
+
+<div class="gl cssf--grid-layout cssf--bg-var_6">
+   <div class="gc gbl cssf--gc_content cssf--grid-brick-layout">
+      <div class="rh cssf--gcol100"><div class="cssf--bg-var_7--p20">rh</div></div>
+      <div class="r1 cssf--gcol33"><div class="cssf--bg-var_3--p20">r1</div></div>
+      <div class="r2 cssf--gcol33"><div class="cssf--bg-var_4--p20">r2</div></div>
+      <div class="r3 cssf--gcol33"><div class="cssf--bg-var_5--p20">r3</div></div>
+      <div class="rf cssf--gcol100"><div class="cssf--bg-var_8--p20">rf</div></div>
+   </div>
+</div>
+
+<hr class="cssf--border-color_var-color-3">
+
+<div class="gl cssf--grid-layout cssf--bg-var_5">
+   <div class="gc cssf--gc_content cssf--bg-var_3">
+      content
+   </div>
+   <div class="gc cssf--gc_content cssf--bg-var_3">
+      content
+   </div>
+   <div class="gc cssf--gc_outside cssf--bg-var_3">
+      outside
+   </div>
+   <div class="gc cssf--gc_content cssf--bg-var_3">
+      content
+   </div>
+   <div class="gc cssf--gc_full cssf--bg-var_3">
+      full
+   </div>
+   <div class="gc cssf--gc_content cssf--bg-var_3">
+      content
+   </div>
+</div>
+
+
+<hr class="cssf--border-color_var-color-3">
+
+<div class="gl cssf--grid-layout cssf--bg-var_6">
+   <div class="gc cssf--gc_content cssf--grid-brick-x3 cssf--mq576--grid-brick-33-33-33 cssf--mq768--grid-brick-33-33-33">
+      <div class="rh cssf--ga_str-rh"><div class="cssf--bg-var_7--p20">rh</div></div>
+      <div class="r1 cssf--ga_str-r1"><div class="cssf--bg-var_3--p20">r1</div></div>
+      <div class="r2 cssf--ga_str-r2"><div class="cssf--bg-var_4--p20">r2</div></div>
+      <div class="r3 cssf--ga_str-r3"><div class="cssf--bg-var_5--p20">r3</div></div>
+      <div class="rf cssf--ga_str-rf"><div class="cssf--bg-var_8--p20">rf</div></div>
+   </div>
+</div>
+<div class="gl cssf--grid-layout cssf--bg-var_2">
+   <div class="gc cssf--gc_content cssf--grid-brick-x3 cssf--mq576--grid-brick-33-33-33 cssf--mq768--grid-brick-33-33-33">
+      <div class="rh cssf--ga_str-rh"><div class="cssf--bg-var_7--p20">rh</div></div>
+      <div class="r1 cssf--ga_str-r1"><div class="cssf--bg-var_3--p20">r1</div></div>
+      <div class="r2 cssf--ga_str-r2"><div class="cssf--bg-var_4--p20">r2</div></div>
+      <div class="r3 cssf--ga_str-r3"><div class="cssf--bg-var_5--p20">r3</div></div>
+      <div class="rf cssf--ga_str-rf"><div class="cssf--bg-var_8--p20">rf</div></div>
+   </div>
+</div>
+<div class="gl cssf--grid-layout cssf--bg-var_6">
+   <div class="gc cssf--gc_content cssf--grid-brick-x3 cssf--mq576--grid-brick-33-33-33 cssf--mq768--grid-brick-33-33-33">
+      <div class="rh cssf--ga_str-rh"><div class="cssf--bg-var_7--p20">rh</div></div>
+      <div class="r1 cssf--ga_str-r1"><div class="cssf--bg-var_3--p20">r1</div></div>
+      <div class="r2 cssf--ga_str-r2"><div class="cssf--bg-var_4--p20">r2</div></div>
+      <div class="r3 cssf--ga_str-r3"><div class="cssf--bg-var_5--p20">r3</div></div>
+      <div class="rf cssf--ga_str-rf"><div class="cssf--bg-var_8--p20">rf</div></div>
+   </div>
+</div>
+<hr class="cssf--border-color_var-color-3">
+
+<div class="cssf--con_992--c-var_1--grid-brick-x3--gap10 cssf--cq300--grid-brick-33-33-33--gap10 cssf--cq400--grid-brick-33-33-33--gap20">
+   <div class="cssf--ga_str-rh--bg-var_7--p20">rh</div>
+   <div class="cssf--ga_str-r1--bg-var_3--p20">r1</div>
+   <div class="cssf--ga_str-r2--bg-var_4--p20">r2</div>
+   <div class="cssf--ga_str-r3--bg-var_5--p20">r3</div>
+   <div class="cssf--ga_str-rf--bg-var_8--p20">rf</div>
+</div>
+
+<hr class="cssf--border-color_var-color-3">
+
+<div class="cssf--con_992--c-var_1--grid-brick--gap10 cssf--cq300--grid-brick-33-33-33--gap10 cssf--cq400--grid-brick-33-33-33--gap20">
+   <div class="cssf--ga_str-rh--bg-var_7--p20">rh</div>
+   <div class="cssf--ga_str-r1--bg-var_3--p20">r1</div>
+   <div class="cssf--ga_str-rf--bg-var_8--p20">rf</div>
+</div>
+
+<hr class="cssf--border-color_var-color-3">
+
+
+
+
+
 
 <div class="cssf--con_768--br_1px_solid_var-color-4 test">.test</div>
 <div class="cssf--con_768--bg-var_3--c-var_1--grid-brick-col-2">
@@ -28,6 +139,42 @@
    <div class="cssf--ga_str-r2">r2</div>
    <div class="cssf--ga_str-rf">rf</div>
 </div>
-
+<hr>
+<div class="cssf--con_768--c-var_1--grid-brick-66-33--gap20">
+   <div class="cssf--ga_str-rh--bg-var_3--p20">rh</div>
+   <div class="cssf--ga_str-r1--bg-var_4--p20">r1</div>
+   <div class="cssf--ga_str-r2--bg-var_5--p20">r2</div>
+   <div class="cssf--ga_str-rf--bg-var_6--p20">rf</div>
+</div>
+<hr>
+<div class="cssf--con_768--c-var_1--grid-brick-50-50--gap20">
+   <div class="cssf--ga_str-rh--bg-var_3--p20">rh</div>
+   <div class="cssf--ga_str-r1--bg-var_4--p20">r1</div>
+   <div class="cssf--ga_str-r2--bg-var_5--p20">r2</div>
+   <div class="cssf--ga_str-rf--bg-var_6--p20">rf</div>
+</div>
+<hr>
+<div class="cssf--con_768--c-var_1--grid-brick-25-25-25-25--gap20">
+   <div class="cssf--ga_str-r1--bg-var_3--p20">r1</div>
+   <div class="cssf--ga_str-r2--bg-var_4--p20">r2</div>
+   <div class="cssf--ga_str-r3--bg-var_5--p20">r3</div>
+   <div class="cssf--ga_str-r4--bg-var_6--p20">r4</div>
+</div>
+<hr>
+<div class="cssf--con_768--c-var_1--grid-brick-25-25-25-25--gap20">
+   <div class="cssf--ga_str-r1--bg-var_3--p20">r1</div>
+   <div class="cssf--ga_str-r2--bg-var_4--p20">r2</div>
+   <div class="cssf--ga_str-r4--bg-var_6--p20">r4</div>
+</div>
+<hr>
+<div class="cssf--con_768--c-var_1--grid-brick-25-25-25-25--gap20">
+   <div class="cssf--ga_str-rh--bg-var_7--p20">rh</div>
+   <div class="cssf--ga_str-r1--bg-var_3--p20">r1</div>
+   <div class="cssf--ga_str-r2--bg-var_4--p20">r2</div>
+   <div class="cssf--ga_str-r3--bg-var_5--p20">r3</div>
+   <div class="cssf--ga_str-r4--bg-var_6--p20">r4</div>
+   <div class="cssf--ga_str-rf--bg-var_8--p20">rf</div>
+</div>
+<hr>
 </body>
 </html>
