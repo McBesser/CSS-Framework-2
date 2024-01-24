@@ -36,9 +36,9 @@ class CSSF {
             'bg-var': 'bg_var-color-§0',
             /* -------------------------------------------------------------------------------------- */
             /* con_1200 = max-width: 1200 */
-            'con': 'max-width§0px--m_auto--box-sizing_border-box',
+            'con': 'max-width§0px--m_auto--box-sizing_border-box--container-type_inline-size',
             /* -------------------------------------------------------------------------------------- */
-            'flex-layout': 'd_flex--f-d_row--f-w_wrap--f-jc_start--f-ac_stretch--f-ai_stretch',
+            'flex-layout': 'd_flex--fd_row--fw_wrap--jc_start--ac_stretch--ai_stretch--container-type_inline-size',
             /* -------------------------------------------------------------------------------------- */
             'fcol25': 'f_1_1--flex-basis100p_cd4int--max-width100p_cd4int--box-sizing_border-box',
             'fcol33': 'f_1_1--flex-basis100p_cd3int--max-width100p_cd3int--box-sizing_border-box',
@@ -56,11 +56,12 @@ class CSSF {
             /* -------------------------------------------------------------------------------------- */
             'fcol100': 'f_1_1_100p--box-sizing_border-box',
             /* -------------------------------------------------------------------------------------- */
-            'grid-layout': 'd_grid--tpl-grid-layout-cols-standard_grid-template-columns_var-layout-gap_var-layout-content_var-layout-outside--tpl-grid-layout-rows-standard_grid-template-rows_var-layout-gap--py_var-layout-gap',
-            'grid-layout-val': 'd_grid--tpl-grid-layout-cols-standard_grid-template-columns_§0_§1_§2--tpl-grid-layout-rows-standard_grid-template-rows_§0',
+            'grid-layout': 'd_grid--tpl-grid-layout-cols-standard_grid-template-columns_var-layout-gap_var-layout-content_var-layout-outside--tpl-grid-layout-rows-standard_grid-template-rows_var-layout-gap--tpl-var_val-grid-layout-spacing_val-container-spacing_var-layout-gap--fn-calc_py_var-grid-layout-spacing_op-div_2--container-type_inline-size',
+            'grid-layout-val': 'd_grid--tpl-grid-layout-cols-standard_grid-template-columns_§0_§1_§2--tpl-grid-layout-rows-standard_grid-template-rows_§0--container-type_inline-size',
+            'grid-layout-main-gap': 'tpl-var_val-grid-layout-spacing_val-container-spacing_var-layout-gap--fn-calc_py_var-grid-layout-spacing_op-div_2',
             /* -------------------------------------------------------------------------------------- */
             /* -------------------------------------------------------------------------------------- */
-            'grid-brick-layout': 'd_grid--tpl-repeat_gtc_12_1fr--gap_var-layout-gap',
+            'grid-brick-layout': 'd_grid--tpl-repeat_gtc_12_1fr--gap_var-layout-gap--container-type_inline-size',
             'gcol25': 'gc_span_3',
             'gcol33': 'gc_span_4',
             'gcol50': 'gc_span_6',
@@ -95,7 +96,11 @@ class CSSF {
             'pb': 'padding-bottom',
             'pl': 'padding-left',
             'w': 'width',
+            'maxw': 'max-width',
+            'minw': 'min-width',
             'h': 'height',
+            'maxh': 'max-height',
+            'minh': 'min-height',
             'c': 'color',
             'bg': 'background',
             'bg-c': 'background-color',
@@ -118,12 +123,12 @@ class CSSF {
             'l': 'left',
             'b': 'bottom',
             'f': 'flex',
-            'f-d': 'flex-direction',
-            'f-w': 'flex-wrap',
-            'f-jc': 'justify-content',
-            'f-ai': 'align-items',
-            'f-ac': 'align-content',
-            'f-as': 'align-self',
+            'fd': 'flex-direction',
+            'fw': 'flex-wrap',
+            'ai': 'align-items',
+            'as': 'align-self',
+            'ac': 'align-content'
+            'jc': 'justify-content'
             'g': 'grid',
             'gta': 'grid-template-areas',
             'gtc': 'grid-template-columns',
@@ -140,7 +145,7 @@ class CSSF {
             'between': 'space-between',
             'around': 'space-around',
             'lc': ['line-clamp', '-webkit-line-clamp'],
-            'bo': ['box-orient', '-webkit-box-orient']
+            'bo': ['box-orient', '-webkit-box-orient'],
          },
          settings.shorts || {}
       );
@@ -264,12 +269,18 @@ class CSSF {
                const instructions = convertedSubPartsData;
                if (subParts[0].startsWith('fn')) {
                   const fn = mainInstruction.property.substring(3);
-                  const property = convertedSubPartsData.shift().property;
-                  styles += ` ${property}: ${fn}(`;
-                  instructions.forEach((instruction, instructionIndex) => {
-                     styles += `${instruction.property ??  ''}${instruction.number ??  ''}${instruction.unit ??  ''}`;
-                  });
-                  styles += `) !important;`;
+                  const propertiesData = convertedSubPartsData.shift().property;
+                  const properties = Array.isArray(propertiesData) ? propertiesData : [propertiesData];
+                  /* ---------- */
+                     properties.forEach((property) => {                        
+                        styles += ` ${property}: ${fn}(`;
+                        instructions.forEach((instruction, instructionIndex) => {
+                           styles += `${instruction.property ??  ''}${instruction.number ??  ''}${instruction.unit ??  ''}`;
+                        });
+                        styles += `) !important;`;    
+                     });
+                     /* ---------- */
+                 
                } else if (subParts[0].startsWith('tpl')) {
                   const tpl = this.templates[subParts[0].substring(4)];
                   const propertyName = convertedSubPartsData.shift()['property'];                  
@@ -294,7 +305,7 @@ class CSSF {
                      const properties = Array.isArray(mainInstruction.property) ? mainInstruction.property : [mainInstruction.property];
                      properties.forEach((property) => {
                         const convProperty = (['media', 'media-dark', 'media-light'].includes(property)) ? 'media' : (['container', 'container-dark', 'container-light'].includes(property) ? 'container' : '');
-                        query += `@${convProperty}(min-width: ${mainInstruction.number}${mainInstruction.unit})`;
+                        query += (convProperty === 'media') ? `@${convProperty} (min-width: ${mainInstruction.number}${mainInstruction.unit}) ` : `@${convProperty} (min-inline-size: ${mainInstruction.number}${mainInstruction.unit}) `;
                         query += (mainInstruction.property === 'media-dark' || mainInstruction.property === 'container-dark') ? ` and (prefers-color-scheme: dark)` : ``;
                         query += (mainInstruction.property === 'media-light' || mainInstruction.property === 'container-light') ? ` and (prefers-color-scheme: light)` : ``;
                      });
@@ -487,7 +498,7 @@ class CSSF {
             number: null,
             unit: null
          };
-      } else if (subPart.startsWith('text-')) {
+      } else if (subPart.startsWith('qstr-')) {
          const propertyName = subPart.substring(5).replace(/-/g, ' ');
          return {
             property: `"${propertyName}"`,
