@@ -23,6 +23,7 @@ html
 body 
    {
       min-height: 100dvh;
+      margin: 0rem;
    }
 
 picture
@@ -35,6 +36,7 @@ video
    {
       display: block;
       max-width: 100%;
+      height: auto;
    }
 
 h1,
