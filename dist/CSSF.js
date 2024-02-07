@@ -62,6 +62,18 @@ class CSSF {
             /* -------------------------------------------------------------------------------------- */
             /* -------------------------------------------------------------------------------------- */
             'grid-brick-layout': 'd_grid--tpl-repeat_gtc_12_1fr--gap_var-layout-gap--container-type_inline-size',
+            'gcolx1': 'gc_span_1',
+            'gcolx2': 'gc_span_2',
+            'gcolx3': 'gc_span_3',
+            'gcolx4': 'gc_span_4',
+            'gcolx5': 'gc_span_5',
+            'gcolx6': 'gc_span_6',
+            'gcolx7': 'gc_span_7',
+            'gcolx8': 'gc_span_8',
+            'gcolx9': 'gc_span_9',
+            'gcolx10': 'gc_span_10',
+            'gcolx11': 'gc_span_11',
+            'gcolx12': 'gc_span_12',
             'gcol25': 'gc_span_3',
             'gcol33': 'gc_span_4',
             'gcol50': 'gc_span_6',
