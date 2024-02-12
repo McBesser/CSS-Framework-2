@@ -141,6 +141,7 @@ class CSSF {
             'as': 'align-self',
             'ac': 'align-content',
             'jc': 'justify-content',
+            'o': 'order',
             'g': 'grid',
             'gta': 'grid-template-areas',
             'gtc': 'grid-template-columns',
@@ -158,6 +159,7 @@ class CSSF {
             'around': 'space-around',
             'lc': ['line-clamp', '-webkit-line-clamp'],
             'bo': ['box-orient', '-webkit-box-orient'],
+            'z': 'z-index',
          },
          settings.shorts || {}
       );
