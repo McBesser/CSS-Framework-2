@@ -257,7 +257,7 @@ class CSSF {
          });
          let query = '';
          let styles = '';
-         styles += this.prefix ? ` .${this.prefix}--${cssClassUse} {` : `.${cssClassUse} {`;
+         let target = '';
          parts.forEach((part, partIndex) => {
             if (part.startsWith('cfn')) {
                const fnRaw = part.substring(4);
@@ -300,6 +300,9 @@ class CSSF {
                   const propertyName = convertedSubPartsData.shift()['property'];                  
                   const val = this.fillTemplate(tpl, convertedSubPartsData);
                   styles += ` ${propertyName}: ${val} !important;`;
+               } else if (subParts[0].startsWith('target')) {
+                  const propertyName = convertedSubPartsData.shift()['property'];     
+                  target += `${propertyName}`;
                } else if (['media', 'media-dark', 'media-light', 'container', 'container-dark', 'container-light'].includes(mainInstruction.property)) {
                   let calc = 0;
                   if (instructions.length > 0 && (instructions[0].number && (instructions[0].unit || instructions[0].unit === ''))) {
@@ -376,6 +379,8 @@ class CSSF {
             }
 
          });
+         
+         styles = (this.prefix ? ` .${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + `${target}` + ` {` + styles;
          styles += ` }`;
          data.push(query !== '' ? `${query}{ ${styles} }` : styles);
       });
@@ -514,6 +519,14 @@ class CSSF {
          };
       } else if (subPart.startsWith('qstr-')) {
          const propertyName = subPart.substring(5).replace(/-/g, ' ');
+         return {
+            property: `"${propertyName}"`,
+            number: null,
+            unit: null
+         };
+      }
+      } else if (subPart.startsWith('target-')) {
+         const propertyName = subPart.substring(6).replace(/-tag-/g, ' ').replace(/-class-/g, ' .').replace(/-id-/g, ' #');
          return {
             property: `"${propertyName}"`,
             number: null,
