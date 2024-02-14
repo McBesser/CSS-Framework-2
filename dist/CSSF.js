@@ -524,7 +524,6 @@ class CSSF {
             number: null,
             unit: null
          };
-      }
       } else if (subPart.startsWith('target-')) {
          const propertyName = subPart.substring(6).replace(/-tag-/g, ' ').replace(/-class-/g, ' .').replace(/-id-/g, ' #');
          return {
