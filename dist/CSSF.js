@@ -160,6 +160,20 @@ class CSSF {
             'lc': ['line-clamp', '-webkit-line-clamp'],
             'bo': ['box-orient', '-webkit-box-orient'],
             'z': 'z-index',
+            'tt': 'target-tag',
+            'tc': 'target-class',
+            'ti': 'target-id',
+            'tct': 'target-close-tag',
+            'tcc': 'target-close-class',
+            'tci': 'target-close-id',
+            'tw': 'target-wildcard',
+            'tn': 'target-next',
+            'twt': 'target-wildcard-tag',
+            'twc': 'target-wildcard-class',
+            'twi': 'target-wildcard-id',
+            'tnt': 'target-next-tag',
+            'tnc': 'target-next-class',
+            'tni': 'target-next-id',
          },
          settings.shorts || {}
       );
@@ -260,7 +274,17 @@ class CSSF {
          let target = '';
          parts.forEach((part, partIndex) => {
             if (part.startsWith('target')) {
-                  const propertyName = part.substring(6).replace(/-tag-/g, ' ').replace(/-class-/g, ' .').replace(/-id-/g, ' #');  
+                  const propertyName = part.substring(7)
+                                           .replace(/pseudo-class-/g, ':')  
+                                           .replace(/pseudo-element-/g, '::') 
+                                           .replace(/close-tag-/g, '')
+                                           .replace(/tag-/g, ' ')
+                                           .replace(/close-class-/g, '.')
+                                           .replace(/class-/g, ' .')
+                                           .replace(/close-id-/g, '#') 
+                                           .replace(/id-/g, ' #') 
+                                           .replace(/wildcard-/g, ' *')
+                                           .replace(/next-/g, ' >');   
                   target += `${propertyName}`;
             } else if (part.startsWith('cfn')) {
                const fnRaw = part.substring(4);
