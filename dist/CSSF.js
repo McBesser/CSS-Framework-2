@@ -259,7 +259,10 @@ class CSSF {
          let styles = '';
          let target = '';
          parts.forEach((part, partIndex) => {
-            if (part.startsWith('cfn')) {
+            if (part.startsWith('target')) {
+                  const propertyName = part.substring(6).replace(/-tag-/g, ' ').replace(/-class-/g, ' .').replace(/-id-/g, ' #');  
+                  target += `${propertyName}`;
+            } else if (part.startsWith('cfn')) {
                const fnRaw = part.substring(4);
                const subParts = fnRaw.split('_');
                const fnName = subParts.shift();
@@ -299,10 +302,7 @@ class CSSF {
                   const tpl = this.templates[subParts[0].substring(4)];
                   const propertyName = convertedSubPartsData.shift()['property'];                  
                   const val = this.fillTemplate(tpl, convertedSubPartsData);
-                  styles += ` ${propertyName}: ${val} !important;`;
-               } else if (subParts[0].startsWith('target')) {
-                  const propertyName = convertedSubPartsData.shift()['property'];     
-                  target += `${propertyName}`;
+                  styles += ` ${propertyName}: ${val} !important;`;               
                } else if (['media', 'media-dark', 'media-light', 'container', 'container-dark', 'container-light'].includes(mainInstruction.property)) {
                   let calc = 0;
                   if (instructions.length > 0 && (instructions[0].number && (instructions[0].unit || instructions[0].unit === ''))) {
@@ -524,15 +524,8 @@ class CSSF {
             number: null,
             unit: null
          };
-      } else if (subPart.startsWith('target-')) {
-         const propertyName = subPart.substring(6).replace(/-tag-/g, ' ').replace(/-class-/g, ' .').replace(/-id-/g, ' #');
-         return {
-            property: `"${propertyName}"`,
-            number: null,
-            unit: null
-         };
-      }
-
+      } 
+      
       let regex = /(\D*[A-Za-z]+)(-?\d+)(\D*)/;
       let matches = subPart.match(regex);
       if (!matches || matches.length !== 4) {
