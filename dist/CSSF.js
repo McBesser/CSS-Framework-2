@@ -55,6 +55,7 @@ class CSSF {
             'fcol75gx1': 'f_1_1--flex-basis100p_cd4int_cm3int_cs§0--max-width100p_cd2int_cs§0_cd2int_cm1int--box-sizing_border-box',
             /* -------------------------------------------------------------------------------------- */
             'fcol100': 'f_1_1_100p--box-sizing_border-box',
+            'fcolauto': 'f_1_1_auto--box-sizing_border-box',
             /* -------------------------------------------------------------------------------------- */
             'grid-layout': 'd_grid--tpl-grid-layout-cols-standard_grid-template-columns_var-layout-gap_var-layout-content_var-layout-outside--tpl-grid-layout-rows-standard_grid-template-rows_var-layout-gap--tpl-var_val-grid-layout-spacing_val-container-spacing_var-layout-gap--fn-calc_py_var-grid-layout-spacing_op-div_2--container-type_inline-size',
             'grid-layout-val': 'd_grid--tpl-grid-layout-cols-standard_grid-template-columns_§0_§1_§2--tpl-grid-layout-rows-standard_grid-template-rows_§0--container-type_inline-size',
