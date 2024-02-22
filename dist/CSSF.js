@@ -83,7 +83,8 @@ class CSSF {
             'gcol100': 'gc_span_12',
             /* -------------------------------------------------------------------------------------- */
             'clamp-font-size': 'tpl-clamp-size-standard_font-size_var-cfs-font-size_var-cfs-width',
-            'btn': 'px15--py10--cursor_pointer--br3_solid_var-btn-br-color'
+            'btn': 'px15--py10--cursor_pointer--br3_solid_var-btn-br-color',
+            'visually-hidden': 'pos_absolute--h1px--w1px--of_hidden--clip_tpl-rect_1px_op-c_1px_op-c_1px_op-c_1px--ws_nowrap'
          },
          settings.alias || {}
       );
@@ -108,7 +109,9 @@ class CSSF {
             'pr': 'padding-right',
             'pb': 'padding-bottom',
             'pl': 'padding-left',
+            'pos': 'position',
             'w': 'width',
+            'ws': 'white-space',
             'maxw': 'max-width',
             'minw': 'min-width',
             'h': 'height',
@@ -143,6 +146,7 @@ class CSSF {
             'ac': 'align-content',
             'jc': 'justify-content',
             'o': 'order',
+            'of': 'overflow',
             'g': 'grid',
             'gta': 'grid-template-areas',
             'gtc': 'grid-template-columns',
