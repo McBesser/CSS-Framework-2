@@ -151,6 +151,7 @@
 
     --ol-margin: var(--default-text-margin, 0);
     --ol-padding: var(--default-text-margin, 0);
+    --ol-counter-reset: numbering;
     --ol-li-margin: var(--default-item-margin, 0);
     --ol-li-margin-left: 0;
     --ol-li-padding: 0;
@@ -485,6 +486,7 @@
    line-height: var(--ul-li-marker-line-height);
 } 
 .cssf ol {
+   counter-reset: var(--ol-counter-reset);
    margin: var(--ol-margin);
    padding: var(--ol-padding);
 }
