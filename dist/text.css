@@ -137,17 +137,18 @@
     --ul-li-font-size: var(--size-16);
     --ul-li-line-height: 1.2;
 
-    --ul-li-before-content: "-";
-    --ul-li-before-top: 50%;
-    --ul-li-before-color: black;
-    --ul-li-before-font-family: inherit;
-    --ul-li-before-font-style: inherit;
-    --ul-li-before-font-variant: inherit;
-    --ul-li-before-font-size: 1em;
-    --ul-li-before-line-height: 1.2;
-    --ul-li-before-font-weight: inherit;
-    --ul-li-before-width: auto;
-    --ul-li-before-margin-left: 0;
+    --ul-li-marker-position: static;
+    --ul-li-marker-content: "-";
+    --ul-li-marker-top: auto;
+    --ul-li-marker-color: black;
+    --ul-li-marker-font-family: inherit;
+    --ul-li-marker-font-style: inherit;
+    --ul-li-marker-font-variant: inherit;
+    --ul-li-marker-font-size: 1em;
+    --ul-li-marker-line-height: 1.2;
+    --ul-li-marker-font-weight: inherit;
+    --ul-li-marker-width: auto;
+    --ul-li-marker-margin-left: 0;
 
     --ol-margin: var(--default-text-margin, 0);
     --ol-padding: var(--default-text-margin, 0);
@@ -159,18 +160,19 @@
     --ol-li-color: var(--color-3);
     --ol-li-font-size: var(--size-16);
     --ol-li-line-height: 1.2;
-
-    --ol-li-before-content: counter(numbering) ".";
-    --ol-li-before-top: 50%;
-    --ol-li-before-color: var(--color-3);
-    --ol-li-before-font-family: inherit;
-    --ol-li-before-font-style: inherit;
-    --ol-li-before-font-variant: inherit;
-    --ol-li-before-font-size: 1em;
-    --ol-li-before-line-height: 1.2;
-    --ol-li-before-font-weight: inherit;
-    --ol-li-before-width: auto;
-    --ol-li-before-margin-left: 0;
+    
+    --ol-li-marker-position: static;
+    --ol-li-marker-content: counter(numbering) ".";
+    --ol-li-marker-top: auto;
+    --ol-li-marker-color: var(--color-3);
+    --ol-li-marker-font-family: inherit;
+    --ol-li-marker-font-style: inherit;
+    --ol-li-marker-font-variant: inherit;
+    --ol-li-marker-font-size: 1em;
+    --ol-li-marker-line-height: 1.2;
+    --ol-li-marker-font-weight: inherit;
+    --ol-li-marker-width: auto;
+    --ol-li-marker-margin-left: 0;
 
     --a-font-family: sans-serif;
     --a-font-style: normal;
@@ -467,24 +469,24 @@
    font-size: var(--ul-li-font-size);
    line-height: var(--ul-li-line-height);
 }
-.cssf ul li::before {  
-   position: absolute;
+.cssf ul li::marker {  
    display: inline-block; 
-   content: var(--ul-li-before-content);
-   top: var(--ul-li-before-top);
-   color: var(--ul-li-before-color);
-   font-family: var(--ul-li-before-font-family);
-   font-style: var(--ul-li-before-font-style);
-   font-variant: var(--ul-li-before-font-variant);
-   font-size: var(--ul-li-before-font-size);
-   line-height: var(--ul-li-before-line-height);
-   font-weight: var(--ul-li-before-font-weight); 
-   width: var(--ul-li-before-width);
-   margin-left: var(--ul-li-before-margin-left);
+   position: var(--ul-li-marker-position);
+   content: var(--ul-li-marker-content);
+   top: var(--ul-li-marker-top);
+   color: var(--ul-li-marker-color);
+   font-family: var(--ul-li-marker-font-family);
+   font-style: var(--ul-li-marker-font-style);
+   font-variant: var(--ul-li-marker-font-variant);
+   font-size: var(--ul-li-marker-font-size);
+   line-height: var(--ul-li-marker-line-height);
+   font-weight: var(--ul-li-marker-font-weight); 
+   width: var(--ul-li-marker-width);
+   margin-left: var(--ul-li-marker-margin-left);
 } 
 .cssf ol {
-   margin: var(--ol--margin);
-   padding: var(--ol--padding);
+   margin: var(--ol-margin);
+   padding: var(--ol-padding);
 }
 .cssf ol li {
    position: relative;
@@ -497,20 +499,20 @@
    font-size: var(--ol-li-font-size);
    line-height: var(--ol-li-line-height);
 }
-.cssf ol li::before {  
-   position: absolute;
+.cssf ol li::marker {  
    display: inline-block; 
-   content: var(--ol-li-before-content);
-   top: var(--ol-li-before-top);
-   color: var(--ol-li-before-color);
-   font-family: var(--ol-li-before-font-family);
-   font-style: var(--ol-li-before-font-style);
-   font-variant: var(--ol-li-before-font-variant);
-   font-size: var(--ol-li-before-font-size);
-   line-height: var(--ol-li-before-line-height);
-   font-weight: var(--ol-li-before-font-weight); 
-   width: var(--ol-li-before-width);
-   margin-left: var(--ol-li-before-margin-left);
+   position: var(--ol-li-marker-position);
+   content: var(--ol-li-marker-content);
+   top: var(--ol-li-marker-top);
+   color: var(--ol-li-marker-color);
+   font-family: var(--ol-li-marker-font-family);
+   font-style: var(--ol-li-marker-font-style);
+   font-variant: var(--ol-li-marker-font-variant);
+   font-size: var(--ol-li-marker-font-size);
+   line-height: var(--ol-li-marker-line-height);
+   font-weight: var(--ol-li-marker-font-weight); 
+   width: var(--ol-li-marker-width);
+   margin-left: var(--ol-li-marker-margin-left);
 } 
 
 
