@@ -1,8 +1,8 @@
 :root {
-    --hr-margin: 0;
+    --hr-margin: var(--default-text-margin, 0);
     --hr-border-bottom: 1px solid black;
 
-    --p-margin: 0;
+    --p-margin: var(--default-text-margin, 0);
     --p-font-family: sans-serif;
     --p-font-style: normal;
     --p-font-variant: normal;
@@ -15,7 +15,7 @@
     --h1-font-style: normal;
     --h1-font-weight: bold;
     --h1-color: var(--color-4);
-    --h1-margin: 0;
+    --h1-margin: var(--default-text-margin, 0);
     --h1-font-size: var(--size-32);
     --h1-line-height: 1.2;
     --h1-letter-spacing: normal;
@@ -25,7 +25,7 @@
     --h2-font-style: normal;
     --h2-font-weight: bold;
     --h2-color: var(--color-4);
-    --h2-margin: 0;
+    --h2-margin: var(--default-text-margin, 0);
     --h2-font-size: var(--size-24);
     --h2-line-height: 1.2;
     --h2-letter-spacing: normal;
@@ -35,7 +35,7 @@
     --h3-font-style: normal;
     --h3-font-weight: bold;
     --h3-color: var(--color-4);
-    --h3-margin: 0;
+    --h3-margin: var(--default-text-margin, 0);
     --h3-font-size: var(--size-20);
     --h3-line-height: 1.2;
     --h3-letter-spacing: normal;
@@ -45,7 +45,7 @@
     --h4-font-style: normal;
     --h4-font-weight: bold;
     --h4-color: var(--color-4);
-    --h4-margin: 0;
+    --h4-margin: var(--default-text-margin, 0);
     --h4-font-size: var(--size-18);
     --h4-line-height: 1.2;
     --h4-letter-spacing: normal;
@@ -55,7 +55,7 @@
     --h5-font-style: normal;
     --h5-font-weight: bold;
     --h5-color: var(--color-4);
-    --h5-margin: 0;
+    --h5-margin: var(--default-text-margin, 0);
     --h5-font-size: var(--size-16);
     --h5-line-height: 1.2;
     --h5-letter-spacing: normal;
@@ -65,7 +65,7 @@
     --h6-font-style: normal;
     --h6-font-weight: bold;
     --h6-color: var(--color-4);
-    --h6-margin: 0;
+    --h6-margin: var(--default-text-margin, 0);
     --h6-font-size: var(--size-14);
     --h6-line-height: 1.2;
     --h6-letter-spacing: normal;
@@ -85,7 +85,7 @@
     --em-line-height: inherit;
     --em-color: inherit;
 
-    --blockquote-margin: 0;
+    --blockquote-margin: var(--default-text-margin, 0);
     --blockquote-padding: 0;
     --blockquote-background: none;
 
@@ -126,9 +126,9 @@
     --blockquote-cite-text-align: right;
     --blockquote-cite-color: var(--color-7);
 
-    --ul-margin: 0;
+    --ul-margin: var(--default-text-margin, 0);
     --ul-padding: 0;
-    --ul-li-margin: 0;
+    --ul-li-margin: var(--default-item-margin, 0);
     --ul-li-font-family: sans-serif;
     --ul-li-font-style: normal;
     --ul-li-font-variant: normal;
@@ -150,8 +150,8 @@
     --ul-li-before-margin-left: 0;
 
     --ol-margin: 0;
-    --ol-padding: 0;
-    --ol-li-margin: 0;
+    --ol-padding: var(--default-text-margin, 0);
+    --ol-li-margin: var(--default-item-margin, 0);
     --ol-li-font-family: sans-serif;
     --ol-li-font-style: normal;
     --ol-li-font-variant: normal;
@@ -258,6 +258,7 @@
     --a-file-svg-after-content: "";
 
     --table-background: none;
+    --table-margin: var(--default-text-margin, 0);
     --table-border: none;
     --table-border-radius: 0;
     --table-thead-background: none;
@@ -741,8 +742,9 @@
 /* table */
 
 .cssf table {
+   margin: var(--table-margin);
    background: var(--table-background);
-   background: var(--table-border);
+   border: var(--table-border);
 }
 .cssf table thead {
    background: var(--table-thead-background);
