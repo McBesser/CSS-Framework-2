@@ -455,6 +455,7 @@
    color: var(--blockquote-cite-color);
 }
 .cssf ul { 
+   list-style: none;
    margin: var(--ul-margin);
    padding: var(--ul-padding);
 }
@@ -487,6 +488,7 @@
    line-height: var(--ul-li-marker-line-height);
 } 
 .cssf ol {
+   list-style: none;
    counter-reset: var(--ol-counter-reset);
    margin: var(--ol-margin);
    padding: var(--ol-padding);
