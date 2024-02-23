@@ -85,7 +85,8 @@ class CSSF {
             'clamp-font-size': 'tpl-clamp-size-standard_font-size_var-cfs-font-size_var-cfs-width',
             'btn': 'px15--py10--cursor_pointer--br3_solid_var-btn-br-color',
             'visually-hidden': 'pos_absolute--h1px--w1px--of_hidden--tpl-rect_clip_1px_1px_1px_1px--ws_nowrap',
-            'focusable': 'target-pseudo-class-focus--pos_static--h_auto--w_auto--of_visible--clip_auto'
+            'focusable': 'target-pseudo-class-focus--pos_static--h_auto--w_auto--of_visible--clip_auto',
+            'overlay': 'pos_fixed--d_none--w100p--h100p--t0--l0--r0--b0--tpl-rgba_bg_0_0_0_0op-p5--z_2--cur_pointer'
          },
          settings.alias || {}
       );
@@ -119,6 +120,7 @@ class CSSF {
             'maxh': 'max-height',
             'minh': 'min-height',
             'c': 'color',
+            'cur': 'cursor',
             'bg': 'background',
             'bg-c': 'background-color',
             'br': 'border',
