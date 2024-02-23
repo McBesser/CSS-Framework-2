@@ -573,8 +573,12 @@ class CSSF {
             let number = parseInt(matches[1], 10);
             let unit = (matches[2].endsWith('pxrem')) ? 'rem' : matches[2];
             number = (matches[2].endsWith('pxrem')) ? number / 16 : number;
+            number = (unit === 'c') ? number / 100 : number;
+            number = (unit === 'k') ? number / 1000 : number;
             unit = (unit === 'p') ? '%' : unit;
             unit = (unit === 'int') ? '' : unit;
+            unit = (unit === 'c') ? '' : unit;
+            unit = (unit === 'k') ? '' : unit;
             return {
                property: null,
                number: number,
