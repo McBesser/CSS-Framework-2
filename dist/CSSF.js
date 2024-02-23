@@ -86,7 +86,7 @@ class CSSF {
             'btn': 'px15--py10--cursor_pointer--br3_solid_var-btn-br-color',
             'visually-hidden': 'pos_absolute--h1px--w1px--of_hidden--tpl-rect_clip_1px_1px_1px_1px--ws_nowrap',
             'focusable': 'target-pseudo-class-focus--pos_static--h_auto--w_auto--of_visible--clip_auto',
-            'overlay': 'pos_fixed--d_none--w100p--h100p--t0--l0--r0--b0--tpl-rgba_bg_0_0_0_0op-p5--z_2--cur_pointer'
+            'overlay': 'pos_fixed--d_none--w100p--h100p--t0--l0--r0--b0--tpl-rgba_bg_0_0_0_50c--z_2--cur_pointer'
          },
          settings.alias || {}
       );
@@ -589,9 +589,13 @@ class CSSF {
          let number = parseInt(matches[2], 10);
          let unit = (!Array.isArray(property) && (property.startsWith('media') || property.startsWith('container')) && !property.endsWith('px')) ? 'px' : matches[3];
          number = (unit === '') ? number / 16 : number;
+         number = (unit === 'c') ? number / 100 : number;
+         number = (unit === 'k') ? number / 1000 : number;
          unit = (unit === '') ? 'rem' : unit;
          unit = (unit === 'p') ? '%' : unit;
          unit = (unit === 'int') ? '' : unit;
+         unit = (unit === 'c') ? '' : unit;
+         unit = (unit === 'k') ? '' : unit;
 
          return {
             property: property,
@@ -629,7 +633,7 @@ class CSSF {
       if (unit2 === '%') {
          value2 = (value1 * value2) / 100;
       }
-
+      
       let result;
       switch (operation) {
          case '+':
