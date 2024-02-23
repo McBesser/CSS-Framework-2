@@ -129,6 +129,9 @@
     --ul-margin: var(--default-text-margin, 0);
     --ul-padding: 0;
     --ul-li-margin: var(--default-item-margin, 0);
+    --ul-li-margin-left: 0;
+    --ul-li-padding: 0;
+    --ul-li-padding-left: 0;
     --ul-li-font-family: sans-serif;
     --ul-li-font-style: normal;
     --ul-li-font-variant: normal;
@@ -149,6 +152,9 @@
     --ol-margin: var(--default-text-margin, 0);
     --ol-padding: var(--default-text-margin, 0);
     --ol-li-margin: var(--default-item-margin, 0);
+    --ol-li-margin-left: 0;
+    --ol-li-padding: 0;
+    --ol-li-padding-left: 0;
     --ol-li-font-family: sans-serif;
     --ol-li-font-style: normal;
     --ol-li-font-variant: normal;
@@ -453,6 +459,9 @@
 .cssf ul li {
    position: relative;
    margin: var(--ul-li-margin);
+   margin-left: var(--ul-li-margin-left);
+   padding: var(--ul-li-padding);
+   padding-left: var(--ul-li-padding-left);
    font-family: var(--ul-li-font-family);
    font-style: var(--ul-li-font-style);
    font-variant: var(--ul-li-font-variant);
@@ -481,6 +490,10 @@
 }
 .cssf ol li {
    position: relative;
+   margin: var(--ol-li-margin);
+   margin-left: var(--ol-li-margin-left);
+   padding: var(--ol-li-padding);
+   padding-left: var(--ol-li-padding-left);
    font-family: var(--ol-li-font-family);
    font-style: var(--ol-li-font-style);
    font-weight: var(--ol-li-font-weight);
