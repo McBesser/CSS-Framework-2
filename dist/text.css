@@ -162,10 +162,7 @@
     --ol-li-color: var(--color-3);
     --ol-li-font-size: var(--size-16);
     --ol-li-line-height: 1.2;
-    --ol-counter-reset: numbering;
     
-    --ol-li-marker-content: counter(numbering) ".";
-    --ol-li-marker-counter-increment: numbering;
     --ol-li-marker-color: var(--color-3);
     --ol-li-marker-font-family: inherit;
     --ol-li-marker-font-style: inherit;
@@ -488,8 +485,6 @@
    line-height: var(--ul-li-marker-line-height);
 } 
 .cssf ol {
-   list-style: none;
-   counter-reset: var(--ol-counter-reset);
    margin: var(--ol-margin);
    padding: var(--ol-padding);
 }
@@ -512,8 +507,6 @@
    -moz-osx-font-smoothing: grayscale;
    -webkit-font-smoothing: antialiased;
    text-rendering: auto;
-   counter-increment: var(--ol-li-marker-counter-increment);
-   content: var(--ol-li-marker-content);
    color: var(--ol-li-marker-color);
    font-family: var(--ol-li-marker-font-family);
    font-style: var(--ol-li-marker-font-style);
