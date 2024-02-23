@@ -149,7 +149,7 @@
     --ul-li-before-width: auto;
     --ul-li-before-margin-left: 0;
 
-    --ol-margin: 0;
+    --ol-margin: var(--default-text-margin, 0);
     --ol-padding: var(--default-text-margin, 0);
     --ol-li-margin: var(--default-item-margin, 0);
     --ol-li-font-family: sans-serif;
