@@ -92,7 +92,7 @@ class CSSF {
             'focus': 'target-pseudo-class-focus',
             'before': 'target-pseudo-element-before--content_sq-str',
             'after': 'target-pseudo-element-after--content_sq-str',
-            'overlay': 'pos_fixed--w100p--h100p--t0int--l0int--r0int--b0int--tpl-rgba_bg_0_0_0_50c--z_9999',
+            'overlay': 'pos_fixed--w100p--h100p--t0int--l0int--r0int--b0int--tpl-rgba_bg_0_0_0_50c--z_-1',
             'center': 'pos_absolute--t50p--l50p--fn-translate_transform_50p_op-c_50p',
          },
          settings.alias || {}
