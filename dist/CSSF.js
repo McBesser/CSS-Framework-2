@@ -20,6 +20,9 @@ class CSSF {
             'minmax': 'minmax(§0, §1)',
             'repeat': 'repeat(§0, §1)',
             'repeat-minmax': 'repeat(§0, minmax(§1, §2))',
+            'translate': 'translate(§0, §1)',
+            'translate-x': 'translateX(§0)',
+            'translate-y': 'translateY(§0)',
          },
          settings.templates || {}
       );
@@ -89,7 +92,8 @@ class CSSF {
             'focus': 'target-pseudo-class-focus',
             'before': 'target-pseudo-element-before',
             'after': 'target-pseudo-element-after',
-            'overlay': 'pos_fixed--w100p--h100p--t0--l0--r0--b0--tpl-rgba_bg_0_0_0_50c--z_9999'
+            'overlay': 'pos_fixed--w100p--h100p--t0--l0--r0--b0--tpl-rgba_bg_0_0_0_50c--z_9999',
+            'center': 'pos_absolute--t50p--l50p--fn-translate_transform_50p_50p',
          },
          settings.alias || {}
       );
