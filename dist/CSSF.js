@@ -542,15 +542,15 @@ class CSSF {
             number: null,
             unit: null
          };
-      } else if (subPart.startsWith('sq-str-')) {
-         const propertyName = subPart.substring(4);
+      } else if (subPart.startsWith('sq-str')) {
+         const propertyName = subPart.substring(5);
          return {
             property: `'${propertyName}'`,
             number: null,
             unit: null
          };
-      } else if (subPart.startsWith('dq-str-')) {
-         const propertyName = subPart.substring(4);
+      } else if (subPart.startsWith('dq-str')) {
+         const propertyName = subPart.substring(5);
          return {
             property: `"${propertyName}"`,
             number: null,
