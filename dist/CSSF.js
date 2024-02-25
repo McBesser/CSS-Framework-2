@@ -87,12 +87,12 @@ class CSSF {
             /* -------------------------------------------------------------------------------------- */
             'clamp-font-size': 'tpl-clamp-size-standard_font-size_var-cfs-font-size_var-cfs-width',
             'btn': 'px15--py10--cursor_pointer--br3_solid_var-btn-br-color',
-            'hide': 'pos_absolute--h1px--w1px--of_hidden--tpl-rect_clip_1px_1px_1px_1px--ws_nowrap',
-            'show': 'pos_static--h_auto--w_auto--of_visible--clip_auto--ws_normal',
+            'hide': 'd_none--pos_absolute--h1px--w1px--of_hidden--tpl-rect_clip_1px_1px_1px_1px--ws_nowrap',
+            'show': 'd_initial--pos_static--h_auto--w_auto--of_visible--clip_auto--ws_normal',
             'focus': 'target-pseudo-class-focus',
             'before': 'target-pseudo-element-before',
             'after': 'target-pseudo-element-after',
-            'overlay': 'pos_fixed--w100p--h100p--t0--l0--r0--b0--tpl-rgba_bg_0_0_0_50c--z_9999',
+            'overlay': 'pos_fixed--w100p--h100p--t0int--l0int--r0int--b0int--tpl-rgba_bg_0_0_0_50c--z_9999',
             'center': 'pos_absolute--t50p--l50p--fn-translate_transform_50p_50p',
          },
          settings.alias || {}
