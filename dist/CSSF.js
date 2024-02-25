@@ -513,6 +513,13 @@ class CSSF {
                   unit: null
                };
             break;
+            case 'c':
+               return {
+                  property: ', ',
+                  number: null,
+                  unit: null
+               };
+            break;
             case 'sq':
                return {
                property: '\'',
