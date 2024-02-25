@@ -543,14 +543,14 @@ class CSSF {
             unit: null
          };
       } else if (subPart.startsWith('sq-str')) {
-         const propertyName = subPart.substring(5);
+         const propertyName = subPart.substring(7);
          return {
             property: `'${propertyName}'`,
             number: null,
             unit: null
          };
       } else if (subPart.startsWith('dq-str')) {
-         const propertyName = subPart.substring(5);
+         const propertyName = subPart.substring(7);
          return {
             property: `"${propertyName}"`,
             number: null,
