@@ -90,8 +90,8 @@ class CSSF {
             'hide': 'd_none--pos_absolute--h1px--w1px--of_hidden--tpl-rect_clip_1px_1px_1px_1px--ws_nowrap',
             'show': 'd_initial--pos_static--h_auto--w_auto--of_visible--clip_auto--ws_normal',
             'focus': 'target-pseudo-class-focus',
-            'before': 'target-pseudo-element-before',
-            'after': 'target-pseudo-element-after',
+            'before': 'target-pseudo-element-before--content_op-sq_op-sq',
+            'after': 'target-pseudo-element-after--content_op-sq_op-sq',
             'overlay': 'pos_fixed--w100p--h100p--t0int--l0int--r0int--b0int--tpl-rgba_bg_0_0_0_50c--z_9999',
             'center': 'pos_absolute--t50p--l50p--fn-translate_transform_50p_op-c_50p',
          },
@@ -513,9 +513,16 @@ class CSSF {
                   unit: null
                };
             break;
-            case 'c':
+            case 'sq':
                return {
-                  property: ', ',
+               property: '\'',
+                  number: null,
+                  unit: null
+               };
+            break;
+            case 'dq':
+               return {
+                  property: '"',
                   number: null,
                   unit: null
                };
