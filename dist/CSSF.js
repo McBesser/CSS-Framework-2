@@ -87,7 +87,7 @@ class CSSF {
             /* -------------------------------------------------------------------------------------- */
             'clamp-font-size': 'tpl-clamp-size-standard_font-size_var-cfs-font-size_var-cfs-width',
             'btn': 'px15--py10--cursor_pointer--br3_solid_var-btn-br-color',
-            'hide': 'd_none--pos_absolute--h1px--w1px--of_hidden--tpl-rect_clip_1px_1px_1px_1px--ws_nowrap',
+            'hide': 'pos_absolute--h1px--w1px--of_hidden--tpl-rect_clip_1px_1px_1px_1px--ws_nowrap',
             'show': 'd_initial--pos_static--h_auto--w_auto--of_visible--clip_auto--ws_normal',
             'focus': 'target-pseudo-class-focus',
             'before': 'target-pseudo-element-before--content_sq-str',
