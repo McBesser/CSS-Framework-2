@@ -141,7 +141,7 @@
     --ul-li-line-height: 1.2;
 
     --ul-li-marker-content: "-";
-    --ul-li-marker-color: black;
+    --ul-li-marker-color: var(--ul-li-color);
     --ul-li-marker-font-family: inherit;
     --ul-li-marker-font-style: inherit;
     --ul-li-marker-font-weight: inherit;
@@ -163,7 +163,7 @@
     --ol-li-font-size: var(--size-16);
     --ol-li-line-height: 1.2;
     
-    --ol-li-marker-color: var(--color-3);
+    --ol-li-marker-color: var(--ol-li-color);
     --ol-li-marker-font-family: inherit;
     --ol-li-marker-font-style: inherit;
     --ol-li-marker-font-weight: inherit;
