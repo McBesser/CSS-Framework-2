@@ -94,7 +94,7 @@ class CSSF {
             'after': 'target-pseudo-element-after--content_sq-str',
             'overlay-background': 'pos_fixed--w100dvw--h100dvh--tpl-rgba_bg_0_0_0_50c--z_-2',
             'overlay-foreground': 'pos_absolute--tpl-rgba_bg_255_255_255_100c--z_-1--py40--fn-calc_w_100p_op-add_op-op_40pxrem_op-mul_2int_op-cp',
-            'overlay-wrapper': 'pos_fixed--t-50p--l-50p--d_flex--tpl-translate-transform_50p_50p--jc_center--ai_center',
+            'overlay-wrapper': 'pos_fixed--t-50p--l-50p--d_flex--tpl-translate_transform_50p_50p--jc_center--ai_center',
             'center': 'pos_absolute--t50p--l50p--fn-translate_transform_50p_op-c_50p',
          },
          settings.alias || {}
