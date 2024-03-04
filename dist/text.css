@@ -273,6 +273,7 @@
     --table-th-font-size: var(--size-16);
     --table-th-line-height: 1.2;
     --table-th-color: var(--color-1);
+    --table-th-vertical-align: top;
     --table-td-background: none;
     --table-td-font-family: sans-serif;
     --table-td-font-style: normal;
@@ -281,6 +282,7 @@
     --table-td-font-size: var(--size-16);
     --table-td-line-height: 1.2;
     --table-td-color: var(--color-1);
+    --table-td-vertical-align: top;
     --table-cell-padding: var(--size-8);
     --table-cell-border-bottom: var(--size-1) solid var(--color-1);
     --table-cell-border-right: var(--size-1) solid var(--color-1);
@@ -773,6 +775,7 @@
    font-size: var(--table-th-font-size);
    line-height: var(--table-th-line-height);
    color: var(--table-th-color);
+   vertical-align: var(--table-th-vertical-align); 
 }
 .cssf table td {
    background: var(--table-td-background);
@@ -783,6 +786,7 @@
    font-size: var(--table-td-font-size);
    line-height: var(--table-td-line-height);
    color: var(--table-td-color);
+   vertical-align: var(--table-td-vertical-align);
 }
   
 .cssf table {  
