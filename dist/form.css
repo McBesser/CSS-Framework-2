@@ -524,7 +524,7 @@
 .cssf form input[type="email"],
 .cssf form input[type="search"],
 .cssf form input[type="tel"],
-.cssf form textaream
+.cssf form textarea
    {
       -webkit-appearance: none !important;
       -moz-appearance: none !important;
@@ -553,7 +553,7 @@
       .cssf form input[type="email"],
       .cssf form input[type="search"],
       .cssf form input[type="tel"],
-      .cssf form textaream
+      .cssf form textarea
          {  
             color: var(--dark-form-input-text-color) !important;
             background: var(--dark-form-input-text-background) !important;
@@ -566,7 +566,7 @@
 .cssf form input[type="email"]:hover,
 .cssf form input[type="search"]:hover,
 .cssf form input[type="tel"]:hover,
-.cssf form textaream:hover
+.cssf form textarea:hover
    {
       font-family: var(--form-input-text-hover-font-family) !important;
       font-style: var(--form-input-text-hover-font-style) !important;
@@ -588,7 +588,7 @@
       .cssf form input[type="email"]:hover,
       .cssf form input[type="search"]:hover,
       .cssf form input[type="tel"]:hover,
-      .cssf form textaream:hover
+      .cssf form textarea:hover
          {
             color: var(--form-input-text-hover-color) !important;
             background: var(--form-input-text-hover-background) !important;
@@ -601,7 +601,7 @@
 .cssf form input[type="email"]:focus,
 .cssf form input[type="search"]:focus,
 .cssf form input[type="tel"]:focus,
-.cssf form textaream:focus
+.cssf form textarea:focus
    {
       font-family: var(--form-input-text-focus-font-family) !important;
       font-style: var(--form-input-text-focus-font-style) !important;
@@ -623,7 +623,7 @@
       .cssf form input[type="email"]:focus,
       .cssf form input[type="search"]:focus,
       .cssf form input[type="tel"]:focus,
-      .cssf form textaream:focus
+      .cssf form textarea:focus
          {
             color: var(--form-input-text-focus-color) !important;
             background: var(--form-input-text-focus-background) !important;
