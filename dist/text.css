@@ -184,6 +184,8 @@
     --a-text-decoration-thickness: auto;
     --a-padding: 0;
     --a-margin: 0;
+    --a-transition: 1s ease;
+    --a-transform: none;
 
     --a-hover-text-decoration: underline;
     --a-hover-text-underline-position: under;
@@ -193,6 +195,7 @@
     --a-hover-border: none;
     --a-hover-border-radius: 0;
     --a-hover-border-bottom: none;
+    --a-hover-transform: none;
 
     --a-focus-text-decoration: underline;
     --a-focus-text-underline-position: under;
@@ -202,6 +205,7 @@
     --a-focus-border: none;
     --a-focus-border-radius: 0;
     --a-focus-border-bottom: none;
+    --a-focus-transform: none;
 
     --a-target-blank-before-content: "";
     --a-target-blank-after-content: " (opens in a new tab)";
@@ -539,6 +543,8 @@
    text-decoration-thickness: var(--a-text-decoration-thickness);
    padding: var(--a-padding);
    margin: var(--a-margin);
+   transition: var(--a-transition);
+   transform: var(--a-transform);
 }
 
 .cssf a:hover {
@@ -550,6 +556,7 @@
    border: var(--a-hover-border);
    border-radius: var(--a-hover-border-radius);
    border-bottom: var(--a-hover-border-bottom);
+   transform: var(--a-hover-transform);
 }
 
 .cssf a:focus {
@@ -561,6 +568,7 @@
    border: var(--a-focus-border);
    border-radius: var(--a-focus-border-radius);
    border-bottom: var(--a-focus-border-bottom);
+   transform: var(--a-focus-transform);
 }
 
 .cssf a[href^="http://"],
