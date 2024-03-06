@@ -190,6 +190,7 @@ class CSSF {
             'lc': ['line-clamp', '-webkit-line-clamp'],
             'bo': ['box-orient', '-webkit-box-orient'],
             'z': 'z-index',
+            'ta': 'text-align',
             'tt': 'target-tag',
             'tc': 'target-class',
             'ti': 'target-id',
