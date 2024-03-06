@@ -197,15 +197,15 @@
     --a-hover-border-bottom: none;
     --a-hover-transform: none;
 
-    --a-focus-text-decoration: underline;
-    --a-focus-text-underline-position: under;
-    --a-focus-text-decoration-thickness: auto;
-    --a-focus-color: var(--color-6);
-    --a-focus-background: none;
-    --a-focus-border: none;
-    --a-focus-border-radius: 0;
-    --a-focus-border-bottom: none;
-    --a-focus-transform: none;
+    --a-focus-text-decoration: var(--a-hover-text-decoration);
+    --a-focus-text-underline-position: var(--a-hover-text-underline-position);
+    --a-focus-text-decoration-thickness: var(--a-hover-text-decoration-thickness);
+    --a-focus-color: var(--a-hover-color);
+    --a-focus-background: var(--a-hover-background);
+    --a-focus-border: var(--a-hover-border);
+    --a-focus-border-radius: var(--a-hover-border-radius);
+    --a-focus-border-bottom: var(--a-hover-border-bottom);
+    --a-focus-transform: var(--a-hover-transform);
 
     --a-target-blank-before-content: "";
     --a-target-blank-after-content: " (opens in a new tab)";
