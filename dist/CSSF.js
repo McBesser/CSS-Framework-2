@@ -163,6 +163,7 @@ class CSSF {
             'l': 'left',
             'b': 'bottom',
             'fs': 'font-size',
+            'lh': 'line-height',
             'f': 'flex',
             'fd': 'flex-direction',
             'fw': 'flex-wrap',
