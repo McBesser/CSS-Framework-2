@@ -208,7 +208,16 @@
     --a-focus-transform: var(--a-hover-transform);
 
     --a-target-blank-before-content: "";
+    --a-target-blank-before-font-family: sans-serif;
+    --a-target-blank-before-font-style: normal;
+    --a-target-blank-before-font-weight: normal;
+    --a-target-blank-before-font-variant: normal;
+    
     --a-target-blank-after-content: " (opens in a new tab)";
+    --a-target-blank-after-font-family: sans-serif;
+    --a-target-blank-after-font-style: normal;
+    --a-target-blank-after-font-weight: normal;
+    --a-target-blank-after-font-variant: normal;
     
     --a-file-before-font-family: sans-serif;
     --a-file-before-font-style: normal;
@@ -583,11 +592,19 @@
 
 .cssf a[target="_blank"]:not([href^="tel:"]):not([href^="mailto:"]):not([href^="/"])::before,
 .cssf a[target="_blank"][href^="//"]::before {
-   content: var(--a-target-blank-before-content);
+   content: var(--a-target-blank-before-content);   
+   font-family: var(--a-target-blank-before-font-family);
+   font-style: var(--a-target-blank-before-font-style);
+   font-weight: var(--a-target-blank-before-font-weight);
+   font-variant: var(--a-target-blank-before-font-variant);
 }
 .cssf a[target="_blank"]:not([href^="tel:"]):not([href^="mailto:"])::after,
 .cssf a[target="_blank"][href^="//"]::after {
    content: var(--a-target-blank-after-content);
+   font-family: var(--a-target-blank-after-font-family);
+   font-style: var(--a-target-blank-after-font-style);
+   font-weight: var(--a-target-blank-after-font-weight);
+   font-variant: var(--a-target-blank-after-font-variant);
 }
 
 .cssf a[href$=".pdf"],
