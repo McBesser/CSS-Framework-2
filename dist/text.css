@@ -10,6 +10,7 @@
     --p-color: var(--color-3);
     --p-font-size: var(--size-16);
     --p-line-height: 1.5;
+    --p-text-align: left;
 
     --h1-font-family: sans-serif;
     --h1-font-style: normal;
@@ -333,6 +334,7 @@
    color: var(--p-color);
    font-size: var(--p-font-size);
    line-height: var(--p-line-height);
+   text-align: var(--p-text-align);
 }
 .cssf h1 {
    font-family: var(--h1-font-family);
