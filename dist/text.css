@@ -543,6 +543,7 @@
 /* link */
 
 .cssf a {
+   z-index: 1;
    display: var(--a-display);
    width: var(--a-width);
    height: var(--a-height);
