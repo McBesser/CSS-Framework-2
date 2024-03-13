@@ -615,7 +615,7 @@
    font-weight: var(--a-target-blank-after-font-weight);
    font-variant: var(--a-target-blank-after-font-variant);
 }
-
+/*
 .cssf a[href$=".pdf"],
 .cssf a[href$=".doc"],
 .cssf a[href$=".docx"],
@@ -632,7 +632,7 @@
 .cssf a[href$=".svg"] {
     padding: var(--a-href-file);
 }
-
+*/
 .cssf a[href$=".pdf"]::before,
 .cssf a[href$=".doc"]::before,
 .cssf a[href$=".docx"]::before,
