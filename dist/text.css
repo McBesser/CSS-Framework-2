@@ -171,6 +171,9 @@
     --ol-li-marker-font-size: 1em;
     --ol-li-marker-line-height: 1.2;
 
+    --a-display: inline-block;
+    --a-justify-content: unset;
+    --a-align-items: unset;
     --a-font-family: sans-serif;
     --a-font-style: normal;
     --a-font-weight: normal;
@@ -538,7 +541,9 @@
 /* link */
 
 .cssf a {
-   display: inline-block;
+   display: var(--a-display);
+   justify-content: var(--a-justify-content);
+   align-items: var(--a-align-items);
    font-family: var(--a-font-family);
    font-style: var(--a-font-style);
    font-weight: var(--a-font-weight);
