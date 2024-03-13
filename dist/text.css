@@ -172,6 +172,10 @@
     --ol-li-marker-line-height: 1.2;
 
     --a-display: inline-block;
+    --a-width: unset;
+    --a-height: unset;
+    --a-padding: unset;
+    --a-margin: unset;
     --a-justify-content: unset;
     --a-align-items: unset;
     --a-font-family: sans-serif;
@@ -542,6 +546,10 @@
 
 .cssf a {
    display: var(--a-display);
+   width: var(--a-width);
+   height: var(--a-height);
+   padding: var(--a-padding);
+   margin: var(--a-margin);
    justify-content: var(--a-justify-content);
    align-items: var(--a-align-items);
    font-family: var(--a-font-family);
