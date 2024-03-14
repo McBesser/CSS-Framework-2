@@ -178,6 +178,7 @@
     --a-display: inline-block;
     --a-width: unset;
     --a-height: unset;
+    --a-min-height: unset;
     --a-justify-content: unset;
     --a-align-items: unset;
     --a-font-family: sans-serif;
@@ -556,6 +557,7 @@
    display: var(--a-display);
    width: var(--a-width);
    height: var(--a-height);
+   min-height: var(--a-min-height);
    justify-content: var(--a-justify-content);
    align-items: var(--a-align-items);
    font-family: var(--a-font-family);
