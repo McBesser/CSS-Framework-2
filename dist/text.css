@@ -183,6 +183,8 @@
     --a-font-family: sans-serif;
     --a-font-style: normal;
     --a-font-weight: normal;
+    --a-font-size: inherit;
+    --a-line-height: inherit;
     --a-color: var(--color-5);
     --a-text-decoration: underline;
     --a-background: none;
@@ -559,6 +561,8 @@
    font-family: var(--a-font-family);
    font-style: var(--a-font-style);
    font-weight: var(--a-font-weight);
+   font-size: var(--a-font-size);
+   line-height: var(--a-line-height);
    color: var(--a-color);
    text-decoration: var(--a-text-decoration);
    background: var(--a-background);
