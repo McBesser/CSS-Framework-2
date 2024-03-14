@@ -63,6 +63,7 @@ class CSSF {
             'grid-layout': 'd_grid--tpl-grid-layout-cols-standard_grid-template-columns_var-layout-gap_var-layout-content_var-layout-outside--tpl-grid-layout-rows-standard_grid-template-rows_var-layout-gap--tpl-var_val-grid-layout-spacing_val-container-spacing_var-layout-gap--fn-calc_py_var-grid-layout-spacing_op-div_2--container-type_inline-size',
             'grid-layout-val': 'd_grid--tpl-grid-layout-cols-standard_grid-template-columns_§0_§1_§2--tpl-grid-layout-rows-standard_grid-template-rows_§0--container-type_inline-size',
             'grid-layout-main-gap': 'tpl-var_val-grid-layout-spacing_val-container-spacing_var-layout-gap--fn-calc_py_var-grid-layout-spacing_op-div_2',
+            'layout-gap': 'gap_var-layout-gap',
             /* -------------------------------------------------------------------------------------- */
             /* -------------------------------------------------------------------------------------- */
             'grid-brick-layout': 'd_grid--tpl-repeat_gtc_12_1fr--gap_var-layout-gap--container-type_inline-size',
