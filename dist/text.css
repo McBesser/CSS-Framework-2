@@ -197,6 +197,7 @@
     --a-padding: 0;
     --a-margin: 0;
     --a-transition: 1s ease;
+    --a-text-transform: none;
     --a-transform: none;
     --a-letter-spacing: 1px;
 
@@ -208,6 +209,7 @@
     --a-hover-border: none;
     --a-hover-border-radius: 0;
     --a-hover-border-bottom: none;
+    --a-hover-text-transform: none;
     --a-hover-transform: none;
 
     --a-focus-text-decoration: var(--a-hover-text-decoration);
@@ -218,6 +220,7 @@
     --a-focus-border: var(--a-hover-border);
     --a-focus-border-radius: var(--a-hover-border-radius);
     --a-focus-border-bottom: var(--a-hover-border-bottom);
+    --a-focus-text-transform: var(--a-hover-text-transform);
     --a-focus-transform: var(--a-hover-transform);
 
     --a-target-blank-before-content: "";
@@ -578,6 +581,7 @@
    margin: var(--a-margin);
    transition: var(--a-transition);
    transform: var(--a-transform);
+   text-transform: var(--a-text-transform);
    letter-spacing: var(--a-letter-spacing);
 }
 
@@ -590,6 +594,7 @@
    border: var(--a-hover-border);
    border-radius: var(--a-hover-border-radius);
    border-bottom: var(--a-hover-border-bottom);
+   text-transform: var(--a-hover-text-transform);
    transform: var(--a-hover-transform);
 }
 
@@ -603,6 +608,7 @@
    border-radius: var(--a-focus-border-radius);
    border-bottom: var(--a-focus-border-bottom);
    transform: var(--a-focus-transform);
+   text-transform: var(--a-focus-text-transform);
 }
 
 .cssf a[href^="http://"],
