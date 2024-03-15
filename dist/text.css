@@ -198,6 +198,7 @@
     --a-margin: 0;
     --a-transition: 1s ease;
     --a-transform: none;
+    --a-letter-spacing: 1px;
 
     --a-hover-text-decoration: underline;
     --a-hover-text-underline-position: under;
@@ -577,6 +578,7 @@
    margin: var(--a-margin);
    transition: var(--a-transition);
    transform: var(--a-transform);
+   letter-spacing: var(--a-letter-spacing);
 }
 
 .cssf a:hover {
