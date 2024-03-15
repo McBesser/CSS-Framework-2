@@ -199,7 +199,7 @@
     --a-transition: 1s ease;
     --a-text-transform: none;
     --a-transform: none;
-    --a-letter-spacing: 1px;
+    --a-letter-spacing: normal;
 
     --a-hover-text-decoration: underline;
     --a-hover-text-underline-position: under;
