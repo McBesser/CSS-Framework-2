@@ -11,6 +11,7 @@
     --p-font-size: var(--size-16);
     --p-line-height: 1.5;
     --p-text-align: left;
+    --p-letter-spacing: normal;
 
     --h1-font-family: sans-serif;
     --h1-font-style: normal;
@@ -143,6 +144,7 @@
     --ul-li-color: var(--color-3);
     --ul-li-font-size: var(--size-16);
     --ul-li-line-height: 1.2;
+    --ul-li-letter-spacing: normal;
 
     --ul-li-marker-content: "-";
     --ul-li-marker-color: var(--ul-li-color);
@@ -166,6 +168,7 @@
     --ol-li-color: var(--color-3);
     --ol-li-font-size: var(--size-16);
     --ol-li-line-height: 1.2;
+    --ol-li-letter-spacing: normal;
     
     --ol-li-marker-color: var(--ol-li-color);
     --ol-li-marker-font-family: inherit;
@@ -342,6 +345,7 @@
    font-size: var(--p-font-size);
    line-height: var(--p-line-height);
    text-align: var(--p-text-align);
+   letter-spacing: var(--p-letter-spacing);
 }
 .cssf h1 {
    font-family: var(--h1-font-family);
@@ -503,6 +507,7 @@
    color: var(--ul-li-color);
    font-size: var(--ul-li-font-size);
    line-height: var(--ul-li-line-height);
+   letter-spacing: var(--ul-li-letter-spacing);
 }
 .cssf ul li::marker {  
    display: list-item; 
@@ -535,6 +540,7 @@
    color: var(--ol-li-color);
    font-size: var(--ol-li-font-size);
    line-height: var(--ol-li-line-height);
+   letter-spacing: var(--ol-li-letter-spacing);
 }
 .cssf ol li::marker {  
    display: list-item; 
