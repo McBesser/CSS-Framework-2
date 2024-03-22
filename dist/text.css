@@ -232,7 +232,7 @@
     --a-target-blank-before-font-weight: normal;
     --a-target-blank-before-font-variant: normal;
     
-    --a-target-blank-after-content: " (opens in a new tab)";
+    --a-target-blank-after-content: "";
     --a-target-blank-after-font-family: sans-serif;
     --a-target-blank-after-font-style: normal;
     --a-target-blank-after-font-weight: normal;
