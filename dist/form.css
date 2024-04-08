@@ -524,6 +524,7 @@
 .cssf form input[type="email"],
 .cssf form input[type="search"],
 .cssf form input[type="tel"],
+.cssf form input[type="password"],
 .cssf form textarea
    {
       -webkit-appearance: none !important;
@@ -553,6 +554,7 @@
       .cssf form input[type="email"],
       .cssf form input[type="search"],
       .cssf form input[type="tel"],
+      .cssf form input[type="password"],
       .cssf form textarea
          {  
             color: var(--dark-form-input-text-color) !important;
@@ -566,6 +568,7 @@
 .cssf form input[type="email"]:hover,
 .cssf form input[type="search"]:hover,
 .cssf form input[type="tel"]:hover,
+.cssf form input[type="password"]:hover,
 .cssf form textarea:hover
    {
       font-family: var(--form-input-text-hover-font-family) !important;
@@ -588,6 +591,7 @@
       .cssf form input[type="email"]:hover,
       .cssf form input[type="search"]:hover,
       .cssf form input[type="tel"]:hover,
+      .cssf form input[type="password"]:hover,
       .cssf form textarea:hover
          {
             color: var(--form-input-text-hover-color) !important;
@@ -601,6 +605,7 @@
 .cssf form input[type="email"]:focus,
 .cssf form input[type="search"]:focus,
 .cssf form input[type="tel"]:focus,
+.cssf form input[type="password"]:focus,
 .cssf form textarea:focus
    {
       font-family: var(--form-input-text-focus-font-family) !important;
@@ -623,6 +628,7 @@
       .cssf form input[type="email"]:focus,
       .cssf form input[type="search"]:focus,
       .cssf form input[type="tel"]:focus,
+      .cssf form input[type="password"]:focus,
       .cssf form textarea:focus
          {
             color: var(--form-input-text-focus-color) !important;
