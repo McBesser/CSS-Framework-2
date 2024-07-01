@@ -307,8 +307,22 @@ class CSSF {
          let query = '';
          let styles = '';
          let target = '';
+         let fromParent = '';
          parts.forEach((part, partIndex) => {
-            if (part.startsWith('target')) {
+            if (part.startsWith('parent')) {
+                  const propertyName = part.substring(7)
+                                           .replace(/pseudo-class-/g, ':')  
+                                           .replace(/pseudo-element-/g, '::') 
+                                           .replace(/close-tag-/g, '')
+                                           .replace(/tag-/g, ' ')
+                                           .replace(/close-class-/g, '.')
+                                           .replace(/class-/g, ' .')
+                                           .replace(/close-id-/g, '#') 
+                                           .replace(/id-/g, ' #') 
+                                           .replace(/wildcard-/g, ' *')
+                                           .replace(/next-/g, ' >');   
+                  fromParent += `${propertyName}`;
+            } else if (part.startsWith('target')) {
                         isCloseTag = part.includes('close-tag-');
                   const propertyName = part.substring(7)
                                            .replace(/pseudo-class-/g, ':')  
@@ -440,9 +454,9 @@ class CSSF {
 
          });
          if(isCloseTag) {
-            styles = `${target}` + (this.prefix ? `.${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + ` {` + styles;
+            styles = `${fromParent} ` + `${target}` + (this.prefix ? `.${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + ` {` + styles;
          } else {
-            styles = (this.prefix ? ` .${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + `${target}` + ` {` + styles;
+            styles = `${fromParent} ` + (this.prefix ? ` .${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + `${target}` + ` {` + styles;
          }
          styles += ` }`;
          data.push(query !== '' ? `${query}{ ${styles} }` : styles);
