@@ -287,6 +287,7 @@ class CSSF {
 
    getStyles(cssClasses) {
       let data = [];
+      let isCloseTag = false;
       cssClasses.forEach((cssClass, cssClassIndex) => {
 
          const cssClassUse = cssClass;
@@ -308,7 +309,7 @@ class CSSF {
          let target = '';
          parts.forEach((part, partIndex) => {
             if (part.startsWith('target')) {
-                  const isCloseTag = part.includes('close-tag-');
+                        isCloseTag = part.includes('close-tag-');
                   const propertyName = part.substring(7)
                                            .replace(/pseudo-class-/g, ':')  
                                            .replace(/pseudo-element-/g, '::') 
