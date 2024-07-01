@@ -308,6 +308,7 @@ class CSSF {
          let target = '';
          parts.forEach((part, partIndex) => {
             if (part.startsWith('target')) {
+                  const isCloseTag = part.includes('close-tag-');
                   const propertyName = part.substring(7)
                                            .replace(/pseudo-class-/g, ':')  
                                            .replace(/pseudo-element-/g, '::') 
@@ -437,8 +438,11 @@ class CSSF {
             }
 
          });
-         
-         styles = (this.prefix ? ` .${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + `${target}` + ` {` + styles;
+         if(isCloseTag) {
+            styles = `${target}` + (this.prefix ? ` .${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + ` {` + styles;
+         } else {
+            styles = (this.prefix ? ` .${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + `${target}` + ` {` + styles;
+         }
          styles += ` }`;
          data.push(query !== '' ? `${query}{ ${styles} }` : styles);
       });
