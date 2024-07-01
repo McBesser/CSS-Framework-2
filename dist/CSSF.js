@@ -207,7 +207,10 @@ class CSSF {
             'twi': 'target-wildcard-id',
             'tnt': 'target-next-tag',
             'tnc': 'target-next-class',
-            'tni': 'target-next-id',
+            'tni': 'target-next-id',            
+            'ptt': 'parent-tag',
+            'ptc': 'parent-class',
+            'pti': 'parent-id',
          },
          settings.shorts || {}
       );
