@@ -446,6 +446,7 @@ class CSSF {
          styles += ` }`;
          data.push(query !== '' ? `${query}{ ${styles} }` : styles);
       });
+      console.log('styles', data);
       return data;
    }
    fillTemplate(tpl, data) {
