@@ -440,14 +440,13 @@ class CSSF {
 
          });
          if(isCloseTag) {
-            styles = `${target}` + (this.prefix ? ` .${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + ` {` + styles;
+            styles = `${target}` + (this.prefix ? `.${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + ` {` + styles;
          } else {
             styles = (this.prefix ? ` .${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + `${target}` + ` {` + styles;
          }
          styles += ` }`;
          data.push(query !== '' ? `${query}{ ${styles} }` : styles);
       });
-      console.log('styles', data);
       return data;
    }
    fillTemplate(tpl, data) {
