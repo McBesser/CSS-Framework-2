@@ -337,6 +337,13 @@
 /* ***************************************************************************************** */
 
 .cssf select {   
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   border-radius: 0rem;
+   background-image: none;
+
+   cursor: pointer;
+   
    font-family: var(--form-select-font-family);
    font-style: var(--form-select-font-style);
    font-weight: var(--form-select-font-weight);
