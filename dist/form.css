@@ -181,6 +181,7 @@
       --form-input-checkbox-checked-color: var(--color-2); 
       --form-input-checkbox-checked-background: var(--color-4);
       --form-input-checkbox-checked-font-family: 'Font Awesome 5 Pro';
+      --form-input-checkbox-checked-font-weight: 400;
       --form-input-checkbox-checked-font-size: 0.725rem;
       --form-input-checkbox-checked-content: '\f00d'; /* cross; check = \f00c */ 
       --form-input-checkbox-focus-color: yellow;
@@ -201,6 +202,7 @@
       --form-input-radio-checked-color: var(--form-input-checkbox-checked-color);
       --form-input-radio-checked-background: var(--color-4);
       --form-input-radio-checked-font-family: 'Font Awesome 5 Pro';
+      --form-input-radio-checked-font-weight: 400;
       --form-input-radio-checked-font-size: 0.725rem;
       --form-input-radio-checked-content: '\f111';
       --form-input-radio-focus-color: yellow;
@@ -689,7 +691,7 @@
    {
       font-family: var(--form-input-checkbox-checked-font-family);
       font-style: normal;
-      font-weight: normal;
+      font-weight: var(--form-input-checkbox-checked-font-weight);
       color: var(--form-input-checkbox-checked-color);
       margin-right: 0.5rem;
       position: absolute;
@@ -765,7 +767,7 @@
    {
       font-family: var(--form-input-radio-checked-font-family);
       font-style: normal;
-      font-weight: normal;
+      font-weight: var(--form-input-radio-checked-font-weight);
       color: var(--form-input-radio-checked-color);
       margin-right: 0.5rem;
       position: absolute;
