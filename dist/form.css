@@ -10,6 +10,22 @@
       --dark-form-placeholder-color: #666;
       
       /* ***************************************************************************************** */
+      
+      --form-fieldset-margin: 0rem;
+      --form-fieldset-padding: 0rem;
+      --form-fieldset-border: var(--size-1, 0.0625rem) solid black;
+      --form-fieldset-border-radius: 0rem;
+      --form-fieldset-legend-font-family: var(--font-family-1, sans-serif);
+      --form-fieldset-legend-font-style: var(--default-font-style, normal);
+      --form-fieldset-legend-font-weight: var(--font-weight-bold, 700);
+      --form-fieldset-legend-color: var(--color-2, #fff);
+      --form-fieldset-legend-font-size: var(--size-20, 1.25rem);
+      --form-fieldset-legend-line-height: var(--size-24, 1.5rem);
+      --form-fieldset-legend-display: block;
+      --form-fieldset-legend-margin: 0rem 0rem var(--size-3, 0.1875rem) 0rem;      
+      --dark-form-fieldset-legend-color: var(--color-2, #fff);
+      
+      /* ***************************************************************************************** */
             
       --form-label-font-family: var(--font-family-1, sans-serif);
       --form-label-font-style: var(--default-font-style, normal);
@@ -18,8 +34,10 @@
       --form-label-font-size: var(--size-20, 1.25rem);
       --form-label-line-height: var(--size-24, 1.5rem);
       --form-label-display: block;
-      --form-label-margin: 0rem 0rem var(--size-3, 0.1875rem) 0rem;
+      --form-label-margin: 0rem 0rem 0rem 0rem;
+      --form-label-padding: 0rem 0rem 0rem 0rem;
       --dark-form-label-color: var(--color-2, #fff);
+      --dark-form-label-background-color: var(--color-1, #fff);
       
       /* ***************************************************************************************** */
       
@@ -313,6 +331,38 @@
          }
    }
    
+/* ***************************************************************************************** */
+
+ 
+.cssf form fieldset
+   {
+      margin: var(--form-fieldset-margin) !important;
+      padding: var(--form-fieldset-padding) !important;
+      border: var(--form-fieldset-border) !important;
+      border-radius: var(--form-fieldset-border-redius) !important;
+   }
+.cssf form fieldset legend
+   {
+      font-family: var(--form-fieldset-legend-font-family) !important;
+      font-style: var(--form-fieldset-legend-font-style) !important;
+      font-weight: var(--form-fieldset-legend-font-weight) !important;
+      color: var(--form-fieldset-legend-color) !important;      
+      background-color: var(--form-fieldset-legend-background-color) !important;      
+      font-size: var(--form-fieldset-legend-font-size) !important;
+      line-height: var(--form-fieldset-legend-line-height) !important;
+      display: var(--form-fieldset-legend-display) !important;
+      margin: var(--form-fieldset-legend-margin) !important;
+      padding: var(--form-fieldset-legend-padding) !important;
+   }
+@media (prefers-color-scheme: dark) 
+   {  
+      .cssf form fieldset legend
+         {
+            color: var(--dark-form-fieldset-legend-color) !important;      
+            background-color: var(--dark-form-fieldset-legend-background-color) !important;      
+         }
+   }
+  
 /* ***************************************************************************************** */
 
  
