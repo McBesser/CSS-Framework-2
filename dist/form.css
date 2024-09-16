@@ -766,7 +766,7 @@
    }
 .cssf form input[type='checkbox'] + label
    {
-     margin: var(--form-input-checkbox-margin);
+     margin: var(--form-input-checkbox-margin) !important;
      display: inline-block;
      cursor: pointer;
      position: relative;
@@ -837,7 +837,7 @@
    }
 .cssf form input[type='radio'] + label 
    {
-     margin: var(--form-input-radio-margin);
+     margin: var(--form-input-radio-margin) !important;
      display: inline-block;
      cursor: pointer;
      position: relative;
