@@ -629,6 +629,7 @@
 .cssf form input[type="password"],
 .cssf form input[type="date"],
 .cssf form input[type="time"],
+.cssf form input[type="number"],
 .cssf form textarea
    {
       -webkit-appearance: none !important;
@@ -654,6 +655,7 @@
    }
 .cssf form input[type="date"],
 .cssf form input[type="time"]
+.cssf form input[type="number"]
    {
       width: auto !important;
    }
