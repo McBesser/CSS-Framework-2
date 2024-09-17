@@ -654,7 +654,7 @@
       outline: var(--form-input-text-outline) !important;
    }
 .cssf form input[type="date"],
-.cssf form input[type="time"]
+.cssf form input[type="time"],
 .cssf form input[type="number"]
    {
       width: auto !important;
