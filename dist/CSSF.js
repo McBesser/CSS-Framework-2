@@ -770,31 +770,39 @@ class CSSFVars {
         this.generateAndApplyStyles();
     }
 
+    formatNumber(num) {
+        return parseFloat(num.toFixed(4)).toString();
+    }
+
     generateStyles() {
         const styles = [':root {'];
         
         for (let i = -200; i <= 1000; i += 0.5) {
             const pixelValue = i / 16;
-            const formattedValue = pixelValue % 1 === 0 ? pixelValue.toFixed(0) : pixelValue.toFixed(4);
+            const formattedValue = this.formatNumber(pixelValue);
+            const variableName = i % 1 === 0 ? `${Math.abs(i)}` : `${Math.abs(i)}`.replace('.', '-');
             
             if (i < 0) {
-                styles.push(`  --size--${Math.abs(i)}: -${formattedValue}rem;`);
-                styles.push(`  --size-n${Math.abs(i)}: -${formattedValue}rem;`);
+                // Negative Werte
+                styles.push(`  --size--${variableName}: -${formattedValue}rem;`);
+                styles.push(`  --size-n${variableName}: -${formattedValue}rem;`);
             } else {
-                styles.push(`  --size-${i}: ${formattedValue}rem;`);
+                // Positive Werte
+                styles.push(`  --size-${variableName}: ${formattedValue}rem;`);
             }
         }
 
+        // Generiere responsive Größen
         this.breakpoints.forEach(breakpoint => {
             for (let i = 0; i <= 100; i++) {
-                const baseSize = i * 0.0625; 
+                const baseSize = i * 0.0625;
                 if (i <= 16) {
-                    styles.push(`  --clamp-${breakpoint}-size-${i}: ${baseSize}rem;`);
+                    styles.push(`  --clamp-${breakpoint}-size-${i}: ${this.formatNumber(baseSize)}rem;`);
                 } else {
                     const maxSize = baseSize;
-                    const minSize = 1; 
-                    const slope = (maxSize - minSize) / (breakpoint / 16);
-                    styles.push(`  --clamp-${breakpoint}-size-${i}: clamp(${minSize}rem, ${minSize}rem + ${slope.toFixed(4)}vw, ${maxSize}rem);`);
+                    const minSize = 1;
+                    const slope = ((maxSize - minSize) / (breakpoint / 16)) * 100;
+                    styles.push(`  --clamp-${breakpoint}-size-${i}: clamp(${minSize}rem, ${minSize}rem + ${this.formatNumber(slope)}vw, ${this.formatNumber(maxSize)}rem);`);
                 }
             }
         });
@@ -822,5 +830,4 @@ class CSSFVars {
         this.applyStylesToDOM(styles);
     }
 }
-
 new CSSFVars();
