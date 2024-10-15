@@ -777,22 +777,16 @@ class CSSFVars {
     generateStyles() {
         const styles = [':root {'];
         
-        for (let i = -200; i <= 1000; i += 0.5) {
-            const pixelValue = i / 16;
-            const formattedValue = this.formatNumber(pixelValue);
-            const variableName = i % 1 === 0 ? `${Math.abs(i)}` : `${Math.abs(i)}`.replace('.', '-');
-            
-            if (i < 0) {
-                // Negative Werte
-                styles.push(`  --size--${variableName}: -${formattedValue}rem;`);
-                styles.push(`  --size-n${variableName}: -${formattedValue}rem;`);
-            } else {
-                // Positive Werte
-                styles.push(`  --size-${variableName}: ${formattedValue}rem;`);
-            }
+        for (let i = -10; i <= 10; i += 0.5) {
+            this.addSizeVariable(styles, i);
+        }
+        for (let i = -11; i >= -200; i--) {
+            this.addSizeVariable(styles, i);
+        }
+        for (let i = 11; i <= 1000; i++) {
+            this.addSizeVariable(styles, i);
         }
 
-        // Generiere responsive Größen
         this.breakpoints.forEach(breakpoint => {
             for (let i = 0; i <= 100; i++) {
                 const baseSize = i * 0.0625;
@@ -800,7 +794,7 @@ class CSSFVars {
                     styles.push(`  --clamp-${breakpoint}-size-${i}: ${this.formatNumber(baseSize)}rem;`);
                 } else {
                     const maxSize = baseSize;
-                    const minSize = 1;
+                    const minSize = 1; 
                     const slope = ((maxSize - minSize) / (breakpoint / 16)) * 100;
                     styles.push(`  --clamp-${breakpoint}-size-${i}: clamp(${minSize}rem, ${minSize}rem + ${this.formatNumber(slope)}vw, ${this.formatNumber(maxSize)}rem);`);
                 }
@@ -809,6 +803,18 @@ class CSSFVars {
         
         styles.push('}');
         return styles;
+    }
+
+    addSizeVariable(styles, i) {
+        const pixelValue = i / 16;
+        const formattedValue = this.formatNumber(pixelValue);
+        const variableName = i % 1 === 0 ? `${Math.abs(i)}` : `${Math.abs(i)}`.replace('.', '-');
+        
+        if (i < 0) {
+            styles.push(`  --size-n${variableName}: ${formattedValue}rem;`);
+        } else {
+            styles.push(`  --size-${variableName}: ${formattedValue}rem;`);
+        }
     }
 
     applyStylesToDOM(styles) {
@@ -830,4 +836,5 @@ class CSSFVars {
         this.applyStylesToDOM(styles);
     }
 }
+
 new CSSFVars();
