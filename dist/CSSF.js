@@ -764,14 +764,15 @@ const cssfInstance = new CSSF({
 /* *********************************************** */
 /* AddOn */
 class CSSFVars {
-    constructor(prefix = '') {
+    constructor(prefix = '', breakpoints = [576, 768, 992, 1200, 1400]) {
         this.prefix = prefix;
+        this.breakpoints = breakpoints;
         this.generateAndApplyStyles();
     }
 
     generateStyles() {
         const styles = [':root {'];
-       
+        
         for (let i = -200; i <= 1000; i += 0.5) {
             const pixelValue = i / 16;
             const formattedValue = pixelValue % 1 === 0 ? pixelValue.toFixed(0) : pixelValue.toFixed(4);
@@ -783,6 +784,20 @@ class CSSFVars {
                 styles.push(`  --size-${i}: ${formattedValue}rem;`);
             }
         }
+
+        this.breakpoints.forEach(breakpoint => {
+            for (let i = 0; i <= 100; i++) {
+                const baseSize = i * 0.0625; 
+                if (i <= 16) {
+                    styles.push(`  --clamp-${breakpoint}-size-${i}: ${baseSize}rem;`);
+                } else {
+                    const maxSize = baseSize;
+                    const minSize = 1; 
+                    const slope = (maxSize - minSize) / (breakpoint / 16);
+                    styles.push(`  --clamp-${breakpoint}-size-${i}: clamp(${minSize}rem, ${minSize}rem + ${slope.toFixed(4)}vw, ${maxSize}rem);`);
+                }
+            }
+        });
         
         styles.push('}');
         return styles;
