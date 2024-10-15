@@ -146,6 +146,8 @@
    --blockquote-cite-line-height: 1.2;
    --blockquote-cite-text-align: right;
    --blockquote-cite-color: var(--color-7);
+   --blockquote-cite-margin: 0 0 0 0;
+   --blockquote-cite-padding: 0 0 0 0;
 
    --ul-margin: var(--default-text-margin, 0);
    --ul-padding: 0;
@@ -516,6 +518,8 @@
 }
 .cssf blockquote cite,
 .cssf blockquote div:last-child {
+   margin: var(--blockquote-cite-margin);
+   padding: var(--blockquote-cite-padding);
    font-family: var(--blockquote-cite-font-family);
    font-style: var(--blockquote-cite-font-style);
    font-weight: var(--blockquote-cite-font-weight);
