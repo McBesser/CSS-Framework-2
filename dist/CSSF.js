@@ -760,3 +760,52 @@ class CSSF {
 const cssfInstance = new CSSF({
    prefix: 'cssf'
 });
+
+/* *********************************************** */
+/* AddOn */
+class CSSFVars {
+    constructor(prefix = '') {
+        this.prefix = prefix;
+        this.generateAndApplyStyles();
+    }
+
+    generateStyles() {
+        const styles = [':root {'];
+       
+        for (let i = -200; i <= 1000; i += 0.5) {
+            const pixelValue = i / 16;
+            const formattedValue = pixelValue % 1 === 0 ? pixelValue.toFixed(0) : pixelValue.toFixed(4);
+            
+            if (i < 0) {
+                styles.push(`  --size--${Math.abs(i)}: -${formattedValue}rem;`);
+                styles.push(`  --size-n${Math.abs(i)}: -${formattedValue}rem;`);
+            } else {
+                styles.push(`  --size-${i}: ${formattedValue}rem;`);
+            }
+        }
+        
+        styles.push('}');
+        return styles;
+    }
+
+    applyStylesToDOM(styles) {
+        const styleClassPrefix = this.prefix ? `${this.prefix}` : `cssf-vars`;
+        const styleTag = document.createElement('style');
+        styleTag.type = 'text/css';
+        const stylesString = styles.join('\n');
+        styleTag.appendChild(document.createTextNode(stylesString));
+        const existingStyleTag = document.querySelector(`style.${styleClassPrefix}-styles`);
+        if (existingStyleTag) {
+            existingStyleTag.remove();
+        }
+        styleTag.classList.add(`${styleClassPrefix}-styles`);
+        document.head.appendChild(styleTag);
+    }
+
+    generateAndApplyStyles() {
+        const styles = this.generateStyles();
+        this.applyStylesToDOM(styles);
+    }
+}
+
+new CSSFVars();
