@@ -777,10 +777,10 @@ class CSSFVars {
     generateStyles() {
         const styles = [':root {'];
         
-        for (let i = -10; i <= 10; i += 0.5) {
+        for (let i = -200; i <= -11; i++) {
             this.addSizeVariable(styles, i);
         }
-        for (let i = -11; i >= -200; i--) {
+        for (let i = -10; i <= 10; i += 0.5) {
             this.addSizeVariable(styles, i);
         }
         for (let i = 11; i <= 1000; i++) {
@@ -788,7 +788,7 @@ class CSSFVars {
         }
 
         this.breakpoints.forEach(breakpoint => {
-            for (let i = 0; i <= 100; i++) {
+            for (let i = 0; i <= 300; i++) {
                 const baseSize = i * 0.0625;
                 if (i <= 16) {
                     styles.push(`  --clamp-${breakpoint}-size-${i}: ${this.formatNumber(baseSize)}rem;`);
