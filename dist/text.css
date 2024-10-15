@@ -97,6 +97,12 @@
    --blockquote-margin: var(--default-text-margin, 0);
    --blockquote-padding: 0;
    --blockquote-background: none;
+   --blockquote-font-family: sans-serif;
+   --blockquote-font-style: normal;
+   --blockquote-font-weight: normal;
+   --blockquote-font-size: inherit;
+   --blockquote-line-height: inherit;
+   --blockquote-color: inherit;
 
    --blockquote-before-content: ""; /* open-quote */
    --blockquote-before-width: auto;
@@ -450,6 +456,12 @@
    margin: var(--blockquote-margin);
    padding: var(--blockquote-padding);
    background: var(--blockquote-background);
+   font-family: var(--blockquote-font-family);
+   font-style: var(--blockquote-font-style);
+   font-weight: var(--blockquote-font-weight);
+   font-size: var(--blockquote-font-size); 
+   line-height: var(--blockquote-line-height); 
+   color: var(--blockquote-color);
 }
 .cssf blockquote::before {
    position: absolute;
