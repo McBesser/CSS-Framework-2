@@ -112,6 +112,7 @@
    --blockquote-before-font-weight: inherit;
    --blockquote-before-font-variant: inherit;
    --blockquote-before-font-size: inherit;
+   --blockquote-before-color: var(--color-1, #000);
    --blockquote-before-z-index: unset;
 
    --blockquote-after-content: ""; /* close-quote */
@@ -128,6 +129,7 @@
    --blockquote-after-font-weight: inherit;
    --blockquote-after-font-variant: inherit;
    --blockquote-after-font-size: inherit;
+   --blockquote-after-color: var(--color-1, #000);
    --blockquote-after-z-index: unset;
 
    --blockquote-cite-font-family: sans-serif;
@@ -470,6 +472,7 @@
    font-weight: var(--blockquote-before-font-weight);
    font-variant: var(--blockquote-before-font-variant);
    font-size: var(--blockquote-before-font-size);
+   color: var(--blockquote-before-color);
    z-index: var(--blockquote-before-z-index);
 }
 .cssf blockquote::after {
@@ -493,6 +496,7 @@
    font-weight: var(--blockquote-after-font-weight);
    font-variant: var(--blockquote-after-font-variant);
    font-size: var(--blockquote-after-font-size);
+   color: var(--blockquote-after-color);
    z-index: var(--blockquote-after-z-index);
 }
 .cssf blockquote cite,
