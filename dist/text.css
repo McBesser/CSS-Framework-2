@@ -456,6 +456,13 @@
    margin: var(--blockquote-margin);
    padding: var(--blockquote-padding);
    background: var(--blockquote-background);
+}
+.cssf blockquote,
+.cssf blockquote p {
+   position: var(--blockquote-position);
+   margin: var(--blockquote-margin);
+   padding: var(--blockquote-padding);
+   background: var(--blockquote-background);
    font-family: var(--blockquote-font-family);
    font-style: var(--blockquote-font-style);
    font-weight: var(--blockquote-font-weight);
