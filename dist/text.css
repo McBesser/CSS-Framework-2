@@ -102,6 +102,8 @@
    --blockquote-font-weight: normal;
    --blockquote-font-size: inherit;
    --blockquote-line-height: inherit;
+   --blockquote-text-align: left;
+   --blockquote-letter-spacing: unset;
    --blockquote-color: inherit;
 
    --blockquote-before-content: ""; /* open-quote */
@@ -145,6 +147,7 @@
    --blockquote-cite-font-size: 1em;
    --blockquote-cite-line-height: 1.2;
    --blockquote-cite-text-align: right;
+   --blockquote-cite-letter-spacing: unset;
    --blockquote-cite-color: var(--color-7);
    --blockquote-cite-margin: 0 0 0 0;
    --blockquote-cite-padding: 0 0 0 0;
@@ -465,7 +468,9 @@
    font-style: var(--blockquote-font-style);
    font-weight: var(--blockquote-font-weight);
    font-size: var(--blockquote-font-size); 
-   line-height: var(--blockquote-line-height); 
+   line-height: var(--blockquote-line-height);    
+   text-align: var(--blockquote-text-align);
+   letter-spacing: var(--blockquote-letter-spacing);
    color: var(--blockquote-color);
 }
 .cssf blockquote::before {
@@ -527,6 +532,7 @@
    font-size: var(--blockquote-cite-font-size);
    line-height: var(--blockquote-cite-line-height);
    text-align: var(--blockquote-cite-text-align);
+   letter-spacing: var(--blockquote-cite-letter-spacing);
    color: var(--blockquote-cite-color);
 }
 .cssf ul { 
