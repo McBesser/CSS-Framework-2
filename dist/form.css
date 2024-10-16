@@ -7,7 +7,6 @@
       
       --form-placeholder-color: #666;
       --form-placeholder-opacity: 0.7;
-      --dark-form-placeholder-color: #666;
       
       /* ***************************************************************************************** */
       
@@ -23,7 +22,6 @@
       --form-fieldset-legend-line-height: var(--size-24, 1.5rem);
       --form-fieldset-legend-display: block;
       --form-fieldset-legend-margin: 0rem 0rem var(--size-3, 0.1875rem) 0rem;      
-      --dark-form-fieldset-legend-color: var(--color-2, #fff);
       
       /* ***************************************************************************************** */
             
@@ -36,8 +34,6 @@
       --form-label-display: block;
       --form-label-margin: 0rem 0rem 0rem 0rem;
       --form-label-padding: 0rem 0rem 0rem 0rem;
-      --dark-form-label-color: var(--color-2, #fff);
-      --dark-form-label-background-color: var(--color-1, #fff);
       
       /* ***************************************************************************************** */
       
@@ -57,10 +53,6 @@
       --form-button-width: auto;
       --form-button-clip-path: var(--default-clip-path, none);
       --form-button-outline: var(--size-0, 0rem) solid var(--color-x, transparent);      
-      --dark-form-button-color: var(--color-2, #fff);
-      --dark-form-button-background: var(--color-1, #000);
-      --dark-form-button-border: var(--size-0, 0rem);
-      --dark-form-button-outline: var(--size-0, 0rem) solid var(--color-x, transparent);
       
       --form-button-hover-font-family: var(--form-button-font-family);
       --form-button-hover-font-style: var(--form-button-font-style);
@@ -78,10 +70,6 @@
       --form-button-hover-width: var(--form-button-width);
       --form-button-hover-clip-path: var(--form-button-clip-path);
       --form-button-hover-outline: var(--size-0, 0rem) solid var(--color-x, transparent);      
-      --dark-form-button-hover-color: var(--color-1, #000);
-      --dark-form-button-hover-background: var(--color-2, #fff);
-      --dark-form-button-hover-border: var(--form-button-border);
-      --dark-form-button-hover-outline: var(--size-0, 0rem) solid var(--color-x, transparent);
       
       --form-button-focus-font-family: var(--form-button-hover-font-family);
       --form-button-focus-font-style: var(--form-button-hover-font-style);
@@ -99,10 +87,6 @@
       --form-button-focus-width: var(--form-button-hover-width);
       --form-button-focus-clip-path: var(--form-button-hover-clip-path);
       --form-button-focus-outline: var(--form-button-hover-outline);
-      --dark-form-button-focus-color: var(--form-button-hover-color);
-      --dark-form-button-focus-background: var(--form-button-hover-background);
-      --dark-form-button-focus-border: var(--form-button-hover-border);
-      --dark-form-button-focus-outline: var(--form-button-hover-outline);
       
       --form-button-active-font-family: var(--form-button-hover-font-family);
       --form-button-active-font-style: var(--form-button-hover-font-style);
@@ -120,10 +104,6 @@
       --form-button-active-width: var(--form-button-hover-width);
       --form-button-active-clip-path: var(--form-button-hover-clip-path);
       --form-button-active-outline: var(--form-button-hover-outline);
-      --dark-form-button-active-color: var(--form-button-hover-color);
-      --dark-form-button-active-background: var(--form-button-hover-background);
-      --dark-form-button-active-border: var(--form-button-hover-border);
-      --dark-form-button-active-outline: var(--form-button-hover-outline);
       
       /* ***************************************************************************************** */
       
@@ -140,11 +120,6 @@
       --form-input-text-border-radius: 0rem;
       --form-input-text-width: 100%;
       --form-input-text-outline: var(--size-0, 0rem) solid var(--color-x, transparent);
-      --dark-form-input-text-color: var(--color-1, #000);
-      --dark-form-input-text-background: var(--color-2, #fff);
-      --dark-form-input-text-border: 0rem solid var(--color-x, transparent);
-      --dark-form-input-text-border-bottom: 0rem solid var(--color-1, #000);
-      --dark-form-input-text-outline: var(--size-0, 0rem) solid var(--color-x, transparent);
       
       --form-input-text-hover-font-family: var(--form-input-text-font-family);
       --form-input-text-hover-font-style: var(--form-input-text-font-style);
@@ -159,11 +134,6 @@
       --form-input-text-hover-border-radius: var(--form-input-text-border-radius);
       --form-input-text-hover-width: var(--form-input-text-width);
       --form-input-text-hover-outline: var(--form-input-text-outline);
-      --dark-form-input-text-hover-color: var(--form-input-text-color);
-      --dark-form-input-text-hover-background: var(--form-input-text-background);
-      --dark-form-input-text-hover-border: var(--form-input-text-border);
-      --dark-form-input-text-hover-border-bottom: var(--form-input-text-border-bottom);
-      --dark-form-input-text-hover-outline: var(--form-input-text-outline);
       
       --form-input-text-focus-font-family: var(--form-input-text-font-family);
       --form-input-text-focus-font-style: var(--form-input-text-font-style);
@@ -178,11 +148,6 @@
       --form-input-text-focus-border-radius: var(--form-input-text-border-radius);
       --form-input-text-focus-width: var(--form-input-text-width);
       --form-input-text-focus-outline: var(--form-input-text-outline);
-      --dark-form-input-text-focus-color: var(--form-input-text-color);
-      --dark-form-input-text-focus-background: var(--form-input-text-background);
-      --dark-form-input-text-focus-border: var(--form-input-text-border);
-      --dark-form-input-text-focus-border-bottom: var(--form-input-text-border-bottom);
-      --dark-form-input-text-focus-outline: var(--form-input-text-outline);
       
       /* ***************************************************************************************** */
       
@@ -312,24 +277,6 @@
       color: var(--form-placeholder-color) !important;
       opacity: var(--form-placeholder-opacity) !important; /* ff */
    }
-@media (prefers-color-scheme: dark) 
-   {
-      /* Edge */   
-      .cssf ::-webkit-input-placeholder 
-         { 
-            color: var(--dark-form-placeholder-color) !important;
-         }
-      /* Internet Explorer 10-11 */
-      .cssf :-ms-input-placeholder 
-         { 
-            color: var(--dark-form-placeholder-color) !important;
-         }
-
-      .cssf ::placeholder 
-         {
-            color: var(--dark-form-placeholder-color) !important;
-         }
-   }
    
 /* ***************************************************************************************** */
 
@@ -354,14 +301,6 @@
       margin: var(--form-fieldset-legend-margin) !important;
       padding: var(--form-fieldset-legend-padding) !important;
    }
-@media (prefers-color-scheme: dark) 
-   {  
-      .cssf form fieldset legend
-         {
-            color: var(--dark-form-fieldset-legend-color) !important;      
-            background-color: var(--dark-form-fieldset-legend-background-color) !important;      
-         }
-   }
   
 /* ***************************************************************************************** */
 
@@ -377,16 +316,7 @@
       display: var(--form-label-display) !important;
       margin: var(--form-label-margin) !important;
    }
-@media (prefers-color-scheme: dark) 
-   {  
-      .cssf form label
-         {
-            color: var(--dark-form-label-color) !important;      
-         }
-   }
-
-
-
+   
 /* ***************************************************************************************** */
 
 .cssf form select {   
@@ -429,11 +359,6 @@
    color: var(--form-select-option-disabled-color);
 }
 
-@media (prefers-color-scheme: dark) 
-   {
-      
-   }
-
 /* ***************************************************************************************** */
 
 .cssf form input[type="submit"],
@@ -471,23 +396,6 @@
       clip-path: var(--form-button-clip-path) !important;  
       outline: var(--form-button-outline) !important;    
    }
-@media (prefers-color-scheme: dark) 
-   {
-      .cssf form input[type="submit"],
-      .cssf form input[type="button"],
-      .cssf form button[type="submit"],
-      .cssf form button,
-      .cssf form .button,
-      .cssf form .btn,
-      .cssf .button,
-      .cssf .btn
-         {
-            color: var(--dark-form-button-color) !important;
-            background: var(--dark-form-button-background) !important;
-            border: var(--dark-form-button-border) !important;
-            outline: var(--dark-form-button-outline) !important;    
-         }
-   }
 .cssf form input[type="submit"]:hover,
 .cssf form input[type="button"]:hover,
 .cssf form button[type="submit"]:hover,
@@ -513,23 +421,6 @@
       width: var(--form-button-hover-width) !important;
       clip-path: var(--form-button-hover-clip-path) !important; 
       outline: var(--form-button-hover-outline) !important; 
-   }
-@media (prefers-color-scheme: dark) 
-   {
-      .cssf form input[type="submit"]:hover,
-      .cssf form input[type="button"]:hover,
-      .cssf form button[type="submit"]:hover,
-      .cssf form button:hover,
-      .cssf form .button:hover,
-      .cssf form .btn:hover,
-      .cssf .button:hover,
-      .cssf .btn:hover
-         {
-            color: var(--dark-form-button-hover-color) !important;
-            background: var(--dark-form-button-hover-background) !important;
-            border: var(--dark-form-button-hover-border) !important;
-            outline: var(--dark-form-button-hover-outline) !important; 
-         }
    }
 .cssf form input[type="submit"]:focus,
 .cssf form input[type="button"]:focus,
@@ -557,23 +448,6 @@
       clip-path: var(--form-button-focus-clip-path) !important; 
       outline: var(--form-button-focus-outline) !important; 
    }
-@media (prefers-color-scheme: dark) 
-   {
-      .cssf form input[type="submit"]:focus,
-      .cssf form input[type="button"]:focus,
-      .cssf form button[type="submit"]:focus,
-      .cssf form button:focus,
-      .cssf form .button:focus,
-      .cssf form .btn:focus,
-      .cssf .button:focus,
-      .cssf .btn:focus
-         {
-            color: var(--dark-form-button-focus-color) !important;
-            background: var(--dark-form-button-focus-background) !important;
-            border: var(--dark-form-button-focus-border) !important;
-            outline: var(--dark-form-button-focus-outline) !important; 
-         }
-   }
 .cssf form input[type="submit"]:active,
 .cssf form input[type="button"]:active,
 .cssf form button[type="submit"]:active,
@@ -599,23 +473,6 @@
       width: var(--form-button-active-width) !important;
       clip-path: var(--form-button-active-clip-path) !important; 
       outline: var(--form-button-active-outline) !important; 
-   }
-@media (prefers-color-scheme: dark) 
-   {
-      .cssf form input[type="submit"]:active,
-      .cssf form input[type="button"]:active,
-      .cssf form button[type="submit"]:active,
-      .cssf form button:active,
-      .cssf form .button:active,
-      .cssf form .btn:active,
-      .cssf .button:active,
-      .cssf .btn:active
-         {
-            color: var(--dark-form-button-active-color) !important;
-            background: var(--dark-form-button-active-background) !important;
-            border: var(--dark-form-button-active-border) !important;
-            outline: var(--dark-form-button-active-outline) !important; 
-         }
    }
 /* ***************************************************************************************** */
 
@@ -659,22 +516,6 @@
    {
       width: auto !important;
    }
-@media (prefers-color-scheme: dark) 
-   {
-      .cssf form input[type="text"],
-      .cssf form input[type="email"],
-      .cssf form input[type="search"],
-      .cssf form input[type="tel"],
-      .cssf form input[type="password"],
-      .cssf form textarea
-         {  
-            color: var(--dark-form-input-text-color) !important;
-            background: var(--dark-form-input-text-background) !important;
-            border: var(--dark-form-input-text-border) !important;
-            border-bottom: var(--dark-form-input-text-border-bottom) !important;
-            outline: var(--dark-form-input-text-outline) !important;
-         }
-   }
 .cssf form input[type="text"]:hover,
 .cssf form input[type="email"]:hover,
 .cssf form input[type="search"]:hover,
@@ -696,22 +537,6 @@
       width: var(--form-input-text-hover-width) !important;
       outline: var(--form-input-text-hover-outline) !important;
    }
-@media (prefers-color-scheme: dark) 
-   {
-      .cssf form input[type="text"]:hover,
-      .cssf form input[type="email"]:hover,
-      .cssf form input[type="search"]:hover,
-      .cssf form input[type="tel"]:hover,
-      .cssf form input[type="password"]:hover,
-      .cssf form textarea:hover
-         {
-            color: var(--form-input-text-hover-color) !important;
-            background: var(--form-input-text-hover-background) !important;
-            border: var(--form-input-text-hover-border) !important;
-            border-bottom: var(--form-input-text-hover-border-bottom) !important;
-            outline: var(--form-input-text-hover-outline) !important;
-         }
-   }
 .cssf form input[type="text"]:focus,
 .cssf form input[type="email"]:focus,
 .cssf form input[type="search"]:focus,
@@ -732,22 +557,6 @@
       border-radius: var(--form-input-text-focus-border-radius) !important;
       width: var(--form-input-text-focus-width) !important;
       outline: var(--form-input-text-focus-outline) !important;
-   }
-@media (prefers-color-scheme: dark) 
-   {
-      .cssf form input[type="text"]:focus,
-      .cssf form input[type="email"]:focus,
-      .cssf form input[type="search"]:focus,
-      .cssf form input[type="tel"]:focus,
-      .cssf form input[type="password"]:focus,
-      .cssf form textarea:focus
-         {
-            color: var(--form-input-text-focus-color) !important;
-            background: var(--form-input-text-focus-background) !important;
-            border: var(--form-input-text-focus-border) !important;
-            border-bottom: var(--form-input-text-focus-border-bottom) !important;
-            outline: var(--form-input-text-focus-outline) !important;
-         }
    }
 .cssf form input[type="number"],
 .cssf form input[type="date"],
@@ -822,10 +631,6 @@
       color: var(--form-input-checkbox-focus-font-color);
       border-color: var(--form-input-checkbox-focus-border-color);
    }  
-@media (prefers-color-scheme: dark) 
-   {
-      
-   }
 
 /* ***************************************************************************************** */
 
@@ -904,10 +709,6 @@
       color: var(--form-input-radio-focus-font-color);
       border-color: var(--form-input-radio-focus-border-color);
    }  
-@media (prefers-color-scheme: dark) 
-   {
-      
-   }
 
 /* ***************************************************************************************** */
 /* ***************************************************************************************** */
