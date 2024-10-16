@@ -52,7 +52,8 @@
       --form-button-border-radius: var(--form-button-line-height);
       --form-button-width: auto;
       --form-button-clip-path: var(--default-clip-path, none);
-      --form-button-outline: var(--size-0, 0rem) solid var(--color-x, transparent);      
+      --form-button-outline: var(--size-0, 0rem) solid var(--color-x, transparent);    
+      --form-button-transition: none;  
       
       --form-button-hover-font-family: var(--form-button-font-family);
       --form-button-hover-font-style: var(--form-button-font-style);
@@ -395,6 +396,7 @@
       width: var(--form-button-width) !important; 
       clip-path: var(--form-button-clip-path) !important;  
       outline: var(--form-button-outline) !important;    
+      transition: var(--form-button-transition) !important;   
    }
 .cssf form input[type="submit"]:hover,
 .cssf form input[type="button"]:hover,
