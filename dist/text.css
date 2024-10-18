@@ -92,6 +92,12 @@
    --em-font-size: inherit;
    --em-line-height: inherit;
    --em-color: inherit;
+   
+   --u-display: inline;
+   --u-text-decoration: underline;
+   --u-background: none;
+   --u-text-underline-position: under;
+   --u-text-decoration-thickness: var(--size-2, 2px);
 
    --blockquote-position: relative;
    --blockquote-margin: var(--default-text-margin, 0);
@@ -455,6 +461,13 @@
    font-size: var(--em-font-size); 
    line-height: var(--em-line-height); 
    color: var(--em-color);
+}
+.cssf u {
+   display: var(--u-display);
+   text-decoration: var(--u-text-decoration);
+   background: var(--u-background);
+   text-underline-position: var(--u-text-underline-position);
+   text-decoration-thickness: var(--u-text-decoration-thickness);
 }
 .cssf blockquote {
    position: var(--blockquote-position);
