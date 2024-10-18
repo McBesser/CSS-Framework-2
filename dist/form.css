@@ -45,6 +45,7 @@
       --form-button-font-size: var(--size-16, 1rem);
       --form-button-line-height: var(--size-20, 1.25rem);
       --form-button-text-transform: var(--default-text-transform, none);
+      --form-button-text-align: center;
       --form-button-letter-spacing: var(--size-1, 1px);
       --form-button-padding: var(--size-10, 0.625rem) var(--size-20, 1.25rem);
       --form-button-margin: var(--size-0, 0rem);
@@ -63,6 +64,7 @@
       --form-button-hover-font-size: var(--form-button-font-size);
       --form-button-hover-line-height: var(--form-button-line-height);
       --form-button-hover-text-transform: var(--form-button-text-transform);
+      --form-button-hover-text-align: var(--form-button-text-align);
       --form-button-hover-letter-spacing: var(--form-button-letter-spacing);
       --form-button-hover-padding: var(--form-button-padding);
       --form-button-hover-margin: var(--form-button-margin);
@@ -80,6 +82,7 @@
       --form-button-focus-font-size: var(--form-button-hover-font-size);
       --form-button-focus-line-height: var(--form-button-hover-line-height);
       --form-button-focus-text-transform: var(--form-button-hover-text-transform);
+      --form-button-focus-text-align: var(--form-button-text-align);
       --form-button-focus-letter-spacing: var(--form-button-hover-letter-spacing);
       --form-button-focus-padding: var(--form-button-hover-padding);
       --form-button-focus-margin: var(--form-button-hover-margin);
@@ -97,6 +100,7 @@
       --form-button-active-font-size: var(--form-button-hover-font-size);
       --form-button-active-line-height: var(--form-button-hover-line-height);
       --form-button-active-text-transform: var(--form-button-hover-text-transform);
+      --form-button-active-text-align: var(--form-button-text-align);
       --form-button-active-letter-spacing: var(--form-button-hover-letter-spacing);
       --form-button-active-padding: var(--form-button-hover-padding);
       --form-button-active-margin: var(--form-button-hover-margin);
@@ -392,6 +396,7 @@
       border: var(--form-button-border) !important;
       border-radius: var(--form-button-border-radius) !important;
       text-transform: var(--form-button-text-transform) !important;
+      text-align: var(--form-button-text-align) !important;
       letter-spacing: var(--form-button-letter-spacing) !important;
       width: var(--form-button-width) !important; 
       clip-path: var(--form-button-clip-path) !important;  
@@ -419,6 +424,7 @@
       border: var(--form-button-hover-border) !important;
       border-radius: var(--form-button-hover-border-radius) !important;
       text-transform: var(--form-button-hover-text-transform) !important;
+      text-align: var(--form-button-hover-text-align) !important;
       letter-spacing: var(--form-button-hover-letter-spacing) !important;
       width: var(--form-button-hover-width) !important;
       clip-path: var(--form-button-hover-clip-path) !important; 
@@ -445,6 +451,7 @@
       border: var(--form-button-focus-border) !important;
       border-radius: var(--form-button-focus-border-radius) !important;
       text-transform: var(--form-button-focus-text-transform) !important;
+      text-align: var(--form-button-focus-text-align) !important;
       letter-spacing: var(--form-button-focus-letter-spacing) !important;
       width: var(--form-button-focus-width) !important;
       clip-path: var(--form-button-focus-clip-path) !important; 
@@ -471,6 +478,7 @@
       border: var(--form-button-active-border) !important;
       border-radius: var(--form-button-active-border-radius) !important;
       text-transform: var(--form-button-active-text-transform) !important;
+      text-align: var(--form-button-active-text-align) !important;
       letter-spacing: var(--form-button-active-letter-spacing) !important;
       width: var(--form-button-active-width) !important;
       clip-path: var(--form-button-active-clip-path) !important; 
