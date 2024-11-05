@@ -791,8 +791,8 @@ class CSSFVars {
             for (let i = 0; i <= 300; i++) {
                 const baseSize = i / 16;
                 if (i <= 16) {
-                  styles.push(`  --clamp-${breakpoint}-size-${i}:  ${this.clampBuilder(0, breakpoint, 0, baseSize)};`);
-                  styles.push(`  --clamp-${breakpoint}-size-n${i}: ${this.clampBuilderNegative(0, breakpoint, 0, baseSize)};`);
+                  styles.push(`  --clamp-${breakpoint}-size-${i}:  ${this.clampBuilder(-768, breakpoint, 0, baseSize)};`);
+                  styles.push(`  --clamp-${breakpoint}-size-n${i}: ${this.clampBuilderNegative(-768, breakpoint, 0, baseSize)};`);
                 } else {
                   styles.push(`  --clamp-${breakpoint}-size-${i}:  ${this.clampBuilder(0, breakpoint, 1, baseSize)};`);
                   styles.push(`  --clamp-${breakpoint}-size-n${i}: ${this.clampBuilderNegative(0, breakpoint, 1, baseSize)};`);
