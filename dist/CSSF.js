@@ -794,8 +794,8 @@ class CSSFVars {
                   styles.push(`  --clamp-${breakpoint}-size-${i}:  ${this.clampBuilder(-768, breakpoint, 0, baseSize)};`);
                   styles.push(`  --clamp-${breakpoint}-size-n${i}: ${this.clampBuilderNegative(-768, breakpoint, 0, baseSize)};`);
                 } else {
-                  styles.push(`  --clamp-${breakpoint}-size-${i}:  ${this.clampBuilder(-768, breakpoint, 1, baseSize)};`);
-                  styles.push(`  --clamp-${breakpoint}-size-n${i}: ${this.clampBuilderNegative(-768, breakpoint, 1, baseSize)};`);
+                  styles.push(`  --clamp-${breakpoint}-size-${i}:  ${this.clampBuilder(-576, breakpoint, 1, baseSize)};`);
+                  styles.push(`  --clamp-${breakpoint}-size-n${i}: ${this.clampBuilderNegative(-576, breakpoint, 1, baseSize)};`);
                 }
                 /*
                 const baseSize = i * 0.0625;
