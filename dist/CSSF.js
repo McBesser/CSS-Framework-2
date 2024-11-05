@@ -797,6 +797,7 @@ class CSSFVars {
                     const minSize = 1; 
                     const slope = ((maxSize - minSize) / (breakpoint / 16)) * 100;
                     styles.push(`  --clamp-${breakpoint}-size-${i}: clamp(${minSize}rem, ${minSize}rem + ${this.formatNumber(slope)}vw, ${this.formatNumber(maxSize)}rem);`);
+                    styles.push(`  --clamp-${breakpoint}-size-n${i}: clamp(${this.formatNumber(-Math.abs(maxSize))}rem, ${-Math.abs(minSize)}rem + ${this.formatNumber(-Math.abs(slope))}vw, ${-Math.abs(minSize)}rem);`);
                 }
             }
         });
