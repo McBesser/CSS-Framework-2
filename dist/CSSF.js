@@ -789,6 +789,11 @@ class CSSFVars {
 
         this.breakpoints.forEach(breakpoint => {
             for (let i = 0; i <= 300; i++) {
+                const baseSize = i / 16;
+                
+                styles.push(`  --clamp-${breakpoint}-size-${i}:  ${this.clampBuilder(0, breakpoint, 0, baseSize)};`);
+                styles.push(`  --clamp-${breakpoint}-size-n${i}: ${this.clampBuilderNegative(0, breakpoint, 0, baseSize)};`);
+                /*
                 const baseSize = i * 0.0625;
                 if (i <= 16) {
                     styles.push(`  --clamp-${breakpoint}-size-${i}: ${this.formatNumber(baseSize)}rem;`);
@@ -800,6 +805,7 @@ class CSSFVars {
                     styles.push(`  --clamp-${breakpoint}-size-${i}: clamp(${minSize}rem, ${minSize}rem + ${this.formatNumber(slope)}vw, ${this.formatNumber(maxSize)}rem);`);
                     styles.push(`  --clamp-${breakpoint}-size-n${i}: clamp(${this.formatNumber(-Math.abs(maxSize))}rem, ${-Math.abs(minSize)}rem + ${this.formatNumber(-Math.abs(slope))}vw, ${-Math.abs(minSize)}rem);`);
                 }
+                */
             }
         });
         
@@ -837,6 +843,32 @@ class CSSFVars {
         const styles = this.generateStyles();
         this.applyStylesToDOM(styles);
     }
+   /* https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */ 
+   clampBuilder( minWidthPx, maxWidthPx, minFontSize, maxFontSize ) {
+     const root = document.querySelector( "html" );
+     const pixelsPerRem = Number( getComputedStyle( root ).fontSize.slice( 0,-2 ) );
+
+     const minWidth = minWidthPx / pixelsPerRem;
+     const maxWidth = maxWidthPx / pixelsPerRem;
+
+     const slope = ( maxFontSize - minFontSize ) / ( maxWidth - minWidth );
+     const yAxisIntersection = -minWidth * slope + minFontSize
+
+     return `clamp( ${ this.formatNumber(minFontSize) }rem, ${ this.formatNumber(yAxisIntersection) }rem + ${ this.formatNumber(slope * 100) }vw, ${ this.formatNumber(maxFontSize) }rem )`;
+   }
+   clampBuilderNegative( minWidthPx, maxWidthPx, minFontSize, maxFontSize ) {
+     const root = document.querySelector( "html" );
+     const pixelsPerRem = Number( getComputedStyle( root ).fontSize.slice( 0,-2 ) );
+
+     const minWidth = minWidthPx / pixelsPerRem;
+     const maxWidth = maxWidthPx / pixelsPerRem;
+
+     const slope = ( maxFontSize - minFontSize ) / ( maxWidth - minWidth );
+     const yAxisIntersection = -minWidth * slope + minFontSize
+
+     /* return `clamp( -${ maxFontSize }rem, -${ yAxisIntersection }rem + -${ slope * 100 }vw, -${ minFontSize }rem )`; */
+     return `clamp( ${ this.formatNumber(-Math.abs(maxFontSize)) }rem, ${ this.formatNumber(-Math.abs(yAxisIntersection)) }rem + ${ this.formatNumber(-Math.abs(slope * 100)) }vw, ${ this.formatNumber(-Math.abs(minFontSize)) }rem )`;
+   }
 }
 
 new CSSFVars();
