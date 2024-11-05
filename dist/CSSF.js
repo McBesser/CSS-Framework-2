@@ -790,16 +790,16 @@ class CSSFVars {
         this.breakpoints.forEach(breakpoint => {
             for (let i = 0; i <= 300; i++) {
                 const baseSize = i * 0.0625;
-                if (i <= 16) {
+                /*if (i <= 16) {
                     styles.push(`  --clamp-${breakpoint}-size-${i}: ${this.formatNumber(baseSize)}rem;`);
                     styles.push(`  --clamp-${breakpoint}-size-n${i}: ${this.formatNumber(-Math.abs(baseSize))}rem;`);
-                } else {
+                } else { */
                     const maxSize = baseSize;
-                    const minSize = 1; 
+                    const minSize = 0; /* 1 */
                     const slope = ((maxSize - minSize) / (breakpoint / 16)) * 100;
                     styles.push(`  --clamp-${breakpoint}-size-${i}: clamp(${minSize}rem, ${minSize}rem + ${this.formatNumber(slope)}vw, ${this.formatNumber(maxSize)}rem);`);
                     styles.push(`  --clamp-${breakpoint}-size-n${i}: clamp(${this.formatNumber(-Math.abs(maxSize))}rem, ${-Math.abs(minSize)}rem + ${this.formatNumber(-Math.abs(slope))}vw, ${-Math.abs(minSize)}rem);`);
-                }
+               /* } */
             }
         });
         
