@@ -792,6 +792,7 @@ class CSSFVars {
                 const baseSize = i * 0.0625;
                 if (i <= 16) {
                     styles.push(`  --clamp-${breakpoint}-size-${i}: ${this.formatNumber(baseSize)}rem;`);
+                    styles.push(`  --clamp-${breakpoint}-nsize-${i}: ${this.formatNumber(-Math.abs(baseSize))}rem;`);
                 } else {
                     const maxSize = baseSize;
                     const minSize = 1; 
