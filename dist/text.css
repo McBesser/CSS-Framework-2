@@ -320,6 +320,7 @@
    --table-margin: var(--default-text-margin, 0);
    --table-border: none;
    --table-border-radius: 0;
+   --table-border-spacing: 0;
    --table-thead-background: none;
    --table-tbody-background: none;
    --table-tfoot-background: none;
@@ -917,7 +918,7 @@
 }
   
 .cssf table {  
-   border-spacing: 0; 
+   border-spacing: var(--table-border-spacing, 0); 
    border-collapse: separate;
    border-radius: var(--table-border-radius);
 }
