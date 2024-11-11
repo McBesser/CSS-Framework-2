@@ -334,6 +334,7 @@
    --table-th-line-height: 1.2;
    --table-th-color: var(--color-1);
    --table-th-vertical-align: top;
+   --table-th-text-align: left;
    --table-td-background: none;
    --table-td-font-family: sans-serif;
    --table-td-font-style: normal;
@@ -343,6 +344,7 @@
    --table-td-line-height: 1.2;
    --table-td-color: var(--color-1);
    --table-td-vertical-align: top;
+   --table-td-text-align: left;
    --table-cell-padding: var(--size-8);
    --table-cell-border-bottom: var(--size-1) solid var(--color-1);
    --table-cell-border-right: var(--size-1) solid var(--color-1);
@@ -899,6 +901,7 @@
    line-height: var(--table-th-line-height);
    color: var(--table-th-color);
    vertical-align: var(--table-th-vertical-align); 
+   text-align: var(--table-th-text-align); 
 }
 .cssf table td {
    background: var(--table-td-background);
@@ -910,6 +913,7 @@
    line-height: var(--table-td-line-height);
    color: var(--table-td-color);
    vertical-align: var(--table-td-vertical-align);
+   text-align: var(--table-td-text-align);
 }
   
 .cssf table {  
