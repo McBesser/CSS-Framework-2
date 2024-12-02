@@ -22,6 +22,7 @@
       --form-fieldset-legend-line-height: var(--size-24, 1.5rem);
       --form-fieldset-legend-display: block;
       --form-fieldset-legend-margin: 0rem 0rem var(--size-3, 0.1875rem) 0rem;      
+      --form-fieldset-legend-padding: 0rem var(--size-20, 1.25rem);      
       
       /* ***************************************************************************************** */
             
@@ -582,8 +583,10 @@
    {     
       margin: 0rem;
       padding: 0rem;    
-      position: absolute;
-      visibility: hidden;
+      position: absolute;      
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
    }
 .cssf form input[type='checkbox'] + label
    {
@@ -650,7 +653,9 @@
       margin: 0rem;
       padding: 0rem;    
       position: absolute;
-      visibility: hidden;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
    }
 .cssf form input[type='radio'] + label 
    {
