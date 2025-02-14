@@ -362,261 +362,261 @@
 /* ********************************************************** */
 /* ********************************************************** */
 .cssf hr {
-   border: 0;
-   margin: var(--hr-margin);
-   border-bottom: var(--hr-border-bottom)
+   border: 0 !important;
+   margin: var(--hr-margin) !important;
+   border-bottom: var(--hr-border-bottom) !important;
 }
 .cssf p {
-   margin: var(--p-margin);
-   font-family: var(--p-font-family);
-   font-style: var(--p-font-style);
-   font-variant: var(--p-font-variant);
-   font-weight: var(--p-font-weight);
-   color: var(--p-color);
-   font-size: var(--p-font-size);
-   line-height: var(--p-line-height);
-   text-align: var(--p-text-align);
-   letter-spacing: var(--p-letter-spacing);
+   margin: var(--p-margin) !important;
+   font-family: var(--p-font-family) !important;
+   font-style: var(--p-font-style) !important;
+   font-variant: var(--p-font-variant) !important;
+   font-weight: var(--p-font-weight) !important;
+   color: var(--p-color) !important;
+   font-size: var(--p-font-size) !important;
+   line-height: var(--p-line-height) !important;
+   text-align: var(--p-text-align) !important;
+   letter-spacing: var(--p-letter-spacing) !important;
 }
 .cssf h1 {
-   font-family: var(--h1-font-family);
-   font-style: var(--h1-font-style);
-   font-weight: var(--h1-font-weight);
-   color: var(--h1-color);
-   margin: var(--h1-margin);
-   font-size: var(--h1-font-size);
-   line-height: var(--h1-line-height);
-   letter-spacing: var(--h1-letter-spacing);
-   text-transform: var(--h1-text-transform);
-   text-align: var(--h1-text-align);
+   font-family: var(--h1-font-family) !important;
+   font-style: var(--h1-font-style) !important;
+   font-weight: var(--h1-font-weight) !important;
+   color: var(--h1-color) !important;
+   margin: var(--h1-margin) !important;
+   font-size: var(--h1-font-size) !important;
+   line-height: var(--h1-line-height) !important;
+   letter-spacing: var(--h1-letter-spacing) !important;
+   text-transform: var(--h1-text-transform) !important;
+   text-align: var(--h1-text-align) !important;
 }
 .cssf h2 {
-   font-family: var(--h2-font-family);
-   font-style: var(--h2-font-style);
-   font-weight: var(--h2-font-weight);
-   color: var(--h2-color);
-   margin: var(--h2-margin);
-   font-size: var(--h2-font-size);
-   line-height: var(--h2-line-height);
-   letter-spacing: var(--h2-letter-spacing);
-   text-transform: var(--h2-text-transform);
-   text-align: var(--h2-text-align);
+   font-family: var(--h2-font-family) !important;
+   font-style: var(--h2-font-style) !important;
+   font-weight: var(--h2-font-weight) !important;
+   color: var(--h2-color) !important;
+   margin: var(--h2-margin) !important;
+   font-size: var(--h2-font-size) !important;
+   line-height: var(--h2-line-height) !important;
+   letter-spacing: var(--h2-letter-spacing) !important;
+   text-transform: var(--h2-text-transform) !important;
+   text-align: var(--h2-text-align) !important;
 }
 .cssf h3 {
-   font-family: var(--h3-font-family);
-   font-style: var(--h3-font-style);
-   font-weight: var(--h3-font-weight);
-   color: var(--h3-color);
-   margin: var(--h3-margin);
-   font-size: var(--h3-font-size);
-   line-height: var(--h3-line-height);
-   letter-spacing: var(--h3-letter-spacing);
-   text-transform: var(--h3-text-transform);
-   text-align: var(--h3-text-align);
+   font-family: var(--h3-font-family) !important;
+   font-style: var(--h3-font-style) !important;
+   font-weight: var(--h3-font-weight) !important;
+   color: var(--h3-color) !important;
+   margin: var(--h3-margin) !important;
+   font-size: var(--h3-font-size) !important;
+   line-height: var(--h3-line-height) !important;
+   letter-spacing: var(--h3-letter-spacing) !important;
+   text-transform: var(--h3-text-transform) !important;
+   text-align: var(--h3-text-align) !important;
 }
 .cssf h4 {
-   font-family: var(--h4-font-family);
-   font-style: var(--h4-font-style);
-   font-weight: var(--h4-font-weight);
-   color: var(--h4-color);
-   margin: var(--h4-margin);
-   font-size: var(--h4-font-size);
-   line-height: var(--h4-line-height);
-   letter-spacing: var(--h4-letter-spacing);
-   text-transform: var(--h4-text-transform);
-   text-align: var(--h4-text-align);
+   font-family: var(--h4-font-family) !important;
+   font-style: var(--h4-font-style) !important;
+   font-weight: var(--h4-font-weight) !important;
+   color: var(--h4-color) !important;
+   margin: var(--h4-margin) !important;
+   font-size: var(--h4-font-size) !important;
+   line-height: var(--h4-line-height) !important;
+   letter-spacing: var(--h4-letter-spacing) !important;
+   text-transform: var(--h4-text-transform) !important;
+   text-align: var(--h4-text-align) !important;
 }
 .cssf h5 {
-   font-family: var(--h5-font-family);
-   font-style: var(--h5-font-style);
-   font-weight: var(--h5-font-weight);
-   color: var(--h5-color);
-   margin: var(--h5-margin);
-   font-size: var(--h5-font-size);
-   line-height: var(--h5-line-height);
-   letter-spacing: var(--h5-letter-spacing);
-   text-transform: var(--h5-text-transform);
-   text-align: var(--h5-text-align);
+   font-family: var(--h5-font-family) !important;
+   font-style: var(--h5-font-style) !important;
+   font-weight: var(--h5-font-weight) !important;
+   color: var(--h5-color) !important;
+   margin: var(--h5-margin) !important;
+   font-size: var(--h5-font-size) !important;
+   line-height: var(--h5-line-height) !important;
+   letter-spacing: var(--h5-letter-spacing) !important;
+   text-transform: var(--h5-text-transform) !important;
+   text-align: var(--h5-text-align) !important;
 }
 .cssf h6 {
-   font-family: var(--h6-font-family);
-   font-style: var(--h6-font-style);
-   font-weight: var(--h6-font-weight);
-   color: var(--h6-color);
-   margin: var(--h6-margin);
-   font-size: var(--h6-font-size);
-   line-height: var(--h6-line-height);
-   letter-spacing: var(--h6-letter-spacing);
-   text-transform: var(--h6-text-transform);
-   text-align: var(--h6-text-align);
+   font-family: var(--h6-font-family) !important;
+   font-style: var(--h6-font-style) !important;
+   font-weight: var(--h6-font-weight) !important;
+   color: var(--h6-color) !important;
+   margin: var(--h6-margin) !important;
+   font-size: var(--h6-font-size) !important;
+   line-height: var(--h6-line-height) !important;
+   letter-spacing: var(--h6-letter-spacing) !important;
+   text-transform: var(--h6-text-transform) !important;
+   text-align: var(--h6-text-align) !important;
 }
 .cssf strong { 
-   font-family: var(--strong-font-family);
-   font-style: var(--strong-font-style);
-   font-weight: var(--strong-font-weight);
-   font-size: var(--strong-font-size); 
-   line-height: var(--strong-line-height); 
-   color: var(--strong-color);
+   font-family: var(--strong-font-family) !important;
+   font-style: var(--strong-font-style) !important;
+   font-weight: var(--strong-font-weight) !important;
+   font-size: var(--strong-font-size) !important; 
+   line-height: var(--strong-line-height) !important; 
+   color: var(--strong-color) !important;
 }
 .cssf em {
-   font-family: var(--em-font-family);
-   font-style: var(--em-font-style);
-   font-weight: var(--em-font-weight);
-   font-size: var(--em-font-size); 
-   line-height: var(--em-line-height); 
-   color: var(--em-color);
+   font-family: var(--em-font-family) !important;
+   font-style: var(--em-font-style) !important;
+   font-weight: var(--em-font-weight) !important;
+   font-size: var(--em-font-size) !important; 
+   line-height: var(--em-line-height) !important; 
+   color: var(--em-color) !important;
 }
 .cssf u {
-   display: var(--u-display);
-   text-decoration: var(--u-text-decoration);
-   background: var(--u-background);
-   text-underline-position: var(--u-text-underline-position);
-   text-decoration-thickness: var(--u-text-decoration-thickness);
+   display: var(--u-display) !important;
+   text-decoration: var(--u-text-decoration) !important;
+   background: var(--u-background) !important;
+   text-underline-position: var(--u-text-underline-position) !important;
+   text-decoration-thickness: var(--u-text-decoration-thickness) !important;
 }
 .cssf blockquote {
-   position: var(--blockquote-position);
-   margin: var(--blockquote-margin);
-   padding: var(--blockquote-padding);
-   background: var(--blockquote-background);
+   position: var(--blockquote-position) !important;
+   margin: var(--blockquote-margin) !important;
+   padding: var(--blockquote-padding) !important;
+   background: var(--blockquote-background) !important;
 }
 .cssf blockquote,
 .cssf blockquote p {
-   font-family: var(--blockquote-font-family);
-   font-style: var(--blockquote-font-style);
-   font-weight: var(--blockquote-font-weight);
-   font-size: var(--blockquote-font-size); 
-   line-height: var(--blockquote-line-height);    
-   text-align: var(--blockquote-text-align);
-   letter-spacing: var(--blockquote-letter-spacing);
-   color: var(--blockquote-color);
+   font-family: var(--blockquote-font-family) !important;
+   font-style: var(--blockquote-font-style) !important;
+   font-weight: var(--blockquote-font-weight) !important;
+   font-size: var(--blockquote-font-size) !important; 
+   line-height: var(--blockquote-line-height) !important;    
+   text-align: var(--blockquote-text-align) !important;
+   letter-spacing: var(--blockquote-letter-spacing) !important;
+   color: var(--blockquote-color) !important;
 }
 .cssf blockquote::before {
-   position: absolute;
-   display: inline-block;
-   -moz-osx-font-smoothing: grayscale;
-   -webkit-font-smoothing: antialiased;
-   text-rendering: auto;
-   line-height: 1;
-   content: var(--blockquote-before-content);
-   width: var(--blockquote-before-width);
-   height: var(--blockquote-before-height);
-   top: var(--blockquote-before-top);
-   right: var(--blockquote-before-right);
-   bottom: var(--blockquote-before-bottom);
-   left: var(--blockquote-before-left);
-   transform: var(--blockquote-before-transform);
-   background: var(--blockquote-before-background);
-   font-family: var(--blockquote-before-font-family);
-   font-style: var(--blockquote-before-font-style);
-   font-weight: var(--blockquote-before-font-weight);
-   font-variant: var(--blockquote-before-font-variant);
-   font-size: var(--blockquote-before-font-size);
-   color: var(--blockquote-before-color);
-   z-index: var(--blockquote-before-z-index);
+   position: absolute !important;
+   display: inline-block !important;
+   -moz-osx-font-smoothing: grayscale !important;
+   -webkit-font-smoothing: antialiased !important;
+   text-rendering: auto !important;
+   line-height: 1 !important;
+   content: var(--blockquote-before-content) !important;
+   width: var(--blockquote-before-width) !important;
+   height: var(--blockquote-before-height) !important;
+   top: var(--blockquote-before-top) !important;
+   right: var(--blockquote-before-right) !important;
+   bottom: var(--blockquote-before-bottom) !important;
+   left: var(--blockquote-before-left) !important;
+   transform: var(--blockquote-before-transform) !important;
+   background: var(--blockquote-before-background) !important;
+   font-family: var(--blockquote-before-font-family) !important;
+   font-style: var(--blockquote-before-font-style) !important;
+   font-weight: var(--blockquote-before-font-weight) !important;
+   font-variant: var(--blockquote-before-font-variant) !important;
+   font-size: var(--blockquote-before-font-size) !important;
+   color: var(--blockquote-before-color) !important;
+   z-index: var(--blockquote-before-z-index) !important;
 }
 .cssf blockquote::after {
-   position: absolute;
-   display: inline-block;
-   -moz-osx-font-smoothing: grayscale;
-   -webkit-font-smoothing: antialiased;
-   text-rendering: auto;
-   line-height: 1;
-   content: var(--blockquote-after-content);
-   width: var(--blockquote-after-width);
-   height: var(--blockquote-after-height);
-   top: var(--blockquote-after-top);
-   right: var(--blockquote-after-right);
-   bottom: var(--blockquote-after-bottom);
-   left: var(--blockquote-after-left);
-   transform: var(--blockquote-after-transform);
-   background: var(--blockquote-after-background);
-   font-family: var(--blockquote-after-font-family);
-   font-style: var(--blockquote-after-font-style);
-   font-weight: var(--blockquote-after-font-weight);
-   font-variant: var(--blockquote-after-font-variant);
-   font-size: var(--blockquote-after-font-size);
-   color: var(--blockquote-after-color);
-   z-index: var(--blockquote-after-z-index);
+   position: absolute !important;
+   display: inline-block !important;
+   -moz-osx-font-smoothing: grayscale !important;
+   -webkit-font-smoothing: antialiased !important;
+   text-rendering: auto !important;
+   line-height: 1 !important;
+   content: var(--blockquote-after-content) !important;
+   width: var(--blockquote-after-width) !important;
+   height: var(--blockquote-after-height) !important;
+   top: var(--blockquote-after-top) !important;
+   right: var(--blockquote-after-right) !important;
+   bottom: var(--blockquote-after-bottom) !important;
+   left: var(--blockquote-after-left) !important;
+   transform: var(--blockquote-after-transform) !important;
+   background: var(--blockquote-after-background) !important;
+   font-family: var(--blockquote-after-font-family) !important;
+   font-style: var(--blockquote-after-font-style) !important;
+   font-weight: var(--blockquote-after-font-weight) !important;
+   font-variant: var(--blockquote-after-font-variant) !important;
+   font-size: var(--blockquote-after-font-size) !important;
+   color: var(--blockquote-after-color) !important;
+   z-index: var(--blockquote-after-z-index) !important;
 }
 .cssf blockquote cite,
 .cssf blockquote div:last-child {
-   margin: var(--blockquote-cite-margin);
-   padding: var(--blockquote-cite-padding);
-   font-family: var(--blockquote-cite-font-family);
-   font-style: var(--blockquote-cite-font-style);
-   font-weight: var(--blockquote-cite-font-weight);
-   font-variant: var(--blockquote-cite-font-variant);
-   font-size: var(--blockquote-cite-font-size);
-   line-height: var(--blockquote-cite-line-height);
-   text-align: var(--blockquote-cite-text-align);
-   letter-spacing: var(--blockquote-cite-letter-spacing);
-   color: var(--blockquote-cite-color);
+   margin: var(--blockquote-cite-margin) !important;
+   padding: var(--blockquote-cite-padding) !important;
+   font-family: var(--blockquote-cite-font-family) !important;
+   font-style: var(--blockquote-cite-font-style) !important;
+   font-weight: var(--blockquote-cite-font-weight) !important;
+   font-variant: var(--blockquote-cite-font-variant) !important;
+   font-size: var(--blockquote-cite-font-size) !important;
+   line-height: var(--blockquote-cite-line-height) !important;
+   text-align: var(--blockquote-cite-text-align) !important;
+   letter-spacing: var(--blockquote-cite-letter-spacing) !important;
+   color: var(--blockquote-cite-color) !important;
 }
 .cssf ul { 
-   list-style: none;
-   margin: var(--ul-margin);
-   padding: var(--ul-padding);
+   list-style: none !important;
+   margin: var(--ul-margin) !important;
+   padding: var(--ul-padding) !important;
 }
 .cssf ul li {
-   position: relative;
-   margin: var(--ul-li-margin);
-   margin-left: var(--ul-li-margin-left);
-   padding: var(--ul-li-padding);
-   padding-left: var(--ul-li-padding-left);
-   font-family: var(--ul-li-font-family);
-   font-style: var(--ul-li-font-style);
-   font-variant: var(--ul-li-font-variant);
-   font-weight: var(--ul-li-font-weight);
-   color: var(--ul-li-color);
-   font-size: var(--ul-li-font-size);
-   line-height: var(--ul-li-line-height);
-   letter-spacing: var(--ul-li-letter-spacing);
+   position: relative !important;
+   margin: var(--ul-li-margin) !important;
+   margin-left: var(--ul-li-margin-left) !important;
+   padding: var(--ul-li-padding) !important;
+   padding-left: var(--ul-li-padding-left) !important;
+   font-family: var(--ul-li-font-family) !important;
+   font-style: var(--ul-li-font-style) !important;
+   font-variant: var(--ul-li-font-variant) !important;
+   font-weight: var(--ul-li-font-weight) !important;
+   color: var(--ul-li-color) !important;
+   font-size: var(--ul-li-font-size) !important;
+   line-height: var(--ul-li-line-height) !important;
+   letter-spacing: var(--ul-li-letter-spacing) !important;
 }
 .cssf ul li::marker {  
-   display: list-item; 
-   -moz-osx-font-smoothing: grayscale;
-   -webkit-font-smoothing: antialiased;
-   text-rendering: auto;
-   content: var(--ul-li-marker-content);
-   color: var(--ul-li-marker-color);
-   font-family: var(--ul-li-marker-font-family);
-   font-style: var(--ul-li-marker-font-style);
-   font-weight: var(--ul-li-marker-font-weight); 
-   font-variant: var(--ul-li-marker-font-variant);
-   font-size: var(--ul-li-marker-font-size);
-   line-height: var(--ul-li-marker-line-height);
+   display: list-item !important; 
+   -moz-osx-font-smoothing: grayscale !important;
+   -webkit-font-smoothing: antialiased !important;
+   text-rendering: auto !important;
+   content: var(--ul-li-marker-content) !important;
+   color: var(--ul-li-marker-color) !important;
+   font-family: var(--ul-li-marker-font-family) !important;
+   font-style: var(--ul-li-marker-font-style) !important;
+   font-weight: var(--ul-li-marker-font-weight) !important; 
+   font-variant: var(--ul-li-marker-font-variant) !important;
+   font-size: var(--ul-li-marker-font-size) !important;
+   line-height: var(--ul-li-marker-line-height) !important;
 } 
 .cssf ol {
-   margin: var(--ol-margin);
-   padding: var(--ol-padding);
+   margin: var(--ol-margin) !important;
+   padding: var(--ol-padding) !important;
 }
 .cssf ol li {
-   position: relative;
-   margin: var(--ol-li-margin);
-   margin-left: var(--ol-li-margin-left);
-   padding: var(--ol-li-padding);
-   padding-left: var(--ol-li-padding-left);
-   font-family: var(--ol-li-font-family);
-   font-style: var(--ol-li-font-style);
-   font-weight: var(--ol-li-font-weight);
-   font-variant: var(--ol-li-font-variant);
-   color: var(--ol-li-color);
-   font-size: var(--ol-li-font-size);
-   line-height: var(--ol-li-line-height);
-   letter-spacing: var(--ol-li-letter-spacing);
+   position: relative !important;
+   margin: var(--ol-li-margin) !important;
+   margin-left: var(--ol-li-margin-left) !important;
+   padding: var(--ol-li-padding) !important;
+   padding-left: var(--ol-li-padding-left) !important;
+   font-family: var(--ol-li-font-family) !important;
+   font-style: var(--ol-li-font-style) !important;
+   font-weight: var(--ol-li-font-weight) !important;
+   font-variant: var(--ol-li-font-variant) !important;
+   color: var(--ol-li-color) !important;
+   font-size: var(--ol-li-font-size) !important;
+   line-height: var(--ol-li-line-height) !important;
+   letter-spacing: var(--ol-li-letter-spacing) !important;
 }
 .cssf ol li::marker {  
-   display: list-item; 
-   -moz-osx-font-smoothing: grayscale;
-   -webkit-font-smoothing: antialiased;
-   text-rendering: auto;
-   color: var(--ol-li-marker-color);
-   font-family: var(--ol-li-marker-font-family);
-   font-style: var(--ol-li-marker-font-style);
-   font-variant: var(--ol-li-marker-font-variant);
-   font-size: var(--ol-li-marker-font-size);
-   line-height: var(--ol-li-marker-line-height);
-   font-weight: var(--ol-li-marker-font-weight); 
+   display: list-item !important; 
+   -moz-osx-font-smoothing: grayscale !important;
+   -webkit-font-smoothing: antialiased !important;
+   text-rendering: auto !important;
+   color: var(--ol-li-marker-color) !important;
+   font-family: var(--ol-li-marker-font-family) !important;
+   font-style: var(--ol-li-marker-font-style) !important;
+   font-variant: var(--ol-li-marker-font-variant) !important;
+   font-size: var(--ol-li-marker-font-size) !important;
+   line-height: var(--ol-li-marker-line-height) !important;
+   font-weight: var(--ol-li-marker-font-weight) !important; 
 } 
 
 
@@ -626,59 +626,59 @@
 /* link */
 
 .cssf a {
-   z-index: 1;
-   display: var(--a-display);
-   width: var(--a-width);
-   height: var(--a-height);
-   min-height: var(--a-min-height);
-   justify-content: var(--a-justify-content);
-   align-items: var(--a-align-items);
-   align-content: var(--a-align-content);
-   font-family: var(--a-font-family);
-   font-style: var(--a-font-style);
-   font-weight: var(--a-font-weight);
-   font-size: var(--a-font-size);
-   line-height: var(--a-line-height);
-   color: var(--a-color);
-   text-decoration: var(--a-text-decoration);
-   background: var(--a-background);
-   border: var(--a-border);
-   border-radius: var(--a-border-radius);
-   border-bottom: var(--a-border-bottom);
-   text-underline-position: var(--a-text-underline-position);
-   text-decoration-thickness: var(--a-text-decoration-thickness);
-   padding: var(--a-padding);
-   margin: var(--a-margin);
-   transition: var(--a-transition);
-   transform: var(--a-transform);
-   text-transform: var(--a-text-transform);
-   letter-spacing: var(--a-letter-spacing);
+   z-index: 1 !important;
+   display: var(--a-display) !important;
+   width: var(--a-width) !important;
+   height: var(--a-height) !important;
+   min-height: var(--a-min-height) !important;
+   justify-content: var(--a-justify-content) !important;
+   align-items: var(--a-align-items) !important;
+   align-content: var(--a-align-content) !important;
+   font-family: var(--a-font-family) !important;
+   font-style: var(--a-font-style) !important;
+   font-weight: var(--a-font-weight) !important;
+   font-size: var(--a-font-size) !important;
+   line-height: var(--a-line-height) !important;
+   color: var(--a-color) !important;
+   text-decoration: var(--a-text-decoration) !important;
+   background: var(--a-background) !important;
+   border: var(--a-border) !important;
+   border-radius: var(--a-border-radius) !important;
+   border-bottom: var(--a-border-bottom) !important;
+   text-underline-position: var(--a-text-underline-position) !important;
+   text-decoration-thickness: var(--a-text-decoration-thickness) !important;
+   padding: var(--a-padding) !important;
+   margin: var(--a-margin) !important;
+   transition: var(--a-transition) !important;
+   transform: var(--a-transform) !important;
+   text-transform: var(--a-text-transform) !important;
+   letter-spacing: var(--a-letter-spacing) !important;
 }
 
 .cssf a:hover {
-   text-decoration: var(--a-hover-text-decoration);
-   text-underline-position: var(--a-hover-text-underline-position);
-   text-decoration-thickness: var(--a-hover-text-decoration-thickness);
-   color: var(--a-hover-color);
-   background: var(--a-hover-background);
-   border: var(--a-hover-border);
-   border-radius: var(--a-hover-border-radius);
-   border-bottom: var(--a-hover-border-bottom);
-   text-transform: var(--a-hover-text-transform);
-   transform: var(--a-hover-transform);
+   text-decoration: var(--a-hover-text-decoration) !important;
+   text-underline-position: var(--a-hover-text-underline-position) !important;
+   text-decoration-thickness: var(--a-hover-text-decoration-thickness) !important;
+   color: var(--a-hover-color) !important;
+   background: var(--a-hover-background) !important;
+   border: var(--a-hover-border) !important;
+   border-radius: var(--a-hover-border-radius) !important;
+   border-bottom: var(--a-hover-border-bottom) !important;
+   text-transform: var(--a-hover-text-transform) !important;
+   transform: var(--a-hover-transform) !important;
 }
 
 .cssf a:focus {
-   text-decoration: var(--a-focus-text-decoration);
-   text-underline-position: var(--a-focus-text-underline-position);
-   text-decoration-thickness: var(--a-focus-text-decoration-thickness);
-   color: var(--a-focus-color);
-   background: var(--a-focus-background);
-   border: var(--a-focus-border);
-   border-radius: var(--a-focus-border-radius);
-   border-bottom: var(--a-focus-border-bottom);
-   transform: var(--a-focus-transform);
-   text-transform: var(--a-focus-text-transform);
+   text-decoration: var(--a-focus-text-decoration) !important;
+   text-underline-position: var(--a-focus-text-underline-position) !important;
+   text-decoration-thickness: var(--a-focus-text-decoration-thickness) !important;
+   color: var(--a-focus-color) !important;
+   background: var(--a-focus-background) !important;
+   border: var(--a-focus-border) !important;
+   border-radius: var(--a-focus-border-radius) !important;
+   border-bottom: var(--a-focus-border-bottom) !important;
+   transform: var(--a-focus-transform) !important;
+   text-transform: var(--a-focus-text-transform) !important;
 }
 
 .cssf a[href^="http://"],
@@ -686,26 +686,26 @@
 .cssf a[href^="//"],
 .cssf a[href^="mailto:"],
 .cssf a[href^="tel:"] {
-   word-wrap: break-word;
-   word-break: break-word;
+   word-wrap: break-word !important;
+   word-break: break-word !important;
 }
 
 
 .cssf a[target="_blank"]:not([href^="tel:"]):not([href^="mailto:"]):not([href^="/"])::before,
 .cssf a[target="_blank"][href^="//"]::before {
-   content: var(--a-target-blank-before-content);   
-   font-family: var(--a-target-blank-before-font-family);
-   font-style: var(--a-target-blank-before-font-style);
-   font-weight: var(--a-target-blank-before-font-weight);
-   font-variant: var(--a-target-blank-before-font-variant);
+   content: var(--a-target-blank-before-content) !important;   
+   font-family: var(--a-target-blank-before-font-family) !important;
+   font-style: var(--a-target-blank-before-font-style) !important;
+   font-weight: var(--a-target-blank-before-font-weight) !important;
+   font-variant: var(--a-target-blank-before-font-variant) !important;
 }
 .cssf a[target="_blank"]:not([href^="tel:"]):not([href^="mailto:"])::after,
 .cssf a[target="_blank"][href^="//"]::after {
-   content: var(--a-target-blank-after-content);
-   font-family: var(--a-target-blank-after-font-family);
-   font-style: var(--a-target-blank-after-font-style);
-   font-weight: var(--a-target-blank-after-font-weight);
-   font-variant: var(--a-target-blank-after-font-variant);
+   content: var(--a-target-blank-after-content) !important;
+   font-family: var(--a-target-blank-after-font-family) !important;
+   font-style: var(--a-target-blank-after-font-style) !important;
+   font-weight: var(--a-target-blank-after-font-weight) !important;
+   font-variant: var(--a-target-blank-after-font-variant) !important;
 }
 /*
 .cssf a[href$=".pdf"],
@@ -722,7 +722,7 @@
 .cssf a[href$=".png"],
 .cssf a[href$=".gif"],
 .cssf a[href$=".svg"] {
-    padding: var(--a-href-file);
+    padding: var(--a-href-file) !important;
 }
 */
 .cssf a[href$=".pdf"]::before,
@@ -739,62 +739,62 @@
 .cssf a[href$=".png"]::before,
 .cssf a[href$=".gif"]::before,
 .cssf a[href$=".svg"]::before {
-   -moz-osx-font-smoothing: grayscale;
-   -webkit-font-smoothing: antialiased;
-   text-rendering: auto;
-   line-height: 1;
-   display: inline-block;
-   font-family: var(--a-file-before-font-family);
-   font-style: var(--a-file-before-font-style);
-   font-weight: var(--a-file-before-font-weight);
-   font-variant: var(--a-file-before-font-variant);
-   border: var(--a-file-before-border);
-   border-radius: var(--a-file-before-border-radius);
-   background: var(--a-file-before-background);
-   padding: var(--a-file-before-padding);
-   margin: var(--a-file-before-margin);
+   -moz-osx-font-smoothing: grayscale !important;
+   -webkit-font-smoothing: antialiased !important;
+   text-rendering: auto !important;
+   line-height: 1 !important;
+   display: inline-block !important;
+   font-family: var(--a-file-before-font-family) !important;
+   font-style: var(--a-file-before-font-style) !important;
+   font-weight: var(--a-file-before-font-weight) !important;
+   font-variant: var(--a-file-before-font-variant) !important;
+   border: var(--a-file-before-border) !important;
+   border-radius: var(--a-file-before-border-radius) !important;
+   background: var(--a-file-before-background) !important;
+   padding: var(--a-file-before-padding) !important;
+   margin: var(--a-file-before-margin) !important;
 }
 .cssf a[href$=".pdf"]::before {
-   content: var(--a-file-pdf-before-content);
+   content: var(--a-file-pdf-before-content) !important;
 }
 .cssf a[href$=".doc"]::before{
-   content: var(--a-file-doc-before-content);
+   content: var(--a-file-doc-before-content) !important;
 }
 .cssf a[href$=".docx"]::before {
-   content: var(--a-file-docx-before-content);
+   content: var(--a-file-docx-before-content) !important;
 }
 .cssf a[href$=".xls"]::before {
-   content: var(--a-file-xls-before-content);
+   content: var(--a-file-xls-before-content) !important;
 }
 .cssf a[href$=".xlsx"]::before {
-   content: var(--a-file-xlsx-before-content);
+   content: var(--a-file-xlsx-before-content) !important;
 }
 .cssf a[href$=".ppt"]::before {
-   content: var(--a-file-ppt-before-content);
+   content: var(--a-file-ppt-before-content) !important;
 }
 .cssf a[href$=".pptx"]::before {
-   content: var(--a-file-pptx-before-content);
+   content: var(--a-file-pptx-before-content) !important;
 }
 .cssf a[href$=".zip"]::before {
-   content: var(--a-file-zip-before-content);
+   content: var(--a-file-zip-before-content) !important;
 }
 .cssf a[href$=".rar"]::before {
-   content: var(--a-file-rar-before-content);
+   content: var(--a-file-rar-before-content) !important;
 }
 .cssf a[href$=".jpg"]::before {
-   content: var(--a-file-jpg-before-content);
+   content: var(--a-file-jpg-before-content) !important;
 }
 .cssf a[href$=".jpeg"]::before {
-   content: var(--a-file-jpeg-before-content);
+   content: var(--a-file-jpeg-before-content) !important;
 }
 .cssf a[href$=".png"]::before {
-   content: var(--a-file-png-before-content);
+   content: var(--a-file-png-before-content) !important;
 }
 .cssf a[href$=".gif"]::before {
-   content: var(--a-file-gif-before-content);
+   content: var(--a-file-gif-before-content) !important;
 }
 .cssf a[href$=".svg"]::before {
-   content: var(--a-file-svg-before-content);
+   content: var(--a-file-svg-before-content) !important;
 }
 
 .cssf a[href$=".pdf"]::after,
@@ -811,148 +811,148 @@
 .cssf a[href$=".png"]::after,
 .cssf a[href$=".gif"]::after,
 .cssf a[href$=".svg"]::after {
-   -moz-osx-font-smoothing: grayscale;
-   -webkit-font-smoothing: antialiased;
-   text-rendering: auto;
-   line-height: 1;
-   display: inline-block;
-   font-family: var(--a-file-after-font-family);
-   font-style: var(--a-file-after-font-style);
-   font-weight: var(--a-file-after-font-weight);
-   font-variant: var(--a-file-after-font-variant);
-   border: var(--a-file-after-border);
-   border-radius: var(--a-file-after-border-radius);
-   background: var(--a-file-after-background);
-   padding: var(--a-file-after-padding);
-   margin: var(--a-file-after-margin);
+   -moz-osx-font-smoothing: grayscale !important;
+   -webkit-font-smoothing: antialiased !important;
+   text-rendering: auto !important;
+   line-height: 1 !important;
+   display: inline-block !important;
+   font-family: var(--a-file-after-font-family) !important;
+   font-style: var(--a-file-after-font-style) !important;
+   font-weight: var(--a-file-after-font-weight) !important;
+   font-variant: var(--a-file-after-font-variant) !important;
+   border: var(--a-file-after-border) !important;
+   border-radius: var(--a-file-after-border-radius) !important;
+   background: var(--a-file-after-background) !important;
+   padding: var(--a-file-after-padding) !important;
+   margin: var(--a-file-after-margin) !important;
 }
 .cssf a[href$=".pdf"]::after {
-   content: var(--a-file-pdf-after-content);
+   content: var(--a-file-pdf-after-content) !important;
 }
 .cssf a[href$=".doc"]::after{
-   content: var(--a-file-doc-after-content);
+   content: var(--a-file-doc-after-content) !important;
 }
 .cssf a[href$=".docx"]::after {
-   content: var(--a-file-docx-after-content);
+   content: var(--a-file-docx-after-content) !important;
 }
 .cssf a[href$=".xls"]::after {
-   content: var(--a-file-xls-after-content);
+   content: var(--a-file-xls-after-content) !important;
 }
 .cssf a[href$=".xlsx"]::after {
-   content: var(--a-file-xlsx-after-content);
+   content: var(--a-file-xlsx-after-content) !important;
 }
 .cssf a[href$=".ppt"]::after {
-   content: var(--a-file-ppt-after-content);
+   content: var(--a-file-ppt-after-content) !important;
 }
 .cssf a[href$=".pptx"]::after {
-   content: var(--a-file-pptx-after-content);
+   content: var(--a-file-pptx-after-content) !important;
 }
 .cssf a[href$=".zip"]::after {
-   content: var(--a-file-zip-after-content);
+   content: var(--a-file-zip-after-content) !important;
 }
 .cssf a[href$=".rar"]::after {
-   content: var(--a-file-rar-after-content);
+   content: var(--a-file-rar-after-content) !important;
 }
 .cssf a[href$=".jpg"]::after {
-   content: var(--a-file-jpg-after-content);
+   content: var(--a-file-jpg-after-content) !important;
 }
 .cssf a[href$=".jpeg"]::after {
-   content: var(--a-file-jpeg-after-content);
+   content: var(--a-file-jpeg-after-content) !important;
 }
 .cssf a[href$=".png"]::after {
-   content: var(--a-file-png-after-content);
+   content: var(--a-file-png-after-content) !important;
 }
 .cssf a[href$=".gif"]::after {
-   content: var(--a-file-gif-after-content);
+   content: var(--a-file-gif-after-content) !important;
 }
 .cssf a[href$=".svg"]::after {
-   content: var(--a-file-svg-after-content);
+   content: var(--a-file-svg-after-content) !important;
 }
 
 /* ********************************************************** */
 /* table */
 
 .cssf table {
-   margin: var(--table-margin);
-   background: var(--table-background);
-   border: var(--table-border);
+   margin: var(--table-margin) !important;
+   background: var(--table-background) !important;
+   border: var(--table-border) !important;
 }
 .cssf table thead {
-   background: var(--table-thead-background);
+   background: var(--table-thead-background) !important;
 }
 .cssf table tbody {
-   background: var(--table-tbody-background);
+   background: var(--table-tbody-background) !important;
 }
 .cssf table tfoot {
-   background: var(--table-tfoot-background);
+   background: var(--table-tfoot-background) !important;
 }
 .cssf table tr:nth(odd) {
-   background: var(--table-tr-odd-background);
+   background: var(--table-tr-odd-background) !important;
 }
 .cssf table tr:nth(even) {
-   background: var(--table-tr-even-background);
+   background: var(--table-tr-even-background) !important;
 }
 .cssf table th {
-   background: var(--table-th-background);
-   font-family: var(--table-th-font-family);
-   font-style: var(--table-th-font-style);
-   font-weight: var(--table-th-font-weight);
-   font-variant: var(--table-th-font-variant);
-   font-size: var(--table-th-font-size);
-   line-height: var(--table-th-line-height);
-   color: var(--table-th-color);
-   vertical-align: var(--table-th-vertical-align); 
-   text-align: var(--table-th-text-align); 
+   background: var(--table-th-background) !important;
+   font-family: var(--table-th-font-family) !important;
+   font-style: var(--table-th-font-style) !important;
+   font-weight: var(--table-th-font-weight) !important;
+   font-variant: var(--table-th-font-variant) !important;
+   font-size: var(--table-th-font-size) !important;
+   line-height: var(--table-th-line-height) !important;
+   color: var(--table-th-color) !important;
+   vertical-align: var(--table-th-vertical-align) !important; 
+   text-align: var(--table-th-text-align) !important; 
 }
 .cssf table td {
-   background: var(--table-td-background);
-   font-family: var(--table-td-font-family);
-   font-style: var(--table-td-font-style);
-   font-weight: var(--table-td-font-weight);
-   font-variant: var(--table-td-font-variant);
-   font-size: var(--table-td-font-size);
-   line-height: var(--table-td-line-height);
-   color: var(--table-td-color);
-   vertical-align: var(--table-td-vertical-align);
-   text-align: var(--table-td-text-align);
+   background: var(--table-td-background) !important;
+   font-family: var(--table-td-font-family) !important;
+   font-style: var(--table-td-font-style) !important;
+   font-weight: var(--table-td-font-weight) !important;
+   font-variant: var(--table-td-font-variant) !important;
+   font-size: var(--table-td-font-size) !important;
+   line-height: var(--table-td-line-height) !important;
+   color: var(--table-td-color) !important;
+   vertical-align: var(--table-td-vertical-align) !important;
+   text-align: var(--table-td-text-align) !important;
 }
   
 .cssf table {  
-   border-spacing: var(--table-border-spacing, 0); 
-   border-collapse: separate;
-   border-radius: var(--table-border-radius);
+   border-spacing: var(--table-border-spacing, 0) !important; 
+   border-collapse: separate !important;
+   border-radius: var(--table-border-radius) !important;
 }
 .cssf table th,
 .cssf table td {  
-   padding: var(--table-cell-padding);
-   border-bottom: var(--table-cell-border-bottom); 
-   border-right: var(--table-cell-border-right); 
+   padding: var(--table-cell-padding) !important;
+   border-bottom: var(--table-cell-border-bottom) !important; 
+   border-right: var(--table-cell-border-right) !important; 
 }
 .cssf table th { 
-   background: var(--table-th-background); 
-   color: var(--table-th-color); 
+   background: var(--table-th-background) !important; 
+   color: var(--table-th-color) !important;
 }
 .cssf table tr:last-child td:first-child {
-    border-bottom-left-radius: var(--table-cell-border-bottom-left-radius);
+    border-bottom-left-radius: var(--table-cell-border-bottom-left-radius) !important;
 }
 .cssf table tr:last-child td:last-child {
-    border-bottom-right-radius: var(--table-cell-border-bottom-right-radius);
+    border-bottom-right-radius: var(--table-cell-border-bottom-right-radius) !important;
 }
 .cssf table tr th:first-child,
 .cssf table tr td:first-child {
-   border-left: var(--table-cell-border-left);
+   border-left: var(--table-cell-border-left) !important;
 }
 .cssf table tr:first-child th,
 .cssf table tr:first-child td {
-   border-top: var(--table-cell-border-top);
+   border-top: var(--table-cell-border-top) !important;
 }
 .cssf table tr:first-child th:first-child,
 .cssf table tr:first-child td:first-child {
-    border-top-left-radius: var(--table-cell-border-top-left-radius)
+    border-top-left-radius: var(--table-cell-border-top-left-radius) !important;
 }
 .cssf table tr:first-child th:last-child,
 .cssf table tr:first-child td:last-child {
-    border-top-right-radius: var(--table-cell-border-top-right-radius)
+    border-top-right-radius: var(--table-cell-border-top-right-radius) !important;
 }   
 
 /* ************************************************************************ */
@@ -970,7 +970,7 @@
 .cssf li:first-child,
 .cssf table:first-child,
 .cssf blockquote:first-child {
-   margin-top: 0rem;
+   margin-top: 0rem !important;
 }
 .cssf h1:last-child,
 .cssf h2:last-child,
@@ -984,5 +984,5 @@
 .cssf li:last-child,
 .cssf table:last-child,
 .cssf blockquote:last-child {
-   margin-bottom: 0rem;
+   margin-bottom: 0rem !important;
 }
