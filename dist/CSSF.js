@@ -313,6 +313,7 @@ class CSSF {
          let fromParent = '';
          parts.forEach((part, partIndex) => {
             if (part.startsWith('parent')) {
+                        isCloseTag = part.includes('close-tag-');
                   const propertyName = part.substring(7)
                                            .replace(/pseudo-class-/g, ':')  
                                            .replace(/pseudo-element-/g, '::') 
