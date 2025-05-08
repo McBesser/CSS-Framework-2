@@ -291,6 +291,7 @@ class CSSF {
    getStyles(cssClasses) {
       let data = [];
       let isCloseTag = false;
+      let isClose = false;
       cssClasses.forEach((cssClass, cssClassIndex) => {
 
          const cssClassUse = cssClass;
@@ -313,19 +314,19 @@ class CSSF {
          let fromParent = '';
          parts.forEach((part, partIndex) => {
             if (part.startsWith('parent')) {
-                        isCloseTag = part.includes('close-tag-');
+                        isClose = part.includes('close-');
                   const propertyName = part.substring(7)
                                            .replace(/pseudo-class-/g, ':')  
                                            .replace(/pseudo-element-/g, '::') 
                                            .replace(/close-tag-/g, '')
-                                           .replace(/tag-/g, ' ')
+                                           .replace(/tag-/g, '')
                                            .replace(/close-class-/g, '.')
-                                           .replace(/class-/g, ' .')
+                                           .replace(/class-/g, '.')
                                            .replace(/close-id-/g, '#') 
-                                           .replace(/id-/g, ' #') 
-                                           .replace(/wildcard-/g, ' *')
-                                           .replace(/next-/g, ' >');   
-                  fromParent += `${propertyName}`;
+                                           .replace(/id-/g, '#') 
+                                           .replace(/wildcard-/g, '*')
+                                           .replace(/next-/g, '>');   
+                  fromParent += `${propertyName}` + (isClose ? '' : ' ');
             } else if (part.startsWith('target')) {
                         isCloseTag = part.includes('close-tag-');
                   const propertyName = part.substring(7)
@@ -458,7 +459,7 @@ class CSSF {
 
          });
          if(isCloseTag) {
-            styles = `${fromParent} ` + `${target}` + (this.prefix ? `.${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + ` {` + styles;
+            styles = `${fromParent}` + `${target}` + (this.prefix ? `.${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + ` {` + styles;
          } else {
             styles = `${fromParent} ` + (this.prefix ? ` .${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + `${target}` + ` {` + styles;
          }
