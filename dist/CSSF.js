@@ -461,7 +461,7 @@ class CSSF {
          if(isCloseTag) {
             styles = `${fromParent}` + `${target}` + (this.prefix ? `.${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + ` {` + styles;
          } else {
-            styles = `${fromParent} ` + (this.prefix ? ` .${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + `${target}` + ` {` + styles;
+            styles = `${fromParent}` + (this.prefix ? ` .${this.prefix}--${cssClassUse}` : `.${cssClassUse}`) + `${target}` + ` {` + styles;
          }
          styles += ` }`;
          data.push(query !== '' ? `${query}{ ${styles} }` : styles);
